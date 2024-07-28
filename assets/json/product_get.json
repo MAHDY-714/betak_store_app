@@ -1,0 +1,1128 @@
+{
+    "products": [
+        {
+            "position": 1,
+            "product_id": "321035976",
+            "title": "30 in. 5.0 cu. ft. Electric Range in Stainless Steel",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/0165a67b-d892-40dc-89cf-99b28300d570/svn/stainless-steel-ge-single-oven-electric-ranges-jbs360rtss-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/0165a67b-d892-40dc-89cf-99b28300d570/svn/stainless-steel-ge-single-oven-electric-ranges-jbs360rtss-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/0165a67b-d892-40dc-89cf-99b28300d570/svn/stainless-steel-ge-single-oven-electric-ranges-jbs360rtss-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/0165a67b-d892-40dc-89cf-99b28300d570/svn/stainless-steel-ge-single-oven-electric-ranges-jbs360rtss-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/0165a67b-d892-40dc-89cf-99b28300d570/svn/stainless-steel-ge-single-oven-electric-ranges-jbs360rtss-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/0165a67b-d892-40dc-89cf-99b28300d570/svn/stainless-steel-ge-single-oven-electric-ranges-jbs360rtss-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/0165a67b-d892-40dc-89cf-99b28300d570/svn/stainless-steel-ge-single-oven-electric-ranges-jbs360rtss-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/GE-30-in-5-0-cu-ft-Electric-Range-in-Stainless-Steel-JBS360RTSS/321035976",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=321035976&store_id=2414",
+            "model_number": "JBS360RTSS",
+            "brand": "GE",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "Stainless Steel",
+                    "link": "https://www.homedepot.com/p/GE-30-in-5-0-cu-ft-Electric-Range-in-Stainless-Steel-JBS360RTSS/321035976",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/87/87e21140-7339-4434-a9a8-fc4f992dd184_35.jpg" 
+                },
+                {
+                    "title": "Black",
+                    "link": "https://www.homedepot.com/p/GE-30-in-5-0-cu-ft-Freestanding-Electric-Range-in-Black-JBS360DMBB/306260271",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/b5/b5453037-4e95-463b-8f6a-679006211ed1_35.jpg"
+                },
+                {
+                    "title": "White",
+                    "link": "https://www.homedepot.com/p/GE-30-in-5-0-cu-ft-Freestanding-Electric-Range-in-White-JBS360DMWW/306260284",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/54/54bc4a6f-02b5-44d5-a2aa-f6953e2c3a7e_35.jpg"
+                }
+            ],
+            "rating": 4.3229,
+            "reviews": 2403,
+            "price": 598.0,
+            "price_was": 749.0,
+            "price_saving": 151.0,
+            "percentage_off": 20.0,
+            "price_badge": null,
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 2,
+            "product_id": "306258612",
+            "title": "30 in. 5.0 cu. ft. Freestanding Electric Range in White",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/701cb887-fe44-4cf4-99d3-9fa3348d194a/svn/white-ge-single-oven-electric-ranges-jb256dmww-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/701cb887-fe44-4cf4-99d3-9fa3348d194a/svn/white-ge-single-oven-electric-ranges-jb256dmww-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/701cb887-fe44-4cf4-99d3-9fa3348d194a/svn/white-ge-single-oven-electric-ranges-jb256dmww-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/701cb887-fe44-4cf4-99d3-9fa3348d194a/svn/white-ge-single-oven-electric-ranges-jb256dmww-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/701cb887-fe44-4cf4-99d3-9fa3348d194a/svn/white-ge-single-oven-electric-ranges-jb256dmww-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/701cb887-fe44-4cf4-99d3-9fa3348d194a/svn/white-ge-single-oven-electric-ranges-jb256dmww-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/701cb887-fe44-4cf4-99d3-9fa3348d194a/svn/white-ge-single-oven-electric-ranges-jb256dmww-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/GE-30-in-5-0-cu-ft-Freestanding-Electric-Range-in-White-JB256DMWW/306258612",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=306258612&store_id=2414",
+            "model_number": "JB256DMWW",
+            "brand": "GE",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "White",
+                    "link": "https://www.homedepot.com/p/GE-30-in-5-0-cu-ft-Freestanding-Electric-Range-in-White-JB256DMWW/306258612",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/10/10b1604a-703c-44c8-9d1c-14053701ad8e_35.jpg"
+                },
+                {
+                    "title": "Black",
+                    "link": "https://www.homedepot.com/p/GE-30-in-5-0-cu-ft-Freestanding-Electric-Range-in-Black-JB256DMBB/306258296",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/b5/b5453037-4e95-463b-8f6a-679006211ed1_35.jpg"
+                },
+                {
+                    "title": "Stainless Steel",
+                    "link": "https://www.homedepot.com/p/GE-30-in-5-0-cu-ft-Freestanding-Electric-Range-in-Stainless-Steel-JB256RTSS/321035857",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/e2/e272064f-fd0a-4c57-947e-bfac276890ca_35.jpg"
+                }
+            ],
+            "favorite": 900,
+            "rating": 4.463,
+            "reviews": 4700,
+            "price": 578.0,
+            "price_was": 729.0,
+            "price_saving": 151.0,
+            "percentage_off": 21.0,
+            "price_badge": null,
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 3,
+            "product_id": "318033388",
+            "title": "5.3 cu. ft. Single Oven Electric Range with Air Fry Oven in Stainless Steel",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/9a49dece-5a24-4d80-95e3-f3bc6e8ff764/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfe535s0ls-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/9a49dece-5a24-4d80-95e3-f3bc6e8ff764/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfe535s0ls-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/9a49dece-5a24-4d80-95e3-f3bc6e8ff764/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfe535s0ls-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/9a49dece-5a24-4d80-95e3-f3bc6e8ff764/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfe535s0ls-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/9a49dece-5a24-4d80-95e3-f3bc6e8ff764/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfe535s0ls-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/9a49dece-5a24-4d80-95e3-f3bc6e8ff764/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfe535s0ls-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/9a49dece-5a24-4d80-95e3-f3bc6e8ff764/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfe535s0ls-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/Whirlpool-5-3-cu-ft-Single-Oven-Electric-Range-with-Air-Fry-Oven-in-Stainless-Steel-WFE535S0LS/318033388",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=318033388&store_id=2414",
+            "model_number": "WFE535S0LS",
+            "brand": "Whirlpool",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "Stainless Steel",
+                    "link": "https://www.homedepot.com/p/Whirlpool-5-3-cu-ft-Single-Oven-Electric-Range-with-Air-Fry-Oven-in-Stainless-Steel-WFE535S0LS/318033388",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/5b/5b8a128c-6127-43ff-bb3f-abfb17c0f6dd_35.jpg"
+                }
+            ],
+            "rating": 4.2143,
+            "reviews": 1008,
+            "price": 698.0,
+            "price_was": 1199.0,
+            "price_saving": 501.0,
+            "percentage_off": 42.0,
+            "price_badge": "Special-Buy",
+            "badges": [
+                "top rated"
+            ],
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 4,
+            "product_id": "306258315",
+            "title": "30 in. 5.0 cu. ft. Freestanding Electric Range in White",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/d0c40519-ad9a-45e6-bc18-b7d757bb8d36/svn/white-ge-single-oven-electric-ranges-jbs160dmww-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/d0c40519-ad9a-45e6-bc18-b7d757bb8d36/svn/white-ge-single-oven-electric-ranges-jbs160dmww-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/d0c40519-ad9a-45e6-bc18-b7d757bb8d36/svn/white-ge-single-oven-electric-ranges-jbs160dmww-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/d0c40519-ad9a-45e6-bc18-b7d757bb8d36/svn/white-ge-single-oven-electric-ranges-jbs160dmww-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/d0c40519-ad9a-45e6-bc18-b7d757bb8d36/svn/white-ge-single-oven-electric-ranges-jbs160dmww-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/d0c40519-ad9a-45e6-bc18-b7d757bb8d36/svn/white-ge-single-oven-electric-ranges-jbs160dmww-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/d0c40519-ad9a-45e6-bc18-b7d757bb8d36/svn/white-ge-single-oven-electric-ranges-jbs160dmww-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/GE-30-in-5-0-cu-ft-Freestanding-Electric-Range-in-White-JBS160DMWW/306258315",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=306258315&store_id=2414",
+            "model_number": "JBS160DMWW",
+            "brand": "GE",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "White",
+                    "link": "https://www.homedepot.com/p/GE-30-in-5-0-cu-ft-Freestanding-Electric-Range-in-White-JBS160DMWW/306258315",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/10/10b1604a-703c-44c8-9d1c-14053701ad8e_35.jpg"
+                },
+                {
+                    "title": "Black",
+                    "link": "https://www.homedepot.com/p/GE-30-in-5-0-cu-ft-Freestanding-Electric-Range-in-Black-JBS160DMBB/306258260",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/b5/b5453037-4e95-463b-8f6a-679006211ed1_35.jpg"
+                }
+            ],
+            "favorite": 815,
+            "rating": 4.294,
+            "reviews": 2439,
+            "price": 528.0,
+            "price_was": 649.0,
+            "price_saving": 121.0,
+            "percentage_off": 19.0,
+            "price_badge": "Special-Buy",
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 5,
+            "product_id": "328283961",
+            "title": "30 in. 4 Element Free-Standing Electric Range in Stainless Steel",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/ef62ad13-c80f-4fea-994c-2a8d115c2b8f/svn/stainless-steel-ge-single-oven-electric-ranges-grf400svss-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/ef62ad13-c80f-4fea-994c-2a8d115c2b8f/svn/stainless-steel-ge-single-oven-electric-ranges-grf400svss-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/ef62ad13-c80f-4fea-994c-2a8d115c2b8f/svn/stainless-steel-ge-single-oven-electric-ranges-grf400svss-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/ef62ad13-c80f-4fea-994c-2a8d115c2b8f/svn/stainless-steel-ge-single-oven-electric-ranges-grf400svss-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/ef62ad13-c80f-4fea-994c-2a8d115c2b8f/svn/stainless-steel-ge-single-oven-electric-ranges-grf400svss-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/ef62ad13-c80f-4fea-994c-2a8d115c2b8f/svn/stainless-steel-ge-single-oven-electric-ranges-grf400svss-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/ef62ad13-c80f-4fea-994c-2a8d115c2b8f/svn/stainless-steel-ge-single-oven-electric-ranges-grf400svss-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/GE-30-in-4-Element-Free-Standing-Electric-Range-in-Stainless-Steel-GRF400SVSS/328283961",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=328283961&store_id=2414",
+            "model_number": "GRF400SVSS",
+            "brand": "GE",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "Stainless Steel",
+                    "link": "https://www.homedepot.com/p/GE-30-in-4-Element-Free-Standing-Electric-Range-in-Stainless-Steel-GRF400SVSS/328283961",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/c3/c3022fe9-b30b-4423-a001-8ddff08154b8_35.jpg"
+                },
+                {
+                    "title": "White",
+                    "link": "https://www.homedepot.com/p/GE-30-in-4-Element-Free-Standing-Electric-Range-in-White-GRF400SVWW/328283896",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/55/55710434-5451-41c3-a102-013012f97a00_35.jpg"
+                },
+                {
+                    "title": "Black",
+                    "link": "https://www.homedepot.com/p/GE-30-in-4-Element-Free-Standing-Electric-Range-in-Black-GRF400SVBB/328283946",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/7e/7e8446b7-b9ee-4aa2-a10d-178eedeeac34_35.jpg"
+                }
+            ],
+            "rating": 4.875,
+            "reviews": 24,
+            "price": 698.0,
+            "price_was": 899.0,
+            "price_saving": 201.0,
+            "percentage_off": 22.0,
+            "price_badge": "Special-Buy",
+            "badges": [
+                "new"
+            ],
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 6,
+            "product_id": "329011820",
+            "title": "30 in. 4 Element Free-Standing Electric Range in Stainless Steel w/Stainless Knobs",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/6928bc17-dc40-41d0-9e6d-61f18d8d7c11/svn/stainless-steel-ge-single-oven-electric-ranges-grf40hsvss-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/6928bc17-dc40-41d0-9e6d-61f18d8d7c11/svn/stainless-steel-ge-single-oven-electric-ranges-grf40hsvss-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/6928bc17-dc40-41d0-9e6d-61f18d8d7c11/svn/stainless-steel-ge-single-oven-electric-ranges-grf40hsvss-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/6928bc17-dc40-41d0-9e6d-61f18d8d7c11/svn/stainless-steel-ge-single-oven-electric-ranges-grf40hsvss-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/6928bc17-dc40-41d0-9e6d-61f18d8d7c11/svn/stainless-steel-ge-single-oven-electric-ranges-grf40hsvss-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/6928bc17-dc40-41d0-9e6d-61f18d8d7c11/svn/stainless-steel-ge-single-oven-electric-ranges-grf40hsvss-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/6928bc17-dc40-41d0-9e6d-61f18d8d7c11/svn/stainless-steel-ge-single-oven-electric-ranges-grf40hsvss-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/GE-30-in-4-Element-Free-Standing-Electric-Range-in-Stainless-Steel-w-Stainless-Knobs-GRF40HSVSS/329011820",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=329011820&store_id=2414",
+            "model_number": "GRF40HSVSS",
+            "brand": "GE",
+            "collection": "https://www.homedepot.com",
+            "rating": 4.72,
+            "reviews": 25,
+            "price": 648.0,
+            "price_was": 899.0,
+            "price_saving": 251.0,
+            "percentage_off": 28.0,
+            "price_badge": null,
+            "badges": [
+                "top rated"
+            ],
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 7,
+            "product_id": "316697126",
+            "title": "20 in. 2.3 cu. ft. Electric Range in White",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/73828be9-6efc-4c08-b159-747c0299ec93/svn/white-summit-appliance-single-oven-electric-ranges-re203w1-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/73828be9-6efc-4c08-b159-747c0299ec93/svn/white-summit-appliance-single-oven-electric-ranges-re203w1-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/73828be9-6efc-4c08-b159-747c0299ec93/svn/white-summit-appliance-single-oven-electric-ranges-re203w1-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/73828be9-6efc-4c08-b159-747c0299ec93/svn/white-summit-appliance-single-oven-electric-ranges-re203w1-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/73828be9-6efc-4c08-b159-747c0299ec93/svn/white-summit-appliance-single-oven-electric-ranges-re203w1-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/73828be9-6efc-4c08-b159-747c0299ec93/svn/white-summit-appliance-single-oven-electric-ranges-re203w1-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/73828be9-6efc-4c08-b159-747c0299ec93/svn/white-summit-appliance-single-oven-electric-ranges-re203w1-64_1000.jpg"
+                ],
+                [
+                    "https://images.thdstatic.com/productImages/9f9bb72d-8938-4285-bf24-5f4431acd1d8/svn/white-summit-appliance-single-oven-electric-ranges-re203w1-e4_65.jpg",
+                    "https://images.thdstatic.com/productImages/9f9bb72d-8938-4285-bf24-5f4431acd1d8/svn/white-summit-appliance-single-oven-electric-ranges-re203w1-e4_100.jpg",
+                    "https://images.thdstatic.com/productImages/9f9bb72d-8938-4285-bf24-5f4431acd1d8/svn/white-summit-appliance-single-oven-electric-ranges-re203w1-e4_145.jpg",
+                    "https://images.thdstatic.com/productImages/9f9bb72d-8938-4285-bf24-5f4431acd1d8/svn/white-summit-appliance-single-oven-electric-ranges-re203w1-e4_300.jpg",
+                    "https://images.thdstatic.com/productImages/9f9bb72d-8938-4285-bf24-5f4431acd1d8/svn/white-summit-appliance-single-oven-electric-ranges-re203w1-e4_400.jpg",
+                    "https://images.thdstatic.com/productImages/9f9bb72d-8938-4285-bf24-5f4431acd1d8/svn/white-summit-appliance-single-oven-electric-ranges-re203w1-e4_600.jpg",
+                    "https://images.thdstatic.com/productImages/9f9bb72d-8938-4285-bf24-5f4431acd1d8/svn/white-summit-appliance-single-oven-electric-ranges-re203w1-e4_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/Summit-Appliance-20-in-2-3-cu-ft-Electric-Range-in-White-RE203W1/316697126",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=316697126&store_id=2414",
+            "model_number": "RE203W1",
+            "brand": "Summit Appliance",
+            "collection": "https://www.homedepot.com",
+            "rating": 3.6667,
+            "reviews": 21,
+            "price": 530.96,
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            },
+            "pickup": {
+                "free_ship_to_store": true
+            }
+        },
+        {
+            "position": 8,
+            "product_id": "306337250",
+            "title": "30 in. 6.7 cu. ft. Smart Slide-In Electric Range in Matte White with True Convection, Air Fry",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/4f45d9bd-3393-4047-be4a-45d66a9cc772/svn/fingerprint-resistant-matte-white-cafe-single-oven-electric-ranges-ces750p4mw2-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/4f45d9bd-3393-4047-be4a-45d66a9cc772/svn/fingerprint-resistant-matte-white-cafe-single-oven-electric-ranges-ces750p4mw2-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/4f45d9bd-3393-4047-be4a-45d66a9cc772/svn/fingerprint-resistant-matte-white-cafe-single-oven-electric-ranges-ces750p4mw2-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/4f45d9bd-3393-4047-be4a-45d66a9cc772/svn/fingerprint-resistant-matte-white-cafe-single-oven-electric-ranges-ces750p4mw2-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/4f45d9bd-3393-4047-be4a-45d66a9cc772/svn/fingerprint-resistant-matte-white-cafe-single-oven-electric-ranges-ces750p4mw2-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/4f45d9bd-3393-4047-be4a-45d66a9cc772/svn/fingerprint-resistant-matte-white-cafe-single-oven-electric-ranges-ces750p4mw2-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/4f45d9bd-3393-4047-be4a-45d66a9cc772/svn/fingerprint-resistant-matte-white-cafe-single-oven-electric-ranges-ces750p4mw2-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/Cafe-30-in-6-7-cu-ft-Smart-Slide-In-Electric-Range-in-Matte-White-with-True-Convection-Air-Fry-CES750P4MW2/306337250",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=306337250&store_id=2414",
+            "model_number": "CES750P4MW2",
+            "brand": "Cafe",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "Fingerprint Resistant Matte White",
+                    "link": "https://www.homedepot.com/p/Cafe-30-in-6-7-cu-ft-Smart-Slide-In-Electric-Range-in-Matte-White-with-True-Convection-Air-Fry-CES750P4MW2/306337250",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/68/6805796f-9ac3-4a6d-a321-99048ea11605_35.jpg"
+                },
+                {
+                    "title": "Stainless Steel",
+                    "link": "https://www.homedepot.com/p/Cafe-30-in-6-7-cu-ft-Smart-Slide-In-Electric-Range-in-Matte-Stainless-Steel-with-True-Convection-Air-Fry-CES750P2MS1/308801493",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/db/db0b8756-b32c-40a8-aa8f-c636dac50c8f_35.jpg"
+                }
+            ],
+            "favorite": 874,
+            "rating": 4.4589,
+            "reviews": 791,
+            "price": 3198.0,
+            "price_was": 3599.0,
+            "price_saving": 401.0,
+            "percentage_off": 11.0,
+            "price_badge": null,
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 9,
+            "product_id": "302264764",
+            "title": "1.7 cu. ft. Over the Range Microwave in Stainless Steel with Electronic Touch Controls",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/026e945d-b252-4109-b45e-eea0efa35791/svn/stainless-steel-whirlpool-over-the-range-microwaves-wmh31017hs-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/026e945d-b252-4109-b45e-eea0efa35791/svn/stainless-steel-whirlpool-over-the-range-microwaves-wmh31017hs-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/026e945d-b252-4109-b45e-eea0efa35791/svn/stainless-steel-whirlpool-over-the-range-microwaves-wmh31017hs-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/026e945d-b252-4109-b45e-eea0efa35791/svn/stainless-steel-whirlpool-over-the-range-microwaves-wmh31017hs-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/026e945d-b252-4109-b45e-eea0efa35791/svn/stainless-steel-whirlpool-over-the-range-microwaves-wmh31017hs-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/026e945d-b252-4109-b45e-eea0efa35791/svn/stainless-steel-whirlpool-over-the-range-microwaves-wmh31017hs-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/026e945d-b252-4109-b45e-eea0efa35791/svn/stainless-steel-whirlpool-over-the-range-microwaves-wmh31017hs-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/Whirlpool-1-7-cu-ft-Over-the-Range-Microwave-in-Stainless-Steel-with-Electronic-Touch-Controls-WMH31017HS/302264764",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=302264764&store_id=2414",
+            "model_number": "WMH31017HS",
+            "brand": "Whirlpool",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "Stainless Steel",
+                    "link": "https://www.homedepot.com/p/Whirlpool-1-7-cu-ft-Over-the-Range-Microwave-in-Stainless-Steel-with-Electronic-Touch-Controls-WMH31017HS/302264764",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/0a/0a33f8d9-27bb-46fc-8000-64d6e3dee171_35.jpg"
+                },
+                {
+                    "title": "Black",
+                    "link": "https://www.homedepot.com/p/Whirlpool-1-7-cu-ft-Over-the-Range-Microwave-in-Black-WMH31017HB/304919936",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/53/53780619-783b-4380-b07d-a9d9c45c605b_35.jpg"
+                },
+                {
+                    "title": "White",
+                    "link": "https://www.homedepot.com/p/Whirlpool-1-7-cu-Ft-Over-the-Range-Microwave-in-White-WMH31017HW/304920136",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/ae/ae8ae940-31dd-4217-8a93-a93277455047_35.jpg"
+                }
+            ],
+            "favorite": 18158,
+            "rating": 4.4991,
+            "reviews": 11295,
+            "price": 198.0,
+            "price_was": 399.0,
+            "price_saving": 201.0,
+            "percentage_off": 50.0,
+            "price_badge": "Special-Buy",
+            "badges": [
+                "top rated"
+            ],
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 10,
+            "product_id": "303516039",
+            "title": "2.3 cu. ft. Washer 4.4 cu. ft. Electric Dryer Combo in White",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/bf3a541c-9123-434f-8218-b631197ed4a7/svn/white-ge-laundry-centers-gud24essmww-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/bf3a541c-9123-434f-8218-b631197ed4a7/svn/white-ge-laundry-centers-gud24essmww-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/bf3a541c-9123-434f-8218-b631197ed4a7/svn/white-ge-laundry-centers-gud24essmww-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/bf3a541c-9123-434f-8218-b631197ed4a7/svn/white-ge-laundry-centers-gud24essmww-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/bf3a541c-9123-434f-8218-b631197ed4a7/svn/white-ge-laundry-centers-gud24essmww-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/bf3a541c-9123-434f-8218-b631197ed4a7/svn/white-ge-laundry-centers-gud24essmww-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/bf3a541c-9123-434f-8218-b631197ed4a7/svn/white-ge-laundry-centers-gud24essmww-64_1000.jpg"
+                ],
+                [
+                    "https://images.thdstatic.com/productImages/1003e578-330d-4f8b-9f87-166d80d0d9e4/svn/white-ge-laundry-centers-gud24essmww-e4_65.jpg",
+                    "https://images.thdstatic.com/productImages/1003e578-330d-4f8b-9f87-166d80d0d9e4/svn/white-ge-laundry-centers-gud24essmww-e4_100.jpg",
+                    "https://images.thdstatic.com/productImages/1003e578-330d-4f8b-9f87-166d80d0d9e4/svn/white-ge-laundry-centers-gud24essmww-e4_145.jpg",
+                    "https://images.thdstatic.com/productImages/1003e578-330d-4f8b-9f87-166d80d0d9e4/svn/white-ge-laundry-centers-gud24essmww-e4_300.jpg",
+                    "https://images.thdstatic.com/productImages/1003e578-330d-4f8b-9f87-166d80d0d9e4/svn/white-ge-laundry-centers-gud24essmww-e4_400.jpg",
+                    "https://images.thdstatic.com/productImages/1003e578-330d-4f8b-9f87-166d80d0d9e4/svn/white-ge-laundry-centers-gud24essmww-e4_600.jpg",
+                    "https://images.thdstatic.com/productImages/1003e578-330d-4f8b-9f87-166d80d0d9e4/svn/white-ge-laundry-centers-gud24essmww-e4_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/GE-2-3-cu-ft-Washer-4-4-cu-ft-Electric-Dryer-Combo-in-White-GUD24ESSMWW/303516039",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=303516039&store_id=2414",
+            "model_number": "GUD24ESSMWW",
+            "brand": "GE",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "White",
+                    "link": "https://www.homedepot.com/p/GE-2-3-cu-ft-Washer-4-4-cu-ft-Electric-Dryer-Combo-in-White-GUD24ESSMWW/303516039",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/b2/b2ff1492-821b-447b-84e4-5b0fd3a9f099_35.jpg"
+                }
+            ],
+            "favorite": 4126,
+            "rating": 4.0668,
+            "reviews": 4206,
+            "price": 1198.0,
+            "price_was": 1499.0,
+            "price_saving": 301.0,
+            "percentage_off": 20.0,
+            "price_badge": null,
+            "badges": [
+                "top rated"
+            ],
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 11,
+            "product_id": "322665751",
+            "title": "30 in. 5-Element Slide-In Front Control Self-Cleaning Electric Range with Convection in Stainless Steel",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/ceecab16-af1d-43d8-a03b-72486317193a/svn/stainless-steel-frigidaire-single-oven-electric-ranges-fcfe3083as-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/ceecab16-af1d-43d8-a03b-72486317193a/svn/stainless-steel-frigidaire-single-oven-electric-ranges-fcfe3083as-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/ceecab16-af1d-43d8-a03b-72486317193a/svn/stainless-steel-frigidaire-single-oven-electric-ranges-fcfe3083as-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/ceecab16-af1d-43d8-a03b-72486317193a/svn/stainless-steel-frigidaire-single-oven-electric-ranges-fcfe3083as-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/ceecab16-af1d-43d8-a03b-72486317193a/svn/stainless-steel-frigidaire-single-oven-electric-ranges-fcfe3083as-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/ceecab16-af1d-43d8-a03b-72486317193a/svn/stainless-steel-frigidaire-single-oven-electric-ranges-fcfe3083as-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/ceecab16-af1d-43d8-a03b-72486317193a/svn/stainless-steel-frigidaire-single-oven-electric-ranges-fcfe3083as-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/Frigidaire-30-in-5-Element-Slide-In-Front-Control-Self-Cleaning-Electric-Range-with-Convection-in-Stainless-Steel-FCFE3083AS/322665751",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=322665751&store_id=2414",
+            "model_number": "FCFE3083AS",
+            "brand": "Frigidaire",
+            "collection": "https://www.homedepot.com",
+            "rating": 4.5741,
+            "reviews": 594,
+            "price": 934.0,
+            "price_was": 1399.0,
+            "price_saving": 465.0,
+            "percentage_off": 33.0,
+            "price_badge": "Special-Buy",
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 12,
+            "product_id": "325611056",
+            "title": "30 in. Single Electric Wall Oven in Stainless Steel",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/bc792f79-da12-496a-ac84-75a4ce38d8ea/svn/stainless-steel-whirlpool-single-electric-wall-ovens-woes3030ls-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/bc792f79-da12-496a-ac84-75a4ce38d8ea/svn/stainless-steel-whirlpool-single-electric-wall-ovens-woes3030ls-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/bc792f79-da12-496a-ac84-75a4ce38d8ea/svn/stainless-steel-whirlpool-single-electric-wall-ovens-woes3030ls-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/bc792f79-da12-496a-ac84-75a4ce38d8ea/svn/stainless-steel-whirlpool-single-electric-wall-ovens-woes3030ls-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/bc792f79-da12-496a-ac84-75a4ce38d8ea/svn/stainless-steel-whirlpool-single-electric-wall-ovens-woes3030ls-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/bc792f79-da12-496a-ac84-75a4ce38d8ea/svn/stainless-steel-whirlpool-single-electric-wall-ovens-woes3030ls-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/bc792f79-da12-496a-ac84-75a4ce38d8ea/svn/stainless-steel-whirlpool-single-electric-wall-ovens-woes3030ls-64_1000.jpg"
+                ],
+                [
+                    "https://images.thdstatic.com/productImages/01bb3690-2d11-40bb-880a-3d4d8fcc2819/svn/stainless-steel-whirlpool-single-electric-wall-ovens-woes3030ls-e4_65.jpg",
+                    "https://images.thdstatic.com/productImages/01bb3690-2d11-40bb-880a-3d4d8fcc2819/svn/stainless-steel-whirlpool-single-electric-wall-ovens-woes3030ls-e4_100.jpg",
+                    "https://images.thdstatic.com/productImages/01bb3690-2d11-40bb-880a-3d4d8fcc2819/svn/stainless-steel-whirlpool-single-electric-wall-ovens-woes3030ls-e4_145.jpg",
+                    "https://images.thdstatic.com/productImages/01bb3690-2d11-40bb-880a-3d4d8fcc2819/svn/stainless-steel-whirlpool-single-electric-wall-ovens-woes3030ls-e4_300.jpg",
+                    "https://images.thdstatic.com/productImages/01bb3690-2d11-40bb-880a-3d4d8fcc2819/svn/stainless-steel-whirlpool-single-electric-wall-ovens-woes3030ls-e4_400.jpg",
+                    "https://images.thdstatic.com/productImages/01bb3690-2d11-40bb-880a-3d4d8fcc2819/svn/stainless-steel-whirlpool-single-electric-wall-ovens-woes3030ls-e4_600.jpg",
+                    "https://images.thdstatic.com/productImages/01bb3690-2d11-40bb-880a-3d4d8fcc2819/svn/stainless-steel-whirlpool-single-electric-wall-ovens-woes3030ls-e4_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/Whirlpool-30-in-Single-Electric-Wall-Oven-in-Stainless-Steel-WOES3030LS/325611056",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=325611056&store_id=2414",
+            "model_number": "WOES3030LS",
+            "brand": "Whirlpool",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "Stainless Steel",
+                    "link": "https://www.homedepot.com/p/Whirlpool-30-in-Single-Electric-Wall-Oven-in-Stainless-Steel-WOES3030LS/325611056",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/8b/8b877f67-3736-423e-aff5-62699428315f_35.jpg"
+                }
+            ],
+            "rating": 4.3968,
+            "reviews": 63,
+            "price": 1248.0,
+            "price_was": 1899.0,
+            "price_saving": 651.0,
+            "percentage_off": 34.0,
+            "price_badge": "Special-Buy",
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 13,
+            "product_id": "328284779",
+            "title": "30 in. 5 Element Free-Standing Electric Range in Stainless Steel with Crisp Mode",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/03169773-6377-4afc-80fe-1d5efaceba86/svn/stainless-steel-ge-single-oven-electric-ranges-grf500pvss-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/03169773-6377-4afc-80fe-1d5efaceba86/svn/stainless-steel-ge-single-oven-electric-ranges-grf500pvss-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/03169773-6377-4afc-80fe-1d5efaceba86/svn/stainless-steel-ge-single-oven-electric-ranges-grf500pvss-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/03169773-6377-4afc-80fe-1d5efaceba86/svn/stainless-steel-ge-single-oven-electric-ranges-grf500pvss-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/03169773-6377-4afc-80fe-1d5efaceba86/svn/stainless-steel-ge-single-oven-electric-ranges-grf500pvss-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/03169773-6377-4afc-80fe-1d5efaceba86/svn/stainless-steel-ge-single-oven-electric-ranges-grf500pvss-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/03169773-6377-4afc-80fe-1d5efaceba86/svn/stainless-steel-ge-single-oven-electric-ranges-grf500pvss-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/GE-30-in-5-Element-Free-Standing-Electric-Range-in-Stainless-Steel-with-Crisp-Mode-GRF500PVSS/328284779",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=328284779&store_id=2414",
+            "model_number": "GRF500PVSS",
+            "brand": "GE",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "Stainless Steel",
+                    "link": "https://www.homedepot.com/p/GE-30-in-5-Element-Free-Standing-Electric-Range-in-Stainless-Steel-with-Crisp-Mode-GRF500PVSS/328284779",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/c3/c3022fe9-b30b-4423-a001-8ddff08154b8_35.jpg"
+                },
+                {
+                    "title": "Black",
+                    "link": "https://www.homedepot.com/p/GE-30-in-5-Element-Free-Standing-Electric-Range-in-Black-with-Crisp-Mode-GRF500PVBB/328284750",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/7e/7e8446b7-b9ee-4aa2-a10d-178eedeeac34_35.jpg"
+                },
+                {
+                    "title": "Slate",
+                    "link": "https://www.homedepot.com/p/GE-30-in-5-Element-Free-Standing-Electric-Range-in-Slate-with-Crisp-Mode-GRF500PVES/328284764",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/ac/ac41067d-f33c-4f6e-836c-298469560e45_35.jpg"
+                },
+                {
+                    "title": "White",
+                    "link": "https://www.homedepot.com/p/GE-30-in-5-Element-Free-Standing-Electric-Range-in-White-with-Crisp-Mode-GRF500PVWW/328284623",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/55/55710434-5451-41c3-a102-013012f97a00_35.jpg"
+                }
+            ],
+            "rating": 4.5614,
+            "reviews": 11070,
+            "price": 848.0,
+            "price_was": 949.0,
+            "price_saving": 101.0,
+            "percentage_off": 11.0,
+            "price_badge": null,
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 14,
+            "product_id": "325110100",
+            "title": "Elite Series 20 in. Electric Range Oven in Stainless Steel",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/614f0f8d-e760-5114-ac38-6dfc84510c5f/svn/stainless-steel-avanti-single-oven-electric-ranges-der20p3s-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/614f0f8d-e760-5114-ac38-6dfc84510c5f/svn/stainless-steel-avanti-single-oven-electric-ranges-der20p3s-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/614f0f8d-e760-5114-ac38-6dfc84510c5f/svn/stainless-steel-avanti-single-oven-electric-ranges-der20p3s-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/614f0f8d-e760-5114-ac38-6dfc84510c5f/svn/stainless-steel-avanti-single-oven-electric-ranges-der20p3s-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/614f0f8d-e760-5114-ac38-6dfc84510c5f/svn/stainless-steel-avanti-single-oven-electric-ranges-der20p3s-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/614f0f8d-e760-5114-ac38-6dfc84510c5f/svn/stainless-steel-avanti-single-oven-electric-ranges-der20p3s-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/614f0f8d-e760-5114-ac38-6dfc84510c5f/svn/stainless-steel-avanti-single-oven-electric-ranges-der20p3s-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/Avanti-Elite-Series-20-in-Electric-Range-Oven-in-Stainless-Steel-DER20P3S/325110100",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=325110100&store_id=2414",
+            "model_number": "DER20P3S",
+            "brand": "Avanti",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "Stainless Steel",
+                    "link": "https://www.homedepot.com/p/Avanti-Elite-Series-20-in-Electric-Range-Oven-in-Stainless-Steel-DER20P3S/325110100",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/2d/2d411a1c-01cf-4427-bf41-00559cc5a785_35.jpg"
+                }
+            ],
+            "rating": 3.0,
+            "reviews": 9,
+            "price": 996.25,
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            },
+            "pickup": {
+                "free_ship_to_store": true
+            }
+        },
+        {
+            "position": 15,
+            "product_id": "206942923",
+            "title": "30 in. 5.3 cu. ft. Freestanding Electric Range in Stainless Steel",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/258f0c7e-2466-4177-8bf9-9229757dfdb0/svn/stainless-steel-ge-single-oven-electric-ranges-jb645rkss-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/258f0c7e-2466-4177-8bf9-9229757dfdb0/svn/stainless-steel-ge-single-oven-electric-ranges-jb645rkss-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/258f0c7e-2466-4177-8bf9-9229757dfdb0/svn/stainless-steel-ge-single-oven-electric-ranges-jb645rkss-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/258f0c7e-2466-4177-8bf9-9229757dfdb0/svn/stainless-steel-ge-single-oven-electric-ranges-jb645rkss-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/258f0c7e-2466-4177-8bf9-9229757dfdb0/svn/stainless-steel-ge-single-oven-electric-ranges-jb645rkss-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/258f0c7e-2466-4177-8bf9-9229757dfdb0/svn/stainless-steel-ge-single-oven-electric-ranges-jb645rkss-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/258f0c7e-2466-4177-8bf9-9229757dfdb0/svn/stainless-steel-ge-single-oven-electric-ranges-jb645rkss-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/GE-30-in-5-3-cu-ft-Freestanding-Electric-Range-in-Stainless-Steel-JB645RKSS/206942923",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=206942923&store_id=2414",
+            "model_number": "JB645RKSS",
+            "brand": "GE",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "Stainless Steel",
+                    "link": "https://www.homedepot.com/p/GE-30-in-5-3-cu-ft-Freestanding-Electric-Range-in-Stainless-Steel-JB645RKSS/206942923",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/17/17d4da19-9a41-4896-a7e9-4c7e5df9ec01_35.jpg"
+                },
+                {
+                    "title": "White",
+                    "link": "https://www.homedepot.com/p/GE-30-in-5-3-cu-ft-Freestanding-Electric-Range-in-White-JB645DKWW/206942913",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/5b/5bfb3015-28da-4305-a00d-43de94969df3_35.jpg"
+                },
+                {
+                    "title": "Fingerprint Resistant Slate",
+                    "link": "https://www.homedepot.com/p/GE-30-in-5-3-cu-ft-Freestanding-Electric-Range-in-Slate-JB645EKES/206942920",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/19/19d8dbd8-f47e-4958-be8e-5f69df3a0a51_35.jpg"
+                },
+                {
+                    "title": "Black",
+                    "link": "https://www.homedepot.com/p/GE-30-in-5-3-cu-ft-Freestanding-Electric-Range-in-Black-JB645DKBB/206943017",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/95/9545067b-294a-48d7-b917-bb29f4591061_35.jpg"
+                }
+            ],
+            "favorite": 14241,
+            "rating": 4.5243,
+            "reviews": 14188,
+            "price": 848.0,
+            "price_was": 949.0,
+            "price_saving": 101.0,
+            "percentage_off": 11.0,
+            "price_badge": "Special-Buy",
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 16,
+            "product_id": "322964228",
+            "title": "Classic Retro 30\" 5 element Freestanding Electric Range with Convection Oven in Ocean Mist Turquoise",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/b155eeae-0023-4fe8-8fa8-dbe751fb3d14/svn/ocean-mist-turquoise-unique-appliances-single-oven-electric-ranges-ugp-30cr-ec-t-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/b155eeae-0023-4fe8-8fa8-dbe751fb3d14/svn/ocean-mist-turquoise-unique-appliances-single-oven-electric-ranges-ugp-30cr-ec-t-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/b155eeae-0023-4fe8-8fa8-dbe751fb3d14/svn/ocean-mist-turquoise-unique-appliances-single-oven-electric-ranges-ugp-30cr-ec-t-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/b155eeae-0023-4fe8-8fa8-dbe751fb3d14/svn/ocean-mist-turquoise-unique-appliances-single-oven-electric-ranges-ugp-30cr-ec-t-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/b155eeae-0023-4fe8-8fa8-dbe751fb3d14/svn/ocean-mist-turquoise-unique-appliances-single-oven-electric-ranges-ugp-30cr-ec-t-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/b155eeae-0023-4fe8-8fa8-dbe751fb3d14/svn/ocean-mist-turquoise-unique-appliances-single-oven-electric-ranges-ugp-30cr-ec-t-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/b155eeae-0023-4fe8-8fa8-dbe751fb3d14/svn/ocean-mist-turquoise-unique-appliances-single-oven-electric-ranges-ugp-30cr-ec-t-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/Unique-Appliances-Classic-Retro-30-5-element-Freestanding-Electric-Range-with-Convection-Oven-in-Ocean-Mist-Turquoise-UGP-30CR-EC-T/322964228",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=322964228&store_id=2414",
+            "model_number": "UGP-30CR EC T",
+            "brand": "Unique Appliances",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "Ocean Mist Turquoise",
+                    "link": "https://www.homedepot.com/p/Unique-Appliances-Classic-Retro-30-5-element-Freestanding-Electric-Range-with-Convection-Oven-in-Ocean-Mist-Turquoise-UGP-30CR-EC-T/322964228",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/37/373bd381-70c5-4a26-8ef6-55cff9dc123e_35.jpg"
+                },
+                {
+                    "title": "Marshmallow White",
+                    "link": "https://www.homedepot.com/p/Unique-Appliances-Classic-Retro-30-5-element-Freestanding-Electric-Range-with-Convection-Oven-in-Marshmallow-White-UGP-30CR-EC-W/322964233",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/8b/8bdc4ca7-966d-4077-9aea-0343dcf7f9f6_35.jpg"
+                },
+                {
+                    "title": "Midnight Black",
+                    "link": "https://www.homedepot.com/p/Unique-Appliances-Classic-Retro-30-5-element-Freestanding-Electric-Range-with-Convection-Oven-in-Midnight-Black-UGP-30CR-EC-B/322964216",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/b0/b09841a2-4241-4554-95e8-2796941f9567_35.jpg"
+                },
+                {
+                    "title": "Summer Mint Green",
+                    "link": "https://www.homedepot.com/p/Unique-Appliances-Classic-Retro-30-5-element-Freestanding-Electric-Range-with-Convection-Oven-in-Summer-Mint-Green-UGP-30CR-EC-LG/322964218",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/b6/b6762752-20d6-4cc0-a209-cdf568e7d61f_35.jpg"
+                }
+            ],
+            "rating": 3.4615,
+            "reviews": 13,
+            "price": 2251.46,
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            },
+            "pickup": {
+                "free_ship_to_store": true
+            }
+        },
+        {
+            "position": 17,
+            "product_id": "329233914",
+            "title": "30 in. 4 Elements Freestanding Electric Range in Stainless Steel with Thermal",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/e8952251-f62f-472a-aac2-20eb50d19bd5/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfes3030rs-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/e8952251-f62f-472a-aac2-20eb50d19bd5/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfes3030rs-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/e8952251-f62f-472a-aac2-20eb50d19bd5/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfes3030rs-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/e8952251-f62f-472a-aac2-20eb50d19bd5/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfes3030rs-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/e8952251-f62f-472a-aac2-20eb50d19bd5/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfes3030rs-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/e8952251-f62f-472a-aac2-20eb50d19bd5/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfes3030rs-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/e8952251-f62f-472a-aac2-20eb50d19bd5/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfes3030rs-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/Whirlpool-30-in-4-Elements-Freestanding-Electric-Range-in-Stainless-Steel-with-Thermal-WFES3030RS/329233914",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=329233914&store_id=2414",
+            "model_number": "WFES3030RS",
+            "brand": "Whirlpool",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "Black",
+                    "link": "https://www.homedepot.com/p/Whirlpool-30-in-4-Element-Freestanding-Electric-Range-in-Black-WFES3030RB/329021421",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/46/465bc150-e248-4ea8-871d-c4810a863e5b_35.jpg"
+                }
+            ],
+            "rating": 4.5294,
+            "reviews": 17,
+            "price": 748.0,
+            "price_was": 949.0,
+            "price_saving": 201.0,
+            "percentage_off": 21.0,
+            "price_badge": null,
+            "badges": [
+                "new"
+            ],
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 18,
+            "product_id": "320472170",
+            "title": "24 in. Built-In Tall Tub Front Control Stainless Steel Dishwasher with 60 dBA, ENERGY STAR",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/6d56d648-e7ce-482d-9c78-82761327d012/svn/stainless-steel-ge-built-in-dishwashers-gdf460pstss-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/6d56d648-e7ce-482d-9c78-82761327d012/svn/stainless-steel-ge-built-in-dishwashers-gdf460pstss-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/6d56d648-e7ce-482d-9c78-82761327d012/svn/stainless-steel-ge-built-in-dishwashers-gdf460pstss-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/6d56d648-e7ce-482d-9c78-82761327d012/svn/stainless-steel-ge-built-in-dishwashers-gdf460pstss-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/6d56d648-e7ce-482d-9c78-82761327d012/svn/stainless-steel-ge-built-in-dishwashers-gdf460pstss-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/6d56d648-e7ce-482d-9c78-82761327d012/svn/stainless-steel-ge-built-in-dishwashers-gdf460pstss-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/6d56d648-e7ce-482d-9c78-82761327d012/svn/stainless-steel-ge-built-in-dishwashers-gdf460pstss-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/GE-24-in-Built-In-Tall-Tub-Front-Control-Stainless-Steel-Dishwasher-with-60-dBA-ENERGY-STAR-GDF460PSTSS/320472170",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=320472170&store_id=2414",
+            "model_number": "GDF460PSTSS",
+            "brand": "GE",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "Stainless Steel",
+                    "link": "https://www.homedepot.com/p/GE-24-in-Built-In-Tall-Tub-Front-Control-Stainless-Steel-Dishwasher-with-60-dBA-ENERGY-STAR-GDF460PSTSS/320472170",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/82/8254a3d5-c498-4cb1-be4d-42f8b6032b45_35.jpg"
+                },
+                {
+                    "title": "White",
+                    "link": "https://www.homedepot.com/p/GE-24-in-Built-In-Tall-Tub-Front-Control-White-Dishwasher-with-60-dBA-ENERGY-STAR-GDF460PGTWW/320472372",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/6e/6eca22ae-ef97-4643-b94e-528be13d81c7_35.jpg"
+                },
+                {
+                    "title": "Black",
+                    "link": "https://www.homedepot.com/p/GE-24-in-Built-In-Tall-Tub-Front-Control-Black-Dishwasher-with-60-dBA-ENERGY-STAR-GDF460PGTBB/320472318",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/74/747dd1fd-19ee-469b-b8fa-6f27318543ed_35.jpg"
+                }
+            ],
+            "rating": 3.3422,
+            "reviews": 1011,
+            "price": 328.0,
+            "price_was": 532.0,
+            "price_saving": 204.0,
+            "percentage_off": 38.0,
+            "price_badge": "Special-Buy",
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 19,
+            "product_id": "312759646",
+            "title": "30 in. 4.8 cu.ft. 4-Burner Electric Range with Keep Warm Setting in Stainless Steel with Storage Drawer",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/df103363-2de7-46dd-9097-c702e635e4d9/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfc150m0js-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/df103363-2de7-46dd-9097-c702e635e4d9/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfc150m0js-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/df103363-2de7-46dd-9097-c702e635e4d9/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfc150m0js-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/df103363-2de7-46dd-9097-c702e635e4d9/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfc150m0js-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/df103363-2de7-46dd-9097-c702e635e4d9/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfc150m0js-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/df103363-2de7-46dd-9097-c702e635e4d9/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfc150m0js-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/df103363-2de7-46dd-9097-c702e635e4d9/svn/stainless-steel-whirlpool-single-oven-electric-ranges-wfc150m0js-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/Whirlpool-30-in-4-8-cu-ft-4-Burner-Electric-Range-with-Keep-Warm-Setting-in-Stainless-Steel-with-Storage-Drawer-WFC150M0JS/312759646",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=312759646&store_id=2414",
+            "model_number": "WFC150M0JS",
+            "brand": "Whirlpool",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "Stainless Steel",
+                    "link": "https://www.homedepot.com/p/Whirlpool-30-in-4-8-cu-ft-4-Burner-Electric-Range-with-Keep-Warm-Setting-in-Stainless-Steel-with-Storage-Drawer-WFC150M0JS/312759646",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/d1/d189a0ed-0820-4175-b587-34b67b227b3f_35.jpg"
+                },
+                {
+                    "title": "Black",
+                    "link": "https://www.homedepot.com/p/Whirlpool-30-in-4-8-cu-ft-4-Burner-Electric-Range-with-Keep-Warm-Setting-in-Black-with-Storage-Drawer-WFC150M0JB/312759559",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/78/78961b37-e1b1-4f68-bfe3-4e65ce58701a_35.jpg"
+                },
+                {
+                    "title": "White",
+                    "link": "https://www.homedepot.com/p/Whirlpool-30-in-4-8-cu-ft-4-Burner-Electric-Range-with-Keep-Warm-Setting-in-White-with-Storage-Drawer-WFC150M0JW/312759433",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/66/66bc17c1-36a6-4c1d-9825-9edd560bb774_35.jpg"
+                }
+            ],
+            "favorite": 338,
+            "rating": 4.1324,
+            "reviews": 476,
+            "price": 688.0,
+            "price_was": 819.0,
+            "price_saving": 131.0,
+            "percentage_off": 16.0,
+            "price_badge": "Special-Buy",
+            "badges": [
+                "top rated"
+            ],
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 20,
+            "product_id": "302560278",
+            "title": "Profile 27.8 cu. ft. French Door Refrigerator with Hands-Free Autofill in Fingerprint Resistant Black Stainless Steel",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/a63d157e-a5b5-4a05-823b-a004cfccc6c4/svn/fingerprint-resistant-black-stainless-steel-ge-french-door-refrigerators-pfe28kblts-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/a63d157e-a5b5-4a05-823b-a004cfccc6c4/svn/fingerprint-resistant-black-stainless-steel-ge-french-door-refrigerators-pfe28kblts-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/a63d157e-a5b5-4a05-823b-a004cfccc6c4/svn/fingerprint-resistant-black-stainless-steel-ge-french-door-refrigerators-pfe28kblts-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/a63d157e-a5b5-4a05-823b-a004cfccc6c4/svn/fingerprint-resistant-black-stainless-steel-ge-french-door-refrigerators-pfe28kblts-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/a63d157e-a5b5-4a05-823b-a004cfccc6c4/svn/fingerprint-resistant-black-stainless-steel-ge-french-door-refrigerators-pfe28kblts-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/a63d157e-a5b5-4a05-823b-a004cfccc6c4/svn/fingerprint-resistant-black-stainless-steel-ge-french-door-refrigerators-pfe28kblts-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/a63d157e-a5b5-4a05-823b-a004cfccc6c4/svn/fingerprint-resistant-black-stainless-steel-ge-french-door-refrigerators-pfe28kblts-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/GE-Profile-27-8-cu-ft-French-Door-Refrigerator-with-Hands-Free-Autofill-in-Fingerprint-Resistant-Black-Stainless-Steel-PFE28KBLTS/302560278",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=302560278&store_id=2414",
+            "model_number": "PFE28KBLTS",
+            "brand": "GE",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "Fingerprint Resistant Black Stainless Steel",
+                    "link": "https://www.homedepot.com/p/GE-Profile-27-8-cu-ft-French-Door-Refrigerator-with-Hands-Free-Autofill-in-Fingerprint-Resistant-Black-Stainless-Steel-PFE28KBLTS/302560278",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/62/62b60f40-2576-4797-863e-2c71d41dc6a2_35.jpg"
+                },
+                {
+                    "title": "Fingerprint Resistant Stainless Steel",
+                    "link": "https://www.homedepot.com/p/GE-Profile-22-1-cu-ft-French-Door-Refrigerator-with-Hands-Free-Autofill-in-Stainless-Steel-Counter-Depth-PYE22KYNFS/312648559",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/13/13a86ae4-294e-46a1-9255-d8b94ee7bd1c_35.jpg"
+                },
+                {
+                    "title": "Fingerprint Resistant Slate",
+                    "link": "https://www.homedepot.com/p/GE-Profile-27-8-cu-ft-French-Door-Refrigerator-with-Hands-Free-Autofill-in-Fingerpint-Resistant-Slate-ENERGY-STAR-PFE28KMKES/206974040",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/f1/f11aed01-d864-4392-afc5-4365eb5c8dda_35.jpg"
+                }
+            ],
+            "favorite": 314,
+            "rating": 4.2674,
+            "reviews": 3698,
+            "price": 3239.0,
+            "price_was": 3599.0,
+            "price_saving": 360.0,
+            "percentage_off": 10.0,
+            "price_badge": "Special-Buy",
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 21,
+            "product_id": "317987099",
+            "title": "25.3 cu. ft. Side by Side Refrigerator in Fingerprint Resistant Stainless Steel, Standard Depth",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/4220e873-79ec-400f-959b-8c286b94c2ba/svn/fingerprint-resistant-stainless-steel-ge-side-by-side-refrigerators-gss25gypfs-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/4220e873-79ec-400f-959b-8c286b94c2ba/svn/fingerprint-resistant-stainless-steel-ge-side-by-side-refrigerators-gss25gypfs-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/4220e873-79ec-400f-959b-8c286b94c2ba/svn/fingerprint-resistant-stainless-steel-ge-side-by-side-refrigerators-gss25gypfs-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/4220e873-79ec-400f-959b-8c286b94c2ba/svn/fingerprint-resistant-stainless-steel-ge-side-by-side-refrigerators-gss25gypfs-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/4220e873-79ec-400f-959b-8c286b94c2ba/svn/fingerprint-resistant-stainless-steel-ge-side-by-side-refrigerators-gss25gypfs-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/4220e873-79ec-400f-959b-8c286b94c2ba/svn/fingerprint-resistant-stainless-steel-ge-side-by-side-refrigerators-gss25gypfs-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/4220e873-79ec-400f-959b-8c286b94c2ba/svn/fingerprint-resistant-stainless-steel-ge-side-by-side-refrigerators-gss25gypfs-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/GE-25-3-cu-ft-Side-by-Side-Refrigerator-in-Fingerprint-Resistant-Stainless-Steel-Standard-Depth-GSS25GYPFS/317987099",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=317987099&store_id=2414",
+            "model_number": "GSS25GYPFS",
+            "brand": "GE",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "Fingerprint Resistant Stainless Steel",
+                    "link": "https://www.homedepot.com/p/GE-25-3-cu-ft-Side-by-Side-Refrigerator-in-Fingerprint-Resistant-Stainless-Steel-Standard-Depth-GSS25GYPFS/317987099",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/f6/f6bd5dff-75e6-48e6-adf3-c4e5b3192c5a_35.jpg"
+                },
+                {
+                    "title": "Slate",
+                    "link": "https://www.homedepot.com/p/GE-25-3-cu-ft-Side-by-Side-Refrigerator-in-Slate-Standard-Depth-GSS25GMPES/318437184",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/78/78dc411f-104b-4fc6-9097-282d40df0de3_35.jpg"
+                },
+                {
+                    "title": "Bisque",
+                    "link": "https://www.homedepot.com/p/GE-25-3-cu-ft-Side-by-Side-Refrigerator-in-Bisque-Standard-Depth-GSS25GGPCC/318451977",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/de/deee9dfa-fc10-4cf1-833d-7ff86da4eaf9_35.jpg"
+                },
+                {
+                    "title": "White",
+                    "link": "https://www.homedepot.com/p/GE-25-3-cu-ft-Side-by-Side-Refrigerator-in-White-Standard-Depth-GSS25GGPWW/318451963",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/7a/7aea52f9-4079-4f76-9381-f5465d18333e_35.jpg"
+                },
+                {
+                    "title": "Black",
+                    "link": "https://www.homedepot.com/p/GE-25-3-cu-ft-Side-by-Side-Refrigerator-in-Black-Standard-Depth-GSS25GGPBB/318451953",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/75/75c6f4bd-7852-4d16-95b1-f535b1c08625_35.jpg"
+                }
+            ],
+            "rating": 4.4714,
+            "reviews": 12252,
+            "price": 1098.0,
+            "price_was": 1799.0,
+            "price_saving": 701.0,
+            "percentage_off": 39.0,
+            "price_badge": "Special-Buy",
+            "badges": [
+                "top rated"
+            ],
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 22,
+            "product_id": "321036041",
+            "title": "30 in. 4.4 cu. ft. Drop-In Electric Range with Self-Cleaning Oven in Stainless Steel",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/219a56e7-d138-4af4-9729-24ae15973c36/svn/stainless-steel-ge-single-oven-electric-ranges-jd630stss-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/219a56e7-d138-4af4-9729-24ae15973c36/svn/stainless-steel-ge-single-oven-electric-ranges-jd630stss-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/219a56e7-d138-4af4-9729-24ae15973c36/svn/stainless-steel-ge-single-oven-electric-ranges-jd630stss-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/219a56e7-d138-4af4-9729-24ae15973c36/svn/stainless-steel-ge-single-oven-electric-ranges-jd630stss-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/219a56e7-d138-4af4-9729-24ae15973c36/svn/stainless-steel-ge-single-oven-electric-ranges-jd630stss-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/219a56e7-d138-4af4-9729-24ae15973c36/svn/stainless-steel-ge-single-oven-electric-ranges-jd630stss-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/219a56e7-d138-4af4-9729-24ae15973c36/svn/stainless-steel-ge-single-oven-electric-ranges-jd630stss-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/GE-30-in-4-4-cu-ft-Drop-In-Electric-Range-with-Self-Cleaning-Oven-in-Stainless-Steel-JD630STSS/321036041",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=321036041&store_id=2414",
+            "model_number": "JD630STSS",
+            "brand": "GE",
+            "collection": "https://www.homedepot.com",
+            "variants": [
+                {
+                    "title": "Stainless Steel",
+                    "link": "https://www.homedepot.com/p/GE-30-in-4-4-cu-ft-Drop-In-Electric-Range-with-Self-Cleaning-Oven-in-Stainless-Steel-JD630STSS/321036041",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/18/18dfa2e1-ba24-4e22-a9cd-f050222f0917_35.jpg"
+                },
+                {
+                    "title": "White",
+                    "link": "https://www.homedepot.com/p/GE-30-in-4-4-cu-ft-Drop-In-Electric-Range-with-Self-Cleaning-Oven-in-White-JD630DTWW/321036140",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/1f/1f28303e-8926-4369-9c1f-914077311304_35.jpg"
+                },
+                {
+                    "title": "Black",
+                    "link": "https://www.homedepot.com/p/GE-30-in-4-4-cu-ft-Drop-In-Electric-Range-with-Self-Cleaning-Oven-in-Black-JD630DTBB/321036028",
+                    "thumbnail": "https://images.thdstatic.com/catalog/swatchImages/35/9b/9b6dae61-3532-4416-b953-fecc0f3266e8_35.jpg"
+                }
+            ],
+            "rating": 4.4632,
+            "reviews": 585,
+            "price": 1888.0,
+            "price_was": 2099.0,
+            "price_saving": 211.0,
+            "percentage_off": 10.0,
+            "price_badge": null,
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 23,
+            "product_id": "322684232",
+            "title": "30 in. 5-Element Slide-In Front Control Electric Range with Steam Clean in Stainless Steel",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/9d7a49ee-e86c-4d0f-b762-fa185e83c4e6/svn/stainless-steel-frigidaire-single-oven-electric-ranges-fcfe3062as-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/9d7a49ee-e86c-4d0f-b762-fa185e83c4e6/svn/stainless-steel-frigidaire-single-oven-electric-ranges-fcfe3062as-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/9d7a49ee-e86c-4d0f-b762-fa185e83c4e6/svn/stainless-steel-frigidaire-single-oven-electric-ranges-fcfe3062as-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/9d7a49ee-e86c-4d0f-b762-fa185e83c4e6/svn/stainless-steel-frigidaire-single-oven-electric-ranges-fcfe3062as-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/9d7a49ee-e86c-4d0f-b762-fa185e83c4e6/svn/stainless-steel-frigidaire-single-oven-electric-ranges-fcfe3062as-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/9d7a49ee-e86c-4d0f-b762-fa185e83c4e6/svn/stainless-steel-frigidaire-single-oven-electric-ranges-fcfe3062as-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/9d7a49ee-e86c-4d0f-b762-fa185e83c4e6/svn/stainless-steel-frigidaire-single-oven-electric-ranges-fcfe3062as-64_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/Frigidaire-30-in-5-Element-Slide-In-Front-Control-Electric-Range-with-Steam-Clean-in-Stainless-Steel-FCFE3062AS/322684232",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=322684232&store_id=2414",
+            "model_number": "FCFE3062AS",
+            "brand": "Frigidaire",
+            "collection": "https://www.homedepot.com",
+            "rating": 4.4149,
+            "reviews": 376,
+            "price": 798.0,
+            "price_was": 1199.0,
+            "price_saving": 401.0,
+            "percentage_off": 33.0,
+            "price_badge": null,
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        },
+        {
+            "position": 24,
+            "product_id": "326973523",
+            "title": "30 in. 5 Element Freestanding Electric Range in Fingerprint Resistant Stainless Steel with Steam Clean",
+            "thumbnails": [
+                [
+                    "https://images.thdstatic.com/productImages/2d534d03-95b6-4642-b53f-2d3551fd9bf0/svn/fingerprint-resistant-stainless-steel-maytag-single-oven-electric-ranges-mer4800pz-64_65.jpg",
+                    "https://images.thdstatic.com/productImages/2d534d03-95b6-4642-b53f-2d3551fd9bf0/svn/fingerprint-resistant-stainless-steel-maytag-single-oven-electric-ranges-mer4800pz-64_100.jpg",
+                    "https://images.thdstatic.com/productImages/2d534d03-95b6-4642-b53f-2d3551fd9bf0/svn/fingerprint-resistant-stainless-steel-maytag-single-oven-electric-ranges-mer4800pz-64_145.jpg",
+                    "https://images.thdstatic.com/productImages/2d534d03-95b6-4642-b53f-2d3551fd9bf0/svn/fingerprint-resistant-stainless-steel-maytag-single-oven-electric-ranges-mer4800pz-64_300.jpg",
+                    "https://images.thdstatic.com/productImages/2d534d03-95b6-4642-b53f-2d3551fd9bf0/svn/fingerprint-resistant-stainless-steel-maytag-single-oven-electric-ranges-mer4800pz-64_400.jpg",
+                    "https://images.thdstatic.com/productImages/2d534d03-95b6-4642-b53f-2d3551fd9bf0/svn/fingerprint-resistant-stainless-steel-maytag-single-oven-electric-ranges-mer4800pz-64_600.jpg",
+                    "https://images.thdstatic.com/productImages/2d534d03-95b6-4642-b53f-2d3551fd9bf0/svn/fingerprint-resistant-stainless-steel-maytag-single-oven-electric-ranges-mer4800pz-64_1000.jpg"
+                ],
+                [
+                    "https://images.thdstatic.com/productImages/7a63e761-cb8a-44b4-9520-af3519a8c65f/svn/fingerprint-resistant-stainless-steel-maytag-single-oven-electric-ranges-mer4800pz-e4_65.jpg",
+                    "https://images.thdstatic.com/productImages/7a63e761-cb8a-44b4-9520-af3519a8c65f/svn/fingerprint-resistant-stainless-steel-maytag-single-oven-electric-ranges-mer4800pz-e4_100.jpg",
+                    "https://images.thdstatic.com/productImages/7a63e761-cb8a-44b4-9520-af3519a8c65f/svn/fingerprint-resistant-stainless-steel-maytag-single-oven-electric-ranges-mer4800pz-e4_145.jpg",
+                    "https://images.thdstatic.com/productImages/7a63e761-cb8a-44b4-9520-af3519a8c65f/svn/fingerprint-resistant-stainless-steel-maytag-single-oven-electric-ranges-mer4800pz-e4_300.jpg",
+                    "https://images.thdstatic.com/productImages/7a63e761-cb8a-44b4-9520-af3519a8c65f/svn/fingerprint-resistant-stainless-steel-maytag-single-oven-electric-ranges-mer4800pz-e4_400.jpg",
+                    "https://images.thdstatic.com/productImages/7a63e761-cb8a-44b4-9520-af3519a8c65f/svn/fingerprint-resistant-stainless-steel-maytag-single-oven-electric-ranges-mer4800pz-e4_600.jpg",
+                    "https://images.thdstatic.com/productImages/7a63e761-cb8a-44b4-9520-af3519a8c65f/svn/fingerprint-resistant-stainless-steel-maytag-single-oven-electric-ranges-mer4800pz-e4_1000.jpg"
+                ]
+            ],
+            "link": "https://www.homedepot.com/p/Maytag-30-in-5-Element-Freestanding-Electric-Range-in-Fingerprint-Resistant-Stainless-Steel-with-Steam-Clean-MER4800PZ/326973523",
+            "serpapi_link": "https://serpapi.com/search.json?delivery_zip=04401&engine=home_depot_product&product_id=326973523&store_id=2414",
+            "model_number": "MER4800PZ",
+            "brand": "Maytag",
+            "collection": "https://www.homedepot.com",
+            "rating": 4.3913,
+            "reviews": 92,
+            "price": 838.0,
+            "price_was": 999.0,
+            "price_saving": 161.0,
+            "percentage_off": 16.0,
+            "price_badge": "Special-Buy",
+            "badges": [
+                "top rated"
+            ],
+            "delivery": {
+                "free": false,
+                "free_delivery_threshold": false
+            }
+        }
+    ]
+}
