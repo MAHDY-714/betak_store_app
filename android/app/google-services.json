@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "995966652365",
+    "project_id": "betak-store-ff528",
+    "storage_bucket": "betak-store-ff528.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995966652365:android:6b91a67633fd5cc70ebe84",
+        "android_client_info": {
+          "package_name": "com.example.betak_store_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY-1BJ885-FKuljZp7Qe5Ar_4PmegTRww"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
