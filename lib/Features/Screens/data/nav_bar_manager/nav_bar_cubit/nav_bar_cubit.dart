@@ -3,12 +3,12 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../presentations/manager/nav_bar_manager/nav_bar_cubit/nav_bar_cubit.dart';
-import '../../../presentations/views/cart/cart_body_view.dart';
-import '../../../presentations/views/categories/categories_body_view.dart';
-import '../../../presentations/views/home/home_body_view.dart';
-import '../../../presentations/views/products/products_body_view.dart';
-import '../../../presentations/views/profiles/profile_body_view.dart';
+import '../../../presentation/manager/nav_bar_manager/nav_bar_cubit/nav_bar_cubit.dart';
+import '../../../presentation/views/cart/cart_body_view.dart';
+import '../../../presentation/views/categories/categories_body_view.dart';
+import '../../../presentation/views/home/home_body_view.dart';
+import '../../../presentation/views/products/products_body_view.dart';
+import '../../../presentation/views/profiles/profile_body_view.dart';
 
 class NavBarCubit extends Cubit<NavBarState> {
   NavBarCubit() : super(HomeInitialState());

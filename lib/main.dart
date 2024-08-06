@@ -1,4 +1,4 @@
-import 'package:betak_store_app/Features/Screens/presentations/manager/nav_bar_manager/nav_bar_cubit/nav_bar_cubit.dart';
+import 'package:betak_store_app/Features/Screens/presentation/manager/nav_bar_manager/nav_bar_cubit/nav_bar_cubit.dart';
 import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';

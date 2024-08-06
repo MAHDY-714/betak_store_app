@@ -9,24 +9,26 @@ class UserInfoModel {
 
   UserInfoModel({
     required this.email,
-    required this.password,
+    this.password,
     this.name,
     this.phone,
     this.uId,
     this.gender,
     this.imageProfile,
   });
-  UserInfoModel.formData(Map<String, dynamic> userData) {
-    email = userData['email'];
-    password = userData['password'];
-    name = userData['name'];
-    phone = userData['phone'];
-    uId = userData['uId'];
-    gender = userData['gender'];
-    imageProfile = userData['imageProfile'];
+  factory UserInfoModel.formData(Map<String, dynamic> userData) {
+    return UserInfoModel(
+      email: userData['email'],
+      password: userData['password'],
+      name: userData['name'],
+      phone: userData['phone'],
+      uId: userData['uId'],
+      gender: userData['gender'],
+      imageProfile: userData['imageProfile'],
+    );
   }
 
-  Map<String, dynamic> userMapStorage() => {
+  Map<String, dynamic> userMapFirestore() => {
         'email': email,
         'password': password,
         'name': name,

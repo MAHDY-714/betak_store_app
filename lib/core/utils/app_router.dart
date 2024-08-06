@@ -1,18 +1,18 @@
 import 'package:betak_store_app/Features/Screens/data/my_cart_data/models/item_info_model.dart';
-import 'package:betak_store_app/Features/Screens/presentations/views/cart/cart_body_view.dart';
-import 'package:betak_store_app/Features/Screens/presentations/views/categories/categories_in_main_category_view.dart';
-import 'package:betak_store_app/Features/Screens/presentations/views/products/products_body_view.dart';
-import 'package:betak_store_app/Features/Screens/presentations/views/products/widget/product_details_view.dart';
-import 'package:betak_store_app/Features/Screens/presentations/views/profiles/widget/screens_in_items/screens_in_items_body_view.dart';
-import 'package:betak_store_app/Features/Screens/presentations/views/screens_view.dart';
-import 'package:betak_store_app/Features/registration/presentations/views/sign_in_view.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/cart/cart_body_view.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/categories/categories_in_main_category_view.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/products/products_body_view.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details_view.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/profiles/widget/screens_in_items/screens_in_items_body_view.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/screens_view.dart';
+import 'package:betak_store_app/Features/registration/presentation/views/sign_in_view.dart';
 import 'package:betak_store_app/core/styles/animation_transotions.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../Features/onboarding/presentations/views/onboarding_view.dart';
-import '../../Features/registration/presentations/views/sign_up_view.dart';
-import '../../Features/splash/presentations/views/splash_view.dart';
+import '../../Features/registration/presentation/views/sign_up_view.dart';
+import '../../Features/splash/presentation/views/splash_view.dart';
 
 class AppRouter {
   static const kHomeView = '/HomeView';
