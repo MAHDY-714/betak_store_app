@@ -22,12 +22,13 @@ class RowButtonsWidgetInProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: InkWell(
-        onTap: onTap??() {
-            GoRouter.of(context).push(
-              AppRouter.kScreensInItemsBodyView,
-              extra: '${listText[itemIndex]} Screen',
-            );
-          },
+        onTap: onTap ??
+            () {
+              GoRouter.of(context).push(
+                AppRouter.kScreensInItemsBodyView,
+                extra: '${listText[itemIndex]} Screen',
+              );
+            },
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
           child: SizedBox(
@@ -79,7 +80,7 @@ const listColor = [
   AppColor.orangeColor,
   AppColor.errorBorderAndRemoveAndIcons,
   AppColor.yellowColor,
-  AppColor.green2Color,
+  AppColor.green3Color,
   AppColor.amberColor,
   AppColor.sky3Color,
   Color(0xFFFF0000),

@@ -48,7 +48,7 @@ abstract class TextStyles {
 //0xFFD5D6F3
 
   static const registerationTextButtonTextStyle = TextStyle(
-    color: Color(0xFF013571),
+    color: AppColor.blueColor,
     fontSize: 20,
     letterSpacing: 1,
     fontFamily: FontFamily.inter900,

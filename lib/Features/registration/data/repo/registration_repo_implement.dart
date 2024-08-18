@@ -1,3 +1,4 @@
+import 'package:betak_store_app/Features/registration/data/model/user_info_model.dart';
 import 'package:betak_store_app/Features/registration/data/repo/registration_repo.dart';
 import 'package:betak_store_app/core/services/errors/failures.dart';
 import 'package:betak_store_app/core/services/errors/firebase_auth_failures.dart';
@@ -14,45 +15,55 @@ class RegistrationRepoImaplement implements RegistrationRepo {
 
   RegistrationRepoImaplement(this.firebaseAuthService);
   @override
-  Future<Either<Failures, UserCredential>> login(
+  Future<Either<Failures, UserInfoModel>> login(
       {required String email, required String password}) async {
     try {
+      UserInfoModel userInfoModel;
       var data = await firebaseAuthService.firebaseAuthLogin(
           email: email, password: password);
-      return right(data);
+      userInfoModel = UserInfoModel.formData({
+        'email': data.user!.email,
+        'password': password,
+      });
+      return right(userInfoModel);
     } catch (e) {
       if (e is FirebaseAuthException) {
         return left(
-            FirebaseAuthFailuresWhenRegister.formFirebaseAuthExceptions(e));
+            FirebaseAuthFailuresWhenLogin.formFirebaseAuthExceptions(e));
       } else {
-        return left(FirebaseAuthFailuresWhenRegister(e.toString()));
+        return left(FirebaseAuthFailuresWhenLogin(e.toString()));
       }
     }
   }
 
   @override
-  Future<Either<Failures, UserCredential>> register(
+  Future<Either<Failures, UserInfoModel>> register(
       {required String email,
       required String password,
       required String name,
       required String phone,
       required String gender}) async {
     try {
-      var data = await firebaseAuthService
-          .firebaseAuthRegister(
+      UserInfoModel userInfoModel;
+      var data = await firebaseAuthService.firebaseAuthRegister(
         email: email,
         password: password,
-      )
-          .then((value) {
-        firebaseAuthService.createUser(
-          email: email,
-          uId: value.user!.uid,
-          name: name,
-          phone: phone,
-          gender: gender,
-        );
+      );
+      firebaseAuthService.createUser(
+        email: email,
+        uId: data.user!.uid,
+        name: name,
+        phone: phone,
+        gender: gender,
+      );
+      userInfoModel = UserInfoModel.formData({
+        'email': data.user!.email,
+        'uId': data.user!.uid,
+        'name': name,
+        'phone': phone,
+        'gender': gender,
       });
-      return right(data);
+      return right(userInfoModel);
     } catch (e) {
       if (e is FirebaseAuthException) {
         return left(

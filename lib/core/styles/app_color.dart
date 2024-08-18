@@ -56,11 +56,14 @@ class AppColor {
   static const backgroundForAllItemsRedColor = Color(0xFFB90000);
   static const backgroundForAllItemsInProductDarkColor = Color(0xFF0C0F19);
   static const blueDarkColor = Color(0xFF000C2C);
+  static const blueColor = Color(0xFF013571);
   static const orangeColor = Color(0xFFFF6600);
   static const yellowColor = Color(0xFFFFD700);
   static const amberColor = Color(0xFFF1A84E);
   static const greenColor = Color(0xFF08B50E);
-  static const green2Color = Color(0xFF006604);
+  static const green2Color = Color(0x9F08B50E);
+  static const green3Color = Color(0xFF006604);
+  static const greyColor = Color(0xFF1D202B);
   static const skyColor = Color(0xFFB2C0E5);
   static const sky2Color = Color(0xFFA2C7FB);
   static const sky3Color = Color(0xFF4F83CD);

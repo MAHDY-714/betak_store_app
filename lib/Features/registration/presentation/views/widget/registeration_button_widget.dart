@@ -1,26 +1,22 @@
 import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/styles/text_styles.dart';
-import 'package:betak_store_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:go_router/go_router.dart';
 
 class RegistrationButton extends StatelessWidget {
   const RegistrationButton({
     super.key,
     required this.buttonName,
-    required this.onPressed,
+    required this.onTap,
   });
   final String buttonName;
-  final void Function() onPressed;
+  final Future<void> Function() onTap;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 10.0),
-      child: TextButton(
-        onPressed: () {
-          GoRouter.of(context).push(AppRouter.kHomeView);
-        },
+      padding: const EdgeInsets.only(bottom: 16.0),
+      child: GestureDetector(
+        onTap: onTap,
         child: Container(
           height: 60,
           width: 180,
@@ -38,7 +34,7 @@ class RegistrationButton extends StatelessWidget {
               ),
               const Icon(
                 FontAwesomeIcons.angleRight,
-                color: Color(0xFF013571),
+                color: AppColor.blueColor,
                 size: 30,
               ),
             ],

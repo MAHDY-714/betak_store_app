@@ -8,6 +8,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class FirebaseAuthService {
   FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
+  FirebaseAuthService(this.firebaseAuth);
   Future<UserCredential> firebaseAuthRegister({
     required String email,
     required String password,

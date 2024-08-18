@@ -1,6 +1,5 @@
 class UserInfoModel {
   String? email;
-  String? password;
   String? name;
   String? phone;
   String? uId;
@@ -9,7 +8,6 @@ class UserInfoModel {
 
   UserInfoModel({
     required this.email,
-    this.password,
     this.name,
     this.phone,
     this.uId,
@@ -19,7 +17,6 @@ class UserInfoModel {
   factory UserInfoModel.formData(Map<String, dynamic> userData) {
     return UserInfoModel(
       email: userData['email'],
-      password: userData['password'],
       name: userData['name'],
       phone: userData['phone'],
       uId: userData['uId'],
@@ -30,7 +27,6 @@ class UserInfoModel {
 
   Map<String, dynamic> userMapFirestore() => {
         'email': email,
-        'password': password,
         'name': name,
         'phone': phone,
         'uId': uId,
