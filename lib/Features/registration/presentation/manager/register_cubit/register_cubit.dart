@@ -29,7 +29,9 @@ class RegisterCubit extends Cubit<RegisterState> {
       (faaiure) => emit(RegisterError(faaiure.errorMessage)),
       (register) {
         emit(RegisterSuccess(userInfoModel: register));
+        log('the uId when register is ${register.uId}');
         log('the register is success');
+
       },
     );
   }

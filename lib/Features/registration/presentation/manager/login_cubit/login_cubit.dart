@@ -27,6 +27,7 @@ class LoginCubit extends Cubit<LoginState> {
         emit(LoginSuccess(userInfoModel: login));
         log(login.email.toString());
         log(password);
+        log('the uId when register is ${login.uId}');
         log('the login is success');
       },
     );

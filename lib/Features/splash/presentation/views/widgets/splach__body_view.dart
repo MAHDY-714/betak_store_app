@@ -1,3 +1,4 @@
+import 'package:betak_store_app/core/utils/cache_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
@@ -21,7 +22,15 @@ class _SplashBodyViewState extends State<SplashBodyView> {
     Future.delayed(
       const Duration(seconds: 3),
       () {
-        GoRouter.of(context).pushReplacement(AppRouter.kOnboardingView);
+        if (CacheHelper.getData(key: 'onboarding') != null) {
+          if (CacheHelper.getData(key: 'uId') != null) {
+            GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
+          } else {
+            GoRouter.of(context).pushReplacement(AppRouter.kSignUpView);
+          }
+        } else {
+          GoRouter.of(context).pushReplacement(AppRouter.kOnboardingView);
+        }
       },
     );
   }

@@ -1,8 +1,6 @@
 import 'dart:developer';
 
-import 'package:betak_store_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 import 'onboarding_animation_controllers.dart';
 import 'onboarding_funcations.dart';
@@ -44,9 +42,10 @@ abstract class OnboardingAnimationsMethods {
     );
     OnboardingFunctions.nameButtonMethod(currentPage);
     if (currentPage == 2) {
-      GoRouter.of(context).pushReplacement(
-        AppRouter.kSignUpView,
-      );
+      if (currentPage == 2) {
+        OnboardingFunctions.skipOnboarding(context);
+
+      }
     }
   }
 }
