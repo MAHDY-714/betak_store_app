@@ -42,7 +42,7 @@ class AppRouter {
     GoRoute(
       path: kSignUpView,
       builder: (context, state) {
-        return SignUpView();
+        return const SignUpView();
       },
     ),
     GoRoute(
@@ -176,7 +176,7 @@ class AppRouter {
       path: kLogOutFromProfile,
       pageBuilder: (context, state) {
         return CustomTransitionPage(
-          child:  SignUpView(),
+          child:  const SignInView(),
           transitionDuration: const Duration(seconds: 2),
           barrierDismissible: true,
           reverseTransitionDuration: const Duration(seconds: 1),

@@ -2,8 +2,12 @@ import 'dart:developer';
 
 import 'package:betak_store_app/Features/registration/data/model/user_info_model.dart';
 import 'package:betak_store_app/Features/registration/data/repo/registration_repo.dart';
+import 'package:betak_store_app/core/utils/app_router.dart';
+import 'package:betak_store_app/core/utils/cache_helper.dart';
 import 'package:equatable/equatable.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 part 'register_state.dart';
 
@@ -31,9 +35,16 @@ class RegisterCubit extends Cubit<RegisterState> {
         emit(RegisterSuccess(userInfoModel: register));
         log('the uId when register is ${register.uId}');
         log('the register is success');
-
       },
     );
+  }
+
+  Future<void> signOut(context) async {
+    await FirebaseAuth.instance.signOut().then((value) {
+      CacheHelper.removeData(key: 'uId').then((value) {
+        GoRouter.of(context).pushReplacement(AppRouter.kLogOutFromProfile);
+      });
+    });
   }
 
   bool visIconSate = true;
@@ -46,6 +57,21 @@ class RegisterCubit extends Cubit<RegisterState> {
     }
 
     log('visIconSate = $visIconSate');
+  }
+
+  bool genderSate = true;
+  bool selectGenderType(int value) {
+    genderSate = !genderSate;
+    if (genderSate == true) {
+      value = 0;
+      emit(GenderTypeMaleSate());
+    } else if (genderSate == false) {
+      value = 1;
+      emit(GenderTypeFemaleSate());
+    }
+    log('genderSate = $genderSate');
+
+    return genderSate;
   }
   // FontAwesomeIcons.faceGrinBeam => vis on
 // FontAwesomeIcons.faceGrinWide => vis off

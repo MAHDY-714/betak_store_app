@@ -26,3 +26,7 @@ class RegisterError extends RegisterState {
 class VisIconChangeVisOnSate extends RegisterState {}
 
 class VisIconChangeVisOffSate extends RegisterState {}
+
+class GenderTypeMaleSate extends RegisterState {}
+
+class GenderTypeFemaleSate extends RegisterState {}

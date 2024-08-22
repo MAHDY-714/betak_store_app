@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:betak_store_app/Features/registration/presentation/manager/register_cubit/register_cubit.dart';
+import 'package:betak_store_app/Features/registration/presentation/views/widget/gender_type_row.dart';
 import 'package:betak_store_app/Features/registration/presentation/views/widget/registeration_button_widget.dart';
 import 'package:betak_store_app/Features/registration/presentation/views/widget/text_form_sign_field.dart';
 import 'package:betak_store_app/core/styles/app_color.dart';
@@ -112,13 +113,6 @@ class InputSignUpFieldsAndRegisterButton extends StatelessWidget {
                   log(phone);
                 },
               ),
-              /*
-                 visIcon = visIconSate
-        ? FontAwesomeIcons.faceGrinWide
-        : FontAwesomeIcons.faceGrinBeam;
-    visIconColor = visIconSate ? Colors.white24 : AppColor.sky4Color;
-              */
-
               SignTextFormField(
                 textEditingController: passwordTextEditingController,
                 hintText: 'Password',
@@ -146,23 +140,39 @@ class InputSignUpFieldsAndRegisterButton extends StatelessWidget {
                   log(password);
                 },
               ),
-              ConditionalBuilder(
-                condition: state is RegisterLoading,
-                builder: (context) => const CircleLoadingIndicatorWidget(),
-                fallback: (context) => RegistrationButton(
-                  buttonName: 'Sign Up',
-                  onTap: () async {
-                    if (formKey.currentState!.validate()) {
-                      cub.registerUser(
-                        email: emailTextEditingController.text,
-                        password: passwordTextEditingController.text,
-                        name: nameTextEditingController.text,
-                        phone: phoneTextEditingController.text,
-                        gender: 'male',
-                      );
-                    }
-                  },
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  GenderTypeRow(
+                    genderType: cub.genderSate,
+                    onChanged: (value) {
+                      // value = cub.selectGenderType(value);
+                    },
+                    onChanged2: (value) {
+                      value = cub.selectGenderType(value) ? 0 : 1;
+                      log(' ${cub.genderSate ? 'male' : 'female'} ');
+                    },
+                  ),
+                  ConditionalBuilder(
+                    condition: state is RegisterLoading,
+                    builder: (context) => const SizedBox(
+                        width: 160, child: CircleLoadingIndicatorWidget()),
+                    fallback: (context) => RegistrationButton(
+                      buttonName: 'Sign Up',
+                      onTap: () async {
+                        if (formKey.currentState!.validate()) {
+                          cub.registerUser(
+                            email: emailTextEditingController.text,
+                            password: passwordTextEditingController.text,
+                            name: nameTextEditingController.text,
+                            phone: phoneTextEditingController.text,
+                            gender: cub.genderSate ? 'Male' : 'Female',
+                          );
+                        }
+                      },
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

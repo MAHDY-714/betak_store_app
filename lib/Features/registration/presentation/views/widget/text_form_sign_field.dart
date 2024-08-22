@@ -4,7 +4,7 @@ import 'package:betak_store_app/core/widget/borders_styles.dart';
 import 'package:flutter/material.dart';
 
 class SignTextFormField extends StatelessWidget {
-  SignTextFormField({
+  const SignTextFormField({
     super.key,
     this.isFinish = false,
     this.obscureText = false,

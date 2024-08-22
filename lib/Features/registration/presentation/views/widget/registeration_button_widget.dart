@@ -7,10 +7,11 @@ class RegistrationButton extends StatelessWidget {
   const RegistrationButton({
     super.key,
     required this.buttonName,
-    required this.onTap,
+    required this.onTap, this.width = 160,
   });
   final String buttonName;
   final Future<void> Function() onTap;
+  final double width;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -19,7 +20,7 @@ class RegistrationButton extends StatelessWidget {
         onTap: onTap,
         child: Container(
           height: 60,
-          width: 180,
+          width: width,
           alignment: Alignment.center,
           decoration: BoxDecoration(
             color: AppColor.skyColor,

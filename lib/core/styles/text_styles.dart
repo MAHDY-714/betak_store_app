@@ -49,7 +49,7 @@ abstract class TextStyles {
 
   static const registerationTextButtonTextStyle = TextStyle(
     color: AppColor.blueColor,
-    fontSize: 20,
+    fontSize: 15,
     letterSpacing: 1,
     fontFamily: FontFamily.inter900,
     height: -.3,
@@ -109,43 +109,6 @@ abstract class TextStyles {
     fontFamily: FontFamily.inter700,
   );
   //used in {textfield in sign & in product details [text in product details] & in text chose color}
-  static const textStyle20 = TextStyle(
-    color: Colors.white,
-    fontSize: 22,
-    letterSpacing: 1,
-    fontFamily: FontFamily.bitter500,
-  );
-  static const textStyle16 = TextStyle(
-    color: Colors.white,
-    fontSize: 16,
-    letterSpacing: 1,
-    fontFamily: FontFamily.bitter300,
-  );
-  static const textStyle15 = TextStyle(
-    color: Colors.white,
-    fontSize: 15,
-    letterSpacing: 1,
-    fontFamily: FontFamily.bitter300,
-  );
-  static const textStyle14 = TextStyle(
-    color: Colors.white,
-    fontSize: 14,
-    fontFamily: FontFamily.bitter300,
-    letterSpacing: 2,
-  );
-  static const textStyle12 = TextStyle(
-    color: Colors.white,
-    fontSize: 12,
-    fontFamily: FontFamily.bitter300,
-    letterSpacing: 2,
-  );
-  static const textStyle11 = TextStyle(
-    color: Colors.white,
-    fontSize: 11,
-    fontFamily: FontFamily.bitter300,
-    letterSpacing: 2,
-  );
-
   static const textStyle10 = TextStyle(
     color: Colors.white,
     fontSize: 10,
@@ -158,18 +121,59 @@ abstract class TextStyles {
     fontFamily: FontFamily.inter700,
     letterSpacing: 1,
   );
+  static const textStyle10R = TextStyle(
+    color: AppColor.errorBorderAndRemoveAndIcons,
+    fontSize: 10,
+    fontFamily: FontFamily.bitter500,
+    letterSpacing: 1,
+  );
+  static const textStyle11 = TextStyle(
+    color: Colors.white,
+    fontSize: 11,
+    fontFamily: FontFamily.bitter300,
+    letterSpacing: 2,
+  );
+  static const textStyle12 = TextStyle(
+    color: Colors.white,
+    fontSize: 12,
+    fontFamily: FontFamily.bitter300,
+    letterSpacing: 2,
+  );
+  static const textStyle13 = TextStyle(
+    color: AppColor.greenColor,
+    fontSize: 13,
+    fontFamily: FontFamily.orbitron900,
+  );
+  static const textStyle14 = TextStyle(
+    color: Colors.white,
+    fontSize: 14,
+    fontFamily: FontFamily.bitter300,
+    letterSpacing: 2,
+  );
+  static const textStyle15 = TextStyle(
+    color: Colors.white,
+    fontSize: 15,
+    letterSpacing: 1,
+    fontFamily: FontFamily.bitter300,
+  );
+  static const textStyle16 = TextStyle(
+    color: Colors.white,
+    fontSize: 16,
+    letterSpacing: 1,
+    fontFamily: FontFamily.bitter300,
+  );
+  static const textStyle22 = TextStyle(
+    color: Colors.white,
+    fontSize: 22,
+    letterSpacing: 1,
+    fontFamily: FontFamily.bitter500,
+  );
 
   static const textPriceInItemMyCartStyle10 = TextStyle(
     color: Colors.white70,
     fontSize: 10,
     fontFamily: FontFamily.orbitron900,
     letterSpacing: 2,
-  );
-  static const textStyle10R = TextStyle(
-    color: AppColor.errorBorderAndRemoveAndIcons,
-    fontSize: 10,
-    fontFamily: FontFamily.bitter500,
-    letterSpacing: 1,
   );
 
   static const priceInProductDetailsStyle = TextStyle(
@@ -182,11 +186,6 @@ abstract class TextStyles {
     fontSize: 9,
     fontFamily: FontFamily.orbitron900,
     decoration: TextDecoration.lineThrough,
-  );
-  static const textStyle13 = TextStyle(
-    color: AppColor.greenColor,
-    fontSize: 13,
-    fontFamily: FontFamily.orbitron900,
   );
   static const textRecommendationsInProductDetailsStyle = TextStyle(
     color: Colors.white70,

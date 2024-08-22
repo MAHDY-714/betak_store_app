@@ -27,6 +27,7 @@ class RegistrationRepoImaplement implements RegistrationRepo {
       userInfoModel = UserInfoModel.formData({
         'email': data.user!.email,
         'password': password,
+        'uId' : data.user!.uid,
       });
       CacheHelper.saveData(key: 'uId', value: data.user!.uid);
       log(data.user!.uid);

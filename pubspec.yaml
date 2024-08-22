@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   animated_text_kit: ^4.2.2
+  animated_toggle_switch: ^0.8.3
   avatar_glow: ^3.0.1
   cloud_firestore: ^5.2.0
   conditional_builder_null_safety: ^0.0.6

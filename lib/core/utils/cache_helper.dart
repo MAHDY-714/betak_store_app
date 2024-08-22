@@ -14,6 +14,11 @@ class CacheHelper {
     return sharedPreferences!.get(key);
   }
 
+  static Future<bool> removeData({required String key}) {
+    log('remove uId is success');
+    return sharedPreferences!.remove(key);
+  }
+
   static Future<bool> saveData(
       {required String key, required dynamic value}) async {
     if (value is int) {

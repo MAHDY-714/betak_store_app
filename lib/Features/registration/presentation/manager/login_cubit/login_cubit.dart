@@ -27,7 +27,12 @@ class LoginCubit extends Cubit<LoginState> {
         emit(LoginSuccess(userInfoModel: login));
         log(login.email.toString());
         log(password);
-        log('the uId when register is ${login.uId}');
+        log('the uId when login is ${login.uId}');
+        log('the email when login is ${login.email}');
+        log('the gender when login is ${login.gender}');
+        log('the name when login is ${login.name}');
+        log('the phone when login is ${login.phone}');
+        log('the imageProfile when login is ${login.imageProfile}');
         log('the login is success');
       },
     );
