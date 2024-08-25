@@ -70,7 +70,8 @@ class MyCartItemBuilder extends StatelessWidget {
                     CountOfUnitsAndRemoveItemWidget(
                       onTapAdd: () => log('add 1 unit'),
                       onTapMinus: () => log('remove 1 unit'),
-                      onTapRemoveItem: () => log('remove The Item'), quantity: quantity,
+                      onTapRemoveItem: () => log('remove The Item'),
+                      quantity: quantity,
                     ),
                   ],
                 ),

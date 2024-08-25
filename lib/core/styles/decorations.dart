@@ -1,4 +1,3 @@
-
 import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:flutter/material.dart';
 

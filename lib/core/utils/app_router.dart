@@ -1,4 +1,4 @@
-import 'package:betak_store_app/Features/Screens/data/my_cart_data/models/item_info_model.dart';
+import 'package:betak_store_app/Features/Screens/data/models/my_cart_data_model/item_info_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/cart_body_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/categories/categories_in_main_category_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/products_body_view.dart';
@@ -176,7 +176,7 @@ class AppRouter {
       path: kLogOutFromProfile,
       pageBuilder: (context, state) {
         return CustomTransitionPage(
-          child:  const SignInView(),
+          child: const SignInView(),
           transitionDuration: const Duration(seconds: 2),
           barrierDismissible: true,
           reverseTransitionDuration: const Duration(seconds: 1),

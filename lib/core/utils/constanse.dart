@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 double kHeight(context) {
@@ -116,4 +115,3 @@ const kListInMainCategoriesName = [
   kListElectricsCategoriesName,
   kListToolsCategoriesName,
 ];
-

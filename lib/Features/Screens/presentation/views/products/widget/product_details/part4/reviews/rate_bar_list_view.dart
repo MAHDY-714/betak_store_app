@@ -1,4 +1,3 @@
-
 import 'rating_bar_item.dart';
 import '../../../../../../../../../core/styles/font_family.dart';
 import '../../../../../../../../../core/styles/text_styles.dart';

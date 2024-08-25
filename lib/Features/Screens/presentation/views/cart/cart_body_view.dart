@@ -6,7 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../../../core/styles/app_color.dart';
 import '../../../../../core/styles/font_family.dart';
 import '../../../../../core/widget/payment_button.dart';
-import '../../../data/my_cart_data/models/item_info_model.dart';
+import '../../../data/models/my_cart_data_model/item_info_model.dart';
 import 'widget/my_cart_list_view.dart';
 
 class CartBodyView extends StatelessWidget {

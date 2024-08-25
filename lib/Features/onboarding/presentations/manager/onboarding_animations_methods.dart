@@ -44,7 +44,6 @@ abstract class OnboardingAnimationsMethods {
     if (currentPage == 2) {
       if (currentPage == 2) {
         OnboardingFunctions.skipOnboarding(context);
-
       }
     }
   }

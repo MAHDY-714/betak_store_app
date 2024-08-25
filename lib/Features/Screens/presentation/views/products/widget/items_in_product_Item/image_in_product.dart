@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class ImageProductInHome extends StatelessWidget {
   const ImageProductInHome({
-    super.key, required this.imageProduct,
+    super.key,
+    required this.imageProduct,
   });
 
   final String imageProduct;
@@ -23,7 +24,6 @@ class ImageProductInHome extends StatelessWidget {
           fit: BoxFit.cover,
           image: AssetImage(
             imageProduct,
-
           ),
         ),
       ),

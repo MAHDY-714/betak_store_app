@@ -11,23 +11,23 @@ class DescriptionAndDelivery extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-          TextInProductDetails(
-                text: 'Description',
-                style: TextStyles.priceStyleInInLayer2,
-              ),
-              DescriptionText(
-                text: kDescription,
-              ),
-              SizedBox(height: 20.0),
-              TextInProductDetails(
-                text: 'Delivering',
-                style: TextStyles.priceStyleInInLayer2,
-              ),
-              TextInProductDetails(
-                text: kDelivery,
-                style: TextStyles.textRecommendationsInProductDetailsStyle,
-              ),
-              SizedBox(height: 20.0),
+        TextInProductDetails(
+          text: 'Description',
+          style: TextStyles.priceStyleInInLayer2,
+        ),
+        DescriptionText(
+          text: kDescription,
+        ),
+        SizedBox(height: 20.0),
+        TextInProductDetails(
+          text: 'Delivering',
+          style: TextStyles.priceStyleInInLayer2,
+        ),
+        TextInProductDetails(
+          text: kDelivery,
+          style: TextStyles.textRecommendationsInProductDetailsStyle,
+        ),
+        SizedBox(height: 20.0),
       ],
     );
   }

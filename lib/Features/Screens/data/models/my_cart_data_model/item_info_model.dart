@@ -19,4 +19,4 @@ class ProductInfoInMyCartModel {
   }
 }
 
- //total = price * quantity
+//total = price * quantity

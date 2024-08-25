@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/images.dart';
-import '../../../../data/my_cart_data/models/item_info_model.dart';
+import '../../../../data/models/my_cart_data_model/item_info_model.dart';
 import 'my_cart_item.dart';
 
 class MyCartListView extends StatelessWidget {

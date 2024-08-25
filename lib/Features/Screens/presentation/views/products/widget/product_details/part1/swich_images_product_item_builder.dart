@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 class SwichImagesProductItemBuilder extends StatelessWidget {
   const SwichImagesProductItemBuilder({
     super.key,
-    this.onTapSwichImagesProduct, required this.images,
+    this.onTapSwichImagesProduct,
+    required this.images,
   });
 
   final String images;

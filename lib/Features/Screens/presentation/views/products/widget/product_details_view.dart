@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:betak_store_app/Features/Screens/data/my_cart_data/models/item_info_model.dart';
+import 'package:betak_store_app/Features/Screens/data/models/my_cart_data_model/item_info_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part7/payment_row.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/product_details_body_view.dart';
 import 'package:betak_store_app/core/utils/app_router.dart';

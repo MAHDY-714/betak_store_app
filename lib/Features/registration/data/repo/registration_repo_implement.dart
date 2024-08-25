@@ -4,7 +4,7 @@ import 'package:betak_store_app/Features/registration/data/model/user_info_model
 import 'package:betak_store_app/Features/registration/data/repo/registration_repo.dart';
 import 'package:betak_store_app/core/services/errors/failures.dart';
 import 'package:betak_store_app/core/services/errors/firebase_auth_failures.dart';
-import 'package:betak_store_app/core/services/firebase_services/firebase_auth_service.dart';
+import 'package:betak_store_app/core/services/firebase_auth_service.dart';
 import 'package:betak_store_app/core/utils/cache_helper.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
@@ -27,7 +27,7 @@ class RegistrationRepoImaplement implements RegistrationRepo {
       userInfoModel = UserInfoModel.formData({
         'email': data.user!.email,
         'password': password,
-        'uId' : data.user!.uid,
+        'uId': data.user!.uid,
       });
       CacheHelper.saveData(key: 'uId', value: data.user!.uid);
       log(data.user!.uid);

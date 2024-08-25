@@ -7,7 +7,8 @@ class RegistrationButton extends StatelessWidget {
   const RegistrationButton({
     super.key,
     required this.buttonName,
-    required this.onTap, this.width = 160,
+    required this.onTap,
+    this.width = 160,
   });
   final String buttonName;
   final Future<void> Function() onTap;

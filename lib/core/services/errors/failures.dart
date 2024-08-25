@@ -3,4 +3,3 @@ abstract class Failures {
 
   Failures(this.errorMessage);
 }
-

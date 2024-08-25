@@ -1,4 +1,4 @@
-import 'package:betak_store_app/Features/Screens/data/my_cart_data/models/item_info_model.dart';
+import 'package:betak_store_app/Features/Screens/data/models/my_cart_data_model/item_info_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_item_builder.dart';
 import 'package:betak_store_app/core/utils/app_router.dart';
 import 'package:betak_store_app/core/utils/images.dart';

@@ -26,7 +26,6 @@ class ListViewCategoriesInMainCategory extends StatelessWidget {
               AppRouter.kProductsBodyView,
               extra: kListInMainCategoriesName[indexCategories][indexItem]
                   .toString(),
-                  
             );
           },
         );

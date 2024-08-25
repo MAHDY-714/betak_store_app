@@ -47,6 +47,7 @@ void customSnackBar(context, String text, ToastState state) {
     ),
   );
 }
+
 enum ToastState { success, warning, error }
 
 Color colorToastState(ToastState state) {
@@ -80,7 +81,7 @@ IconData iconsInToastState(ToastState state) {
   }
   return icon;
 }
- 
+
 /* 
 success green( Color(0xFF006604) ) 
   - & icon check or progress-check tabler icons 

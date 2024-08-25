@@ -10,7 +10,6 @@ import 'package:go_router/go_router.dart';
 class ListViewMainCategory extends StatelessWidget {
   const ListViewMainCategory({super.key});
   @override
-  
   Widget build(BuildContext context) {
     return ListView.builder(
       itemBuilder: (BuildContext context, int index) {
