@@ -5,7 +5,7 @@ import 'pickup.dart';
 import 'thumbnail.dart';
 import 'variant.dart';
 
-class Product extends Equatable {
+class ProductsInfoModel extends Equatable {
   final int? position;
   final String? productId;
   final String? title;
@@ -15,21 +15,21 @@ class Product extends Equatable {
   final String? modelNumber;
   final String? brand;
   final String? collection;
+  final List<Variant>? variants;
+  final int? favorite;
   final double? rating;
+  final int? reviews;
   final double? price;
+  final List<String>? badges;
   final Delivery? delivery;
   final Pickup? pickup;
-  final int? favorite;
-  final int? reviews;
-  final String? unit;
-  final List<String>? badges;
-  final List<Variant>? variants;
   final double? priceWas;
-  final int? priceSaving;
+  final double? priceSaving;
   final int? percentageOff;
   final String? priceBadge;
+  final String? unit;
 
-  const Product({
+  const ProductsInfoModel({
     this.position,
     this.productId,
     this.title,
@@ -39,22 +39,23 @@ class Product extends Equatable {
     this.modelNumber,
     this.brand,
     this.collection,
+    this.variants,
+    this.favorite,
     this.rating,
+    this.reviews,
     this.price,
+    this.badges,
     this.delivery,
     this.pickup,
-    this.favorite,
-    this.reviews,
-    this.unit,
-    this.badges,
-    this.variants,
     this.priceWas,
     this.priceSaving,
     this.percentageOff,
     this.priceBadge,
+    this.unit,
   });
 
-  factory Product.fromJson(Map<String, dynamic> json) => Product(
+  factory ProductsInfoModel.fromJson(Map<String, dynamic> json) =>
+      ProductsInfoModel(
         position: json['position'] as int?,
         productId: json['product_id'] as String?,
         title: json['title'] as String?,
@@ -66,25 +67,25 @@ class Product extends Equatable {
         modelNumber: json['model_number'] as String?,
         brand: json['brand'] as String?,
         collection: json['collection'] as String?,
+        variants: (json['variants'] as List<dynamic>?)
+            ?.map((e) => Variant.fromJson(e as Map<String, dynamic>))
+            .toList(),
+        favorite: json['favorite'] as int?,
         rating: (json['rating'] as num?)?.toDouble(),
+        reviews: json['reviews'] as int?,
         price: (json['price'] as num?)?.toDouble(),
+        badges: json['badges'] as List<String>?,
         delivery: json['delivery'] == null
             ? null
             : Delivery.fromJson(json['delivery'] as Map<String, dynamic>),
         pickup: json['pickup'] == null
             ? null
             : Pickup.fromJson(json['pickup'] as Map<String, dynamic>),
-        favorite: json['favorite'] as int?,
-        reviews: json['reviews'] as int?,
-        unit: json['unit'] as String?,
-        badges: json['badges'] as List<String>?,
-        variants: (json['variants'] as List<dynamic>?)
-            ?.map((e) => Variant.fromJson(e as Map<String, dynamic>))
-            .toList(),
         priceWas: (json['price_was'] as num?)?.toDouble(),
-        priceSaving: json['price_saving'] as int?,
+        priceSaving: (json['price_saving'] as num?)?.toDouble(),
         percentageOff: json['percentage_off'] as int?,
         priceBadge: json['price_badge'] as String?,
+        unit: json['unit'] as String?,
       );
 
   Map<String, dynamic> toJson() => {
@@ -97,19 +98,19 @@ class Product extends Equatable {
         'model_number': modelNumber,
         'brand': brand,
         'collection': collection,
+        'variants': variants?.map((e) => e.toJson()).toList(),
+        'favorite': favorite,
         'rating': rating,
+        'reviews': reviews,
         'price': price,
+        'badges': badges,
         'delivery': delivery?.toJson(),
         'pickup': pickup?.toJson(),
-        'favorite': favorite,
-        'reviews': reviews,
-        'unit': unit,
-        'badges': badges,
-        'variants': variants?.map((e) => e.toJson()).toList(),
         'price_was': priceWas,
         'price_saving': priceSaving,
         'percentage_off': percentageOff,
         'price_badge': priceBadge,
+        'unit': unit,
       };
 
   @override
@@ -124,19 +125,19 @@ class Product extends Equatable {
       modelNumber,
       brand,
       collection,
+      variants,
+      favorite,
       rating,
+      reviews,
       price,
+      badges,
       delivery,
       pickup,
-      favorite,
-      reviews,
-      unit,
-      badges,
-      variants,
       priceWas,
       priceSaving,
       percentageOff,
       priceBadge,
+      unit,
     ];
   }
 }

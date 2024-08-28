@@ -6,8 +6,6 @@ class Layer2View extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Layer2BodyView(
-      text: 'home',
-    );
+    return const Layer2BodyView();
   }
 }

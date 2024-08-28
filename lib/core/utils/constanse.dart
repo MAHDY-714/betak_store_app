@@ -54,6 +54,19 @@ int rate(index) {
   return ratingCount!;
 }
 
+const kListTitlesCategoriesInHome = [
+  'chairs',
+  'sofas',
+  'stove',
+  'air Fryer',
+  'coffee Machine',
+  'smart TV',
+  'lamps',
+  'lamps hades',
+  'hammer',
+  'screwdriver',
+];
+
 const kListMainCategoriesName = [
   'Furnitures',
   'Kitchens',

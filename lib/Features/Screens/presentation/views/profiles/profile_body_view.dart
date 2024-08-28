@@ -2,7 +2,6 @@ import 'dart:developer';
 
 import 'package:betak_store_app/Features/Screens/presentation/views/profiles/widget/row_buttons_widget_in_profile.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/profiles/widget/row_for_image_and_name_and_phone_widget.dart';
-import 'package:betak_store_app/Features/registration/presentation/manager/register_cubit/register_cubit.dart';
 import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/utils/app_router.dart';
 import 'package:betak_store_app/core/utils/cache_helper.dart';
@@ -11,7 +10,6 @@ import 'package:betak_store_app/core/utils/images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 ///ProfilesBodyView

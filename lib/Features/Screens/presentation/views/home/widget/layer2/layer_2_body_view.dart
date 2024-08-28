@@ -7,8 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class Layer2BodyView extends StatelessWidget {
-  const Layer2BodyView({super.key, required this.text});
-  final String text;
+  const Layer2BodyView({super.key});
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -26,7 +25,7 @@ class Layer2BodyView extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TitleWidget(title: 'Best Categories'),
+                  TitleWidget(title: 'Top Categories'),
                   CategoriesHomeListView(),
                   TitleWidget(title: 'Top Sallers'),
                 ],
