@@ -17,10 +17,13 @@ class HomeCubit extends Cubit<HomeState> {
       sortValue: sortValue,
     );
     data.fold((failure) {
-      log(failure.toString());
-      emit(HomeGetProductFailureState(failure.toString()));
+      log(failure.errorMessage);
+      emit(HomeGetProductFailureState(failure.errorMessage));
     }, (products) {
-      log(products[0].thumbnails!.last.toString());
+      log('thumbnails Product');
+      log(products[0].thumbnails![0]!.last.toString());
+      log('thumbnails color');
+      log(products[0].variants![0].thumbnail.toString());
       emit(HomeGetProductSuccessState());
     });
   }
@@ -30,7 +33,7 @@ class HomeCubit extends Cubit<HomeState> {
     var data = await homeRepo.getProductDetails(productId: productId);
     data.fold((failure) {
       log(failure.toString());
-            emit(HomeGetProductDetailsFailureState(failure.toString()));
+      emit(HomeGetProductDetailsFailureState(failure.toString()));
     }, (productDeatails) {
       log(productDeatails.images![0].images!.last);
       emit(HomeGetProductDetailsSuccessState());

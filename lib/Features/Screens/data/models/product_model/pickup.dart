@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-
+//free Ship The Product to store free or no
 class Pickup extends Equatable {
   final bool? freeShipToStore;
 

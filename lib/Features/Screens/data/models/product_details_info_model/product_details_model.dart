@@ -8,7 +8,7 @@ import 'promotion.dart';
 import 'specification.dart';
 
 //جيميناي هل يمكنك أنت تساعدني في كتابة موديل يحتوي علي عنصر  List<String<String>> images مع العلم ان أن الموديل الأساسي
-class ProductResults extends Equatable {
+class ProductDetailsModel extends Equatable {
   final String? productId;
   final String? title;
   final String? description;
@@ -28,7 +28,7 @@ class ProductResults extends Equatable {
   final List<Specification>? specifications;
   final Fulfillment? fulfillment;
 
-  const ProductResults({
+  const ProductDetailsModel({
     this.productId,
     this.title,
     this.description,
@@ -49,8 +49,8 @@ class ProductResults extends Equatable {
     this.fulfillment,
   });
 
-  factory ProductResults.fromJson(Map<String, dynamic> json) {
-    return ProductResults(
+  factory ProductDetailsModel.fromJson(Map<String, dynamic> json) {
+    return ProductDetailsModel(
       productId: json['product_id'] as String?,
       title: json['title'] as String?,
       description: json['description'] as String?,

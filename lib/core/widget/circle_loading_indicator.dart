@@ -16,7 +16,7 @@ class CircleLoadingIndicatorWidget extends StatelessWidget {
           width: 50,
           decoration: BoxDecoration(
             // color: Color(0xFF2F3038),
-            color: Color(0xFF4B4E5B),
+            color: const Color(0xFF4B4E5B),
             border: Border.all(
               color: AppColor.sky2Color,
               width: 1.25,

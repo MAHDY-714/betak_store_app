@@ -14,6 +14,7 @@ final class HomeGetProductFailureState extends HomeState {
 
   HomeGetProductFailureState(this.errorMessage);
 }
+
 final class HomeGetProductDetailsLoadingState extends HomeState {}
 
 final class HomeGetProductDetailsSuccessState extends HomeState {}
