@@ -1,4 +1,4 @@
-import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_details_model.dart';
+import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/Features/Screens/data/repo/home_repo/home_repo.dart';
 import 'package:betak_store_app/core/services/api_services.dart';
@@ -32,14 +32,16 @@ class HomeRepoImplement implements HomeRepo {
   }
 
   @override
-  Future<Either<Failures, ProductDetailsModel>> getProductDetails(
-      {required int productId}) async {
+  Future<Either<Failures, ProductResults>> getProductDetails(
+      {required String productId}) async {
     try {
       var data = await apiService.getProducts(
         endPoint: 'engine=home_depot_product&product_id=$productId',
       );
-      ProductDetailsModel productResults = ProductDetailsModel.fromJson(data);
-      return right(productResults);
+      // log(data['product_results'].toString());
+      ProductResults productDetailsModel = ProductResults.fromJson(
+          data['product_results'] as Map<String, dynamic>);
+      return right(productDetailsModel);
     } catch (e) {
       if (e is DioException) {
         return left(ServerFailure.formDioExceptions(e));

@@ -9,34 +9,35 @@ class HomeCubit extends Cubit<HomeState> {
   final HomeRepo homeRepo;
   Future<void> getProducts({
     required String qValue,
-    required String sortValue,
+     String? sortValue,
   }) async {
-    emit(HomeGetProductLoadingState());
+    emit(GetProductsLoadingState());
     var data = await homeRepo.getCtegoriesInHomeProduct(
       qValue: qValue,
-      sortValue: sortValue,
+      sortValue: sortValue??"best_match",
     );
     data.fold((failure) {
       log(failure.errorMessage);
-      emit(HomeGetProductFailureState(failure.errorMessage));
+      emit(GetProductsFailureState(failure.errorMessage));
     }, (products) {
-      log('thumbnails Product');
-      log(products[0].thumbnails![0]!.last.toString());
-      log('thumbnails color');
-      log(products[0].variants![0].thumbnail.toString());
-      emit(HomeGetProductSuccessState());
-    });
-  }
-
-  Future<void> getProductDetails({required int productId}) async {
-    emit(HomeGetProductDetailsLoadingState());
-    var data = await homeRepo.getProductDetails(productId: productId);
-    data.fold((failure) {
-      log(failure.toString());
-      emit(HomeGetProductDetailsFailureState(failure.toString()));
-    }, (productDeatails) {
-      log(productDeatails.images![0].images!.last);
-      emit(HomeGetProductDetailsSuccessState());
+      log('the first Product');
+      log(products.toString());
+      emit(GetProductsSuccessState());
     });
   }
 }
+
+/* 
+// hihihih
+// jiojojo
+*/
+//iinhj 
+// #sdfsf
+//fsfsaf
+
+/*
+*sdsadsfa*
+"sfsfsaf"
+\#dfgsf
+dfsfafff
+ */

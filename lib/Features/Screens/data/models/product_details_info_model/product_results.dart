@@ -1,4 +1,3 @@
-import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/image.dart';
 import 'package:equatable/equatable.dart';
 
 import 'brand.dart';
@@ -8,7 +7,7 @@ import 'promotion.dart';
 import 'specification.dart';
 
 //جيميناي هل يمكنك أنت تساعدني في كتابة موديل يحتوي علي عنصر  List<String<String>> images مع العلم ان أن الموديل الأساسي
-class ProductDetailsModel extends Equatable {
+class ProductResults extends Equatable {
   final String? productId;
   final String? title;
   final String? description;
@@ -18,17 +17,17 @@ class ProductDetailsModel extends Equatable {
   final String? storeSkuNumber;
   final String? rating;
   final String? reviews;
-  final int? price;
+  final double? price;
   final Promotion? promotion;
-  final List<String>? highlights;
+  final List<dynamic>? highlights;
   final Brand? brand;
-  final List<Images>? images;
-  final List<String>? bullets;
+  final List<dynamic>? images;
+  final List<dynamic>? bullets;
   final List<InfoAndGuide>? infoAndGuides;
   final List<Specification>? specifications;
   final Fulfillment? fulfillment;
 
-  const ProductDetailsModel({
+  const ProductResults({
     this.productId,
     this.title,
     this.description,
@@ -49,8 +48,8 @@ class ProductDetailsModel extends Equatable {
     this.fulfillment,
   });
 
-  factory ProductDetailsModel.fromJson(Map<String, dynamic> json) {
-    return ProductDetailsModel(
+  factory ProductResults.fromJson(Map<String, dynamic> json) {
+    return ProductResults(
       productId: json['product_id'] as String?,
       title: json['title'] as String?,
       description: json['description'] as String?,
@@ -60,16 +59,16 @@ class ProductDetailsModel extends Equatable {
       storeSkuNumber: json['store_sku_number'] as String?,
       rating: json['rating'] as String?,
       reviews: json['reviews'] as String?,
-      images: json['images'] as List<Images>?,
-      price: json['price'] as int?,
+      images: json['images'] as List<dynamic>?,
+      price: json['price'],
       promotion: json['promotion'] == null
           ? null
           : Promotion.fromJson(json['promotion'] as Map<String, dynamic>),
-      highlights: json['highlights'] as List<String>?,
+      highlights: json['highlights'] as List<dynamic>?,
       brand: json['brand'] == null
           ? null
           : Brand.fromJson(json['brand'] as Map<String, dynamic>),
-      bullets: json['bullets'] as List<String>?,
+      bullets: json['bullets'] as List<dynamic>?,
       infoAndGuides: (json['info_and_guides'] as List<dynamic>?)
           ?.map((e) => InfoAndGuide.fromJson(e as Map<String, dynamic>))
           .toList(),

@@ -5,14 +5,14 @@ sealed class HomeState {}
 
 final class HomeInitialState extends HomeState {}
 
-final class HomeGetProductLoadingState extends HomeState {}
+final class GetProductsLoadingState extends HomeState {}
 
-final class HomeGetProductSuccessState extends HomeState {}
+final class GetProductsSuccessState extends HomeState {}
 
-final class HomeGetProductFailureState extends HomeState {
+final class GetProductsFailureState extends HomeState {
   final String errorMessage;
 
-  HomeGetProductFailureState(this.errorMessage);
+  GetProductsFailureState(this.errorMessage);
 }
 
 final class HomeGetProductDetailsLoadingState extends HomeState {}

@@ -37,7 +37,7 @@ class ProductsGridView extends StatelessWidget {
             return ProductItemBuilder(
               index: index,
               onTapLove: () {
-                cub.getProducts(qValue: 'Sofa', sortValue: 'best_match');
+                cub.getProducts(qValue: 'sofa', sortValue: 'best_match');
               },
               onTapGoProductAllInfo: () async {
                 GoRouter.of(context).push(

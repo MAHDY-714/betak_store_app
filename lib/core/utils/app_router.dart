@@ -62,7 +62,7 @@ class AppRouter {
       pageBuilder: (context, state) {
         return CustomTransitionPage(
           child: ProductDetailsView(
-            productInfoInMyCartModel: state.extra as ProductInfoInMyCartModel,
+            // productInfoInMyCartModel: state.extra as ProductInfoInMyCartModel,
           ),
           transitionDuration: const Duration(seconds: 2),
           barrierDismissible: true,

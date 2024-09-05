@@ -1,16 +1,16 @@
 import 'package:equatable/equatable.dart';
 
 class Promotion extends Equatable {
-  final int? save;
-  final int? percentage;
-  final int? original;
+  final double? save;
+  final double? percentage;
+  final double? original;
 
   const Promotion({this.save, this.percentage, this.original});
 
   factory Promotion.fromJson(Map<String, dynamic> json) => Promotion(
-        save: json['save'] as int?,
-        percentage: json['percentage'] as int?,
-        original: json['original'] as int?,
+        save: json['save'],
+        percentage: json['percentage'],
+        original: json['original'],
       );
 
   Map<String, dynamic> toJson() => {
