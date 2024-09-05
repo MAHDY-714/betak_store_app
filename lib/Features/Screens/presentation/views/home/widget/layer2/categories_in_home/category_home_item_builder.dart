@@ -1,3 +1,4 @@
+import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/utils/images.dart';
 import 'package:flutter/material.dart';
 
@@ -26,6 +27,13 @@ class CategoryHomeItemBuilder extends StatelessWidget {
             width: 70,
             decoration: BoxDecoration(
               color: const Color(0xFFF2F2F2),
+              border: const BorderDirectional(
+                bottom: BorderSide(
+                  color: Color(0xFF06526A),
+                  width: 5,
+                ),
+              ),
+              borderRadius: BorderRadius.circular(16),
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage(
