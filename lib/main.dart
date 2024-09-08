@@ -5,6 +5,7 @@ import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/utils/app_router.dart';
 import 'package:betak_store_app/core/utils/bloc_observer.dart';
 import 'package:betak_store_app/core/utils/cache_helper.dart';
+import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:betak_store_app/core/utils/service_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -34,7 +35,8 @@ class BetakStoreApp extends StatelessWidget {
           create: (context) => NavBarCubit(),
         ),
         BlocProvider(
-          create: (context) => HomeCubit(getIt.get<HomeRepoImplement>()),
+          create: (context) => HomeCubit(getIt.get<HomeRepoImplement>())
+            ..getProducts(qValue: kListTitlesCategoriesInHome[0].toString()),
         )
       ],
       child: MaterialApp.router(

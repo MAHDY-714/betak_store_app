@@ -1,3 +1,4 @@
+import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:flutter/material.dart';
 
 @immutable
@@ -7,7 +8,11 @@ final class HomeInitialState extends HomeState {}
 
 final class GetProductsLoadingState extends HomeState {}
 
-final class GetProductsSuccessState extends HomeState {}
+final class GetProductsSuccessState extends HomeState {
+  final List<ProductModel> productModel;
+
+  GetProductsSuccessState({required this.productModel});
+}
 
 final class GetProductsFailureState extends HomeState {
   final String errorMessage;
@@ -15,12 +20,4 @@ final class GetProductsFailureState extends HomeState {
   GetProductsFailureState(this.errorMessage);
 }
 
-final class HomeGetProductDetailsLoadingState extends HomeState {}
-
-final class HomeGetProductDetailsSuccessState extends HomeState {}
-
-final class HomeGetProductDetailsFailureState extends HomeState {
-  final String errorMessage;
-
-  HomeGetProductDetailsFailureState(this.errorMessage);
-}
+final class HomeChangeCategoriesState extends HomeState {}

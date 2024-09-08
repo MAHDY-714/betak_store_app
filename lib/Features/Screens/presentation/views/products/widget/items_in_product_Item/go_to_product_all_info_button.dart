@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class GoToProductAllInfoButton extends StatelessWidget {
   const GoToProductAllInfoButton({
     super.key,
-    this.index = 1,
+    this.index = 0,
     required this.onTap,
   });
   final int index;

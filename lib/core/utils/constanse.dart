@@ -55,16 +55,16 @@ int rate(index) {
 }
 
 const kListTitlesCategoriesInHome = [
-  'chairs',
-  'sofas',
-  'stove',
-  'air Fryer',
-  'coffee Machine',
-  'smart TV',
-  'lamps',
-  'lamps hades',
-  'hammer',
-  'screwdriver',
+  'Chair',
+  'Sofa',
+  'Stove',
+  'Air Fryer',
+  'Coffee Machine',
+  'Smart TV',
+  'Lamps',
+  'Lamps Hades',
+  'Hammer',
+  'Screwdriver',
 ];
 
 const kListMainCategoriesName = [

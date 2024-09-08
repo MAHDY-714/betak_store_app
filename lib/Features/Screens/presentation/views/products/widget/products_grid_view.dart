@@ -3,7 +3,6 @@ import 'package:betak_store_app/Features/Screens/presentation/manager/home_manag
 import 'package:betak_store_app/Features/Screens/presentation/manager/home_manager/home_state.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_item_builder.dart';
 import 'package:betak_store_app/core/utils/app_router.dart';
-import 'package:betak_store_app/core/utils/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -45,10 +44,10 @@ class ProductsGridView extends StatelessWidget {
                   extra: productInfoInMyCartModel,
                 );
               },
-              imageProduct: AssetsImages.listCategoriesInHome[index],
+              imageProduct: cub.productModel[index].thumbnails!.last.toString(),
             );
           },
-          itemCount: AssetsImages.listCategoriesInHome.length,
+          itemCount: cub.productModel.length,
           physics: const NeverScrollableScrollPhysics(),
           scrollDirection: Axis.vertical,
           shrinkWrap: true,

@@ -55,6 +55,7 @@ class AppColor {
   static const backgroundImageCategore = Color(0xFFF2F2F2);
   static const backgroundForAllItemsRedColor = Color(0xFFB90000);
   static const backgroundForAllItemsInProductDarkColor = Color(0xFF0C0F19);
+  static const redDeepColor = Color(0xFF700606);
   static const blueDarkColor = Color(0xFF000C2C);
   static const blueColor = Color(0xFF013571);
   static const orangeColor = Color(0xFFFF6600);

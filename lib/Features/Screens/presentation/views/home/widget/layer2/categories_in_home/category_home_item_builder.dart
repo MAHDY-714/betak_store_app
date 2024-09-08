@@ -1,4 +1,5 @@
-import 'package:betak_store_app/core/styles/app_color.dart';
+import 'dart:developer';
+
 import 'package:betak_store_app/core/utils/images.dart';
 import 'package:flutter/material.dart';
 
@@ -7,11 +8,14 @@ class CategoryHomeItemBuilder extends StatelessWidget {
     super.key,
     this.index = 0,
     required this.onTap,
+    required this.borderColor,
   });
   final int index;
+  final Color borderColor;
   final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
+    log(index.toString());
     return InkWell(
       onTap: onTap,
       child: Padding(
@@ -27,10 +31,10 @@ class CategoryHomeItemBuilder extends StatelessWidget {
             width: 70,
             decoration: BoxDecoration(
               color: const Color(0xFFF2F2F2),
-              border: const BorderDirectional(
+              border: BorderDirectional(
                 bottom: BorderSide(
-                  color: Color(0xFF06526A),
-                  width: 5,
+                  color: borderColor,
+                  width: 10,
                 ),
               ),
               borderRadius: BorderRadius.circular(16),

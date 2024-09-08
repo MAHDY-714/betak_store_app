@@ -162,6 +162,12 @@ abstract class TextStyles {
     letterSpacing: 1,
     fontFamily: FontFamily.bitter300,
   );
+  static const textStyle16Error = TextStyle(
+    color: AppColor.redDeepColor,
+    fontSize: 16,
+    letterSpacing: 1,
+    fontFamily: FontFamily.bitter300,
+  );
   static const textStyle22 = TextStyle(
     color: Colors.white,
     fontSize: 22,

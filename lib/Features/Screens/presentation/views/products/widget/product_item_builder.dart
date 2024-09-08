@@ -4,7 +4,6 @@ import 'package:betak_store_app/Features/Screens/presentation/views/products/wid
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/items_in_product_Item/info_product.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/items_in_product_Item/precentage_widget.dart';
 import 'package:betak_store_app/core/styles/decorations.dart';
-import 'package:betak_store_app/core/utils/images.dart';
 import 'package:flutter/material.dart';
 
 class ProductItemBuilder extends StatelessWidget {
@@ -61,23 +60,7 @@ class ProductItemBuilder extends StatelessWidget {
                           children: [
                             PercentageWidget(
                               textDiscount: '25',
-                              isDiscount: AssetsImages
-                                              .listCategoriesInHome[index] ==
-                                          AssetsImages
-                                              .listCategoriesInHome[0] ||
-                                      AssetsImages
-                                              .listCategoriesInHome[index] ==
-                                          AssetsImages
-                                              .listCategoriesInHome[3] ||
-                                      AssetsImages
-                                              .listCategoriesInHome[index] ==
-                                          AssetsImages
-                                              .listCategoriesInHome[5] ||
-                                      AssetsImages
-                                              .listCategoriesInHome[index] ==
-                                          AssetsImages.listCategoriesInHome[7]
-                                  ? isDiscount == true
-                                  : isDiscount == false,
+                              isDiscount: isDiscount == true,
                             ),
                             AddToMyCartProductButton(
                               onTap: onTapLove,
