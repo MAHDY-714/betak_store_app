@@ -1,3 +1,4 @@
+import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/core/styles/text_styles.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
@@ -5,7 +6,9 @@ import 'package:flutter/material.dart';
 class InfoProduct extends StatelessWidget {
   const InfoProduct({
     super.key,
+    required this.productModel,
   });
+  final ProductModel? productModel;
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -19,17 +22,17 @@ class InfoProduct extends StatelessWidget {
           color: const Color(0xFF507EFF).withOpacity(.04),
           borderRadius: BorderRadius.circular(16),
         ),
-        child: const Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'ikea Sofa ikea Sofa ikea Sofa ikea Sofa',
+              productModel!.title.toString(),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: TextStyles.nameProductStyleInInLayer2,
             ),
             Text(
-              '300\$',
+              '${productModel!.price!.round()}\$',
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: TextStyles.priceStyleInInLayer2,

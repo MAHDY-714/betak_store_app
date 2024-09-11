@@ -1,3 +1,4 @@
+import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/items_in_product_Item/add_to_my_cart_product_button.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/items_in_product_Item/go_to_product_all_info_button.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/items_in_product_Item/image_in_product.dart';
@@ -9,17 +10,20 @@ import 'package:flutter/material.dart';
 class ProductItemBuilder extends StatelessWidget {
   const ProductItemBuilder({
     super.key,
-    this.index = 1,
+    this.index = 0,
     required this.onTapLove,
     required this.onTapGoProductAllInfo,
     this.isDiscount = false,
     required this.imageProduct,
+    required this.productModel,
   });
   final int index;
   final String imageProduct;
   final void Function()? onTapLove;
   final void Function()? onTapGoProductAllInfo;
   final bool isDiscount;
+  final ProductModel? productModel;
+
   @override
   Widget build(BuildContext context) {
     double heighBodyProduct = 300;
@@ -27,12 +31,7 @@ class ProductItemBuilder extends StatelessWidget {
     return Container(
       // width: kWidth(context) * .456,
       height: heighBodyProduct,
-      padding: const EdgeInsetsDirectional.only(
-        top: 8.0,
-        bottom: 8.0,
-        start: 8.0,
-        end: 8.0,
-      ),
+      padding: const EdgeInsetsDirectional.all(8),
       decoration: Decorations.outsideproductHomeItemBuilderBoxDecorations,
       child: Stack(
         alignment: const AlignmentDirectional(0, 1),
@@ -58,10 +57,20 @@ class ProductItemBuilder extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            PercentageWidget(
-                              textDiscount: '25',
-                              isDiscount: isDiscount == true,
-                            ),
+                            if (productModel?.percentageOff != null)
+                              PercentageWidget(
+                                textValue: productModel!.percentageOff!.round(),
+                                // textValue: 100,
+                                textDiscount:
+                                    '${productModel?.percentageOff!.round()}',
+                                isDiscount: productModel?.percentageOff != null
+                                    ? true
+                                    : false,
+                              ),
+                            if (productModel?.percentageOff == null)
+                              const SizedBox(
+                                height: 60,
+                              ),
                             AddToMyCartProductButton(
                               onTap: onTapLove,
                             ),
@@ -70,7 +79,9 @@ class ProductItemBuilder extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const InfoProduct(),
+                  InfoProduct(
+                    productModel: productModel!,
+                  ),
                 ],
               ),
             ),
@@ -78,6 +89,7 @@ class ProductItemBuilder extends StatelessWidget {
           GoToProductAllInfoButton(
             index: index,
             onTap: onTapGoProductAllInfo,
+            productModel: productModel!,
           ),
         ],
       ),

@@ -19,7 +19,7 @@ class HomeCubit extends Cubit<HomeState> {
     emit(GetProductsLoadingState());
     var data = await homeRepo.getCtegoriesInHomeProduct(
       qValue: qValue,
-      sortValue: sortValue ?? "best_ma",
+      sortValue: sortValue ?? "best_match",
       // sortValue: sortValue ?? "best_match",
     );
     data.fold((failure) {

@@ -8,19 +8,19 @@ class PercentageWidget extends StatelessWidget {
     super.key,
     this.isDiscount = false,
     required this.textDiscount,
+    required this.textValue,
   });
   final bool isDiscount;
   final String textDiscount;
+  final int textValue;
   @override
   Widget build(BuildContext context) {
-    int textLength = textDiscount.length;
     return SizedBox(
-      width: 60,
+      width: textValue <= 99 ? 50 : 60,
       // alignment: const AlignmentDirectional(-.85, -.9),
       child: isDiscount
           ? Container(
               height: 30,
-              width: textLength == 2 ? 50 : 60,
               alignment: AlignmentDirectional.center,
               padding: const EdgeInsetsDirectional.all(2),
               decoration: BoxDecoration(

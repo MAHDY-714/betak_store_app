@@ -44,7 +44,9 @@ class ProductsGridView extends StatelessWidget {
                   extra: productInfoInMyCartModel,
                 );
               },
-              imageProduct: cub.productModel[index].thumbnails!.last.toString(),
+              imageProduct:
+                  cub.productModel[index].thumbnails![0].last.toString(),
+              productModel: cub.productModel[index],
             );
           },
           itemCount: cub.productModel.length,

@@ -86,9 +86,9 @@ abstract class TextStyles {
 
   static const titilesInLayer2 = TextStyle(
     color: Color(0xFFF2F2F2),
-    fontSize: 16,
+    fontSize: 18,
     letterSpacing: 2,
-    fontFamily: FontFamily.inter700,
+    fontFamily: FontFamily.platypi600,
   );
   static const nameProductStyleInInLayer2 = TextStyle(
     fontSize: 15,

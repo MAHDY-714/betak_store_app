@@ -1,4 +1,5 @@
 import 'package:betak_store_app/core/styles/app_color.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class Decorations {
@@ -111,15 +112,36 @@ class Decorations {
         ));
   }
 
-  static const goToProductAllInfoButtonBoxDecorationsOutSide = BoxDecoration(
-    // shape: BoxShape.circle,
-    borderRadius: BorderRadiusDirectional.only(
-      topStart: Radius.circular(27),
-      topEnd: Radius.circular(19),
-      bottomStart: Radius.circular(11),
-    ),
-    color: AppColor.backgroundLayer2,
-  );
+  static goToProductAllInfoButtonBoxDecorationsOutSide({
+    required urlImage,
+    size = 40,
+    bool isImage = false,
+  }) =>
+      BoxDecoration(
+        // shape: BoxShape.circle,
+        borderRadius: const BorderRadiusDirectional.only(
+          topStart: Radius.circular(40),
+          topEnd: Radius.circular(40),
+          bottomStart: Radius.circular(12.5),
+          bottomEnd: Radius.circular(12.5),
+        ),
+        border: Border.all(color: AppColor.backgroundLayer2, width: 5),
+        // shape: BoxShape.circle,
+        color: AppColor.backgroundLayer2,
+        image: isImage
+            ? DecorationImage(
+                opacity: .9,
+                onError: (exception, stackTrace) => Icon(
+                  Icons.error,
+                  color: AppColor.focusederrorBorderAndRemove,
+                  size: size,
+                ),
+                image: CachedNetworkImageProvider(
+                  urlImage,
+                ),
+              )
+            : null,
+      );
   static const imageInProfileBoxDecorationsOutSide = BoxDecoration(
     color: Color(0xFF000110),
     border: BorderDirectional(

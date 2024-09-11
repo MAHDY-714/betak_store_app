@@ -61,9 +61,9 @@ class AppRouter {
       path: kProductDetailsView,
       pageBuilder: (context, state) {
         return CustomTransitionPage(
-          child: ProductDetailsView(
-            // productInfoInMyCartModel: state.extra as ProductInfoInMyCartModel,
-          ),
+          child: const ProductDetailsView(
+              // productInfoInMyCartModel: state.extra as ProductInfoInMyCartModel,
+              ),
           transitionDuration: const Duration(seconds: 2),
           barrierDismissible: true,
           reverseTransitionDuration: const Duration(seconds: 1),
