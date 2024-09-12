@@ -122,14 +122,14 @@ class Decorations {
         borderRadius: const BorderRadiusDirectional.only(
           topStart: Radius.circular(40),
           topEnd: Radius.circular(40),
-          bottomStart: Radius.circular(12.5),
-          bottomEnd: Radius.circular(12.5),
+          bottomStart: Radius.circular(15),
+          bottomEnd: Radius.circular(15),
         ),
-        border: Border.all(color: AppColor.backgroundLayer2, width: 5),
-        // shape: BoxShape.circle,
+        // border: Border.all(color: Colors.transparent, width: 4),
         color: AppColor.backgroundLayer2,
         image: isImage
             ? DecorationImage(
+                fit: BoxFit.fill,
                 opacity: .9,
                 onError: (exception, stackTrace) => Icon(
                   Icons.error,

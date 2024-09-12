@@ -44,7 +44,7 @@ class ChoseColorForProduct extends StatelessWidget {
           );
         },
         separatorBuilder: (BuildContext context, int index) =>
-            const SizedBox(width: 6),
+            const SizedBox(width: 3),
         itemCount: listColors.length,
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,

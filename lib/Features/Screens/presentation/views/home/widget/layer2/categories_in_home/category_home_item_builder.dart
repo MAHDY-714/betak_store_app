@@ -20,21 +20,34 @@ class CategoryHomeItemBuilder extends StatelessWidget {
       onTap: onTap,
       child: Padding(
         padding: const EdgeInsetsDirectional.only(
-          end: 16.0,
+          end: 8.0,
           top: 16.0,
-          bottom: 16.0,
+          // bottom: 16.0,
+          start: 8,
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(16),
           clipBehavior: Clip.antiAlias,
           child: Container(
-            width: 70,
+            width: 80,
             decoration: BoxDecoration(
               color: const Color(0xFFF2F2F2),
               border: BorderDirectional(
                 bottom: BorderSide(
                   color: borderColor,
-                  width: 10,
+                  width: 8,
+                ),
+                top: BorderSide(
+                  color: borderColor,
+                  width: 2,
+                ),
+                start: BorderSide(
+                  color: borderColor,
+                  width: 2,
+                ),
+                end: BorderSide(
+                  color: borderColor,
+                  width: 2,
                 ),
               ),
               borderRadius: BorderRadius.circular(16),

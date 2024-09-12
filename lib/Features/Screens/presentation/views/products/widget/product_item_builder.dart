@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/items_in_product_Item/add_to_my_cart_product_button.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/items_in_product_Item/go_to_product_all_info_button.dart';
@@ -5,6 +7,7 @@ import 'package:betak_store_app/Features/Screens/presentation/views/products/wid
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/items_in_product_Item/info_product.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/items_in_product_Item/precentage_widget.dart';
 import 'package:betak_store_app/core/styles/decorations.dart';
+import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 
 class ProductItemBuilder extends StatelessWidget {
@@ -26,7 +29,7 @@ class ProductItemBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double heighBodyProduct = 300;
+    double heighBodyProduct = 320;
     // double widthBodyProduct = kWidth(context) * .456;
     return Container(
       // width: kWidth(context) * .456,
@@ -72,7 +75,10 @@ class ProductItemBuilder extends StatelessWidget {
                                 height: 60,
                               ),
                             AddToMyCartProductButton(
-                              onTap: onTapLove,
+                              onTap: () {
+                                log('${kHeight(context).round()}');
+                                log('${kWidth(context).round()}');
+                              },
                             ),
                           ],
                         ),

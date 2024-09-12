@@ -10,16 +10,13 @@ class SuccessHomeBodyInLayer2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: AlignmentDirectional.bottomCenter,
-      child: Column(
-        children: [
-          ProductsGridView(),
-          const SizedBox(
-            height: 20,
-          ),
-        ],
-      ),
+    return Column(
+      children: [
+        ProductsGridView(),
+        const SizedBox(
+          height: 20,
+        ),
+      ],
     );
   }
 }

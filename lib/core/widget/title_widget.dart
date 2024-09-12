@@ -16,7 +16,10 @@ class TitleWidget extends StatelessWidget {
       padding: EdgeInsetsDirectional.symmetric(horizontal: padding ?? 0.0),
       child: Text(
         title,
-        style: TextStyles.titilesInLayer2,
+        style: TextStyles.titilesInLayer2.copyWith(
+          fontSize:
+              kHeight(context) >= 770 && kHeight(context) <= 810 ? 22 : 25,
+        ),
       ),
     );
   }

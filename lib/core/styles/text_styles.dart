@@ -86,19 +86,19 @@ abstract class TextStyles {
 
   static const titilesInLayer2 = TextStyle(
     color: Color(0xFFF2F2F2),
-    fontSize: 18,
-    letterSpacing: 2,
+    fontSize: 22,
+    letterSpacing: 3,
     fontFamily: FontFamily.platypi600,
   );
   static const nameProductStyleInInLayer2 = TextStyle(
-    fontSize: 15,
+    fontSize: 10,
     color: AppColor.blueDarkColor,
-    fontFamily: FontFamily.bitter500,
+    fontFamily: FontFamily.bitter900,
   );
   static const priceStyleInInLayer2 = TextStyle(
     color: AppColor.sky4Color,
-    fontSize: 18,
-    fontFamily: FontFamily.jersey400,
+    fontSize: 16,
+    fontFamily: FontFamily.orbitron900,
   );
 
   ///used in {any discount widget}

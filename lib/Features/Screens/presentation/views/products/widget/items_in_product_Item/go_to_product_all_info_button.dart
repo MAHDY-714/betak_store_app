@@ -21,23 +21,21 @@ class GoToProductAllInfoButton extends StatelessWidget {
         child: Align(
           alignment: const AlignmentDirectional(1.1, 1.05),
           child: Container(
-            width: 50,
-            height: 50,
-            padding: const EdgeInsetsDirectional.only(start: 8.0, top: 8.0),
+            width: 55,
+            height: 55,
+            padding: const EdgeInsetsDirectional.only(start: 7.0, top: 8.0),
             decoration:
                 Decorations.goToProductAllInfoButtonBoxDecorationsOutSide(
-                    urlImage: productModel.thumbnails![0].last, isImage: true),
-            child: Center(
-                // child: Container(
-                //   width: 45,
-                //   height: 45,
-                //   // padding: const EdgeInsetsDirectional.only(start: 4.0, top: 4.0),
-                //   decoration:
-                //       Decorations.goToProductAllInfoButtonBoxDecorationsOutSide(
-                //           urlImage: productModel.thumbnails![0].last,
-                //           isImage: true),
-                // ),
-                ),
+                    urlImage: productModel.thumbnails![0].last, isImage: false),
+            child: Container(
+              width: 50,
+              height: 50,
+              padding: const EdgeInsetsDirectional.only(start: 8.0, top: 8.0),
+              decoration:
+                  Decorations.goToProductAllInfoButtonBoxDecorationsOutSide(
+                      urlImage: productModel.thumbnails![0].last,
+                      isImage: true),
+            ),
           ),
         ),
       ),

@@ -14,7 +14,7 @@ class CategoriesHomeListView extends StatelessWidget {
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
         return SizedBox(
-          height: 100,
+          height: 96,
           child: ListView.builder(
             itemBuilder: (context, index) {
               return CategoryHomeItemBuilder(
@@ -25,7 +25,7 @@ class CategoriesHomeListView extends StatelessWidget {
                   );
                 },
                 borderColor: cub.categoryIndex == index
-                    ? AppColor.sky4Color.withOpacity(.6)
+                    ? AppColor.sky4Color
                     : Colors.transparent,
               );
             },
