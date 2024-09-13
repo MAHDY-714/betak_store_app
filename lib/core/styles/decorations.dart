@@ -3,15 +3,16 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class Decorations {
+  static const double borderWidthForProduct = 2;
+  static const Color borderWidthForProductColor = AppColor.sky4Color;
   static BoxDecoration insideProductHomeItemBuilderBoxDecorations =
       BoxDecoration(
-    color: const Color(0xFFF2F2F2),
-    borderRadius: BorderRadius.circular(16),
-    border: Border.all(
-      color: AppColor.backgroundLayer2,
-      width: 1,
-    ),
-  );
+          color: AppColor.backgroundImageCategore,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(
+            color: borderWidthForProductColor,
+            width: borderWidthForProduct,
+          ));
 
   static BoxDecoration outsideproductHomeItemBuilderBoxDecorations =
       BoxDecoration(
@@ -92,25 +93,37 @@ class Decorations {
     );
   }
 
-  static BoxDecoration goToProductAllInfoButtonBoxDecorationsInside(
-      {String? images}) {
-    return BoxDecoration(
+  static BoxDecoration goToProductAllInfoButtonBoxDecorationsInside({
+    required urlImage,
+    size = 40,
+    bool isImage = false,
+  }) =>
+      BoxDecoration(
         // shape: BoxShape.circle,
         borderRadius: const BorderRadiusDirectional.only(
-          topStart: Radius.circular(22),
-          topEnd: Radius.circular(19),
-          bottomStart: Radius.circular(11),
-          bottomEnd: Radius.circular(11),
+          topStart: Radius.circular(16),
+          topEnd: Radius.circular(0),
+          bottomStart: Radius.circular(0),
+          bottomEnd: Radius.circular(16),
         ),
-        border: Border.all(color: Colors.white.withOpacity(0.2)),
+        border: Border.all(
+            color: borderWidthForProductColor, width: borderWidthForProduct),
         color: AppColor.backgroundLayer2,
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          opacity: .85,
-          scale: 7,
-          image: AssetImage(images ?? ''),
-        ));
-  }
+        image: isImage
+            ? DecorationImage(
+                fit: BoxFit.fill,
+                opacity: .9,
+                onError: (exception, stackTrace) => Icon(
+                  Icons.error,
+                  color: AppColor.focusederrorBorderAndRemove,
+                  size: size,
+                ),
+                image: CachedNetworkImageProvider(
+                  urlImage,
+                ),
+              )
+            : null,
+      );
 
   static goToProductAllInfoButtonBoxDecorationsOutSide({
     required urlImage,
@@ -120,12 +133,21 @@ class Decorations {
       BoxDecoration(
         // shape: BoxShape.circle,
         borderRadius: const BorderRadiusDirectional.only(
-          topStart: Radius.circular(40),
-          topEnd: Radius.circular(40),
-          bottomStart: Radius.circular(15),
-          bottomEnd: Radius.circular(15),
+          topStart: Radius.circular(24),
+          topEnd: Radius.circular(0),
+          bottomStart: Radius.circular(0),
+          // bottomEnd: Radius.circular(0),
         ),
-        // border: Border.all(color: Colors.transparent, width: 4),
+        border: const BorderDirectional(
+          start: BorderSide(
+            color: borderWidthForProductColor,
+            width: borderWidthForProduct,
+          ),
+          top: BorderSide(
+            color: borderWidthForProductColor,
+            width: borderWidthForProduct,
+          ),
+        ),
         color: AppColor.backgroundLayer2,
         image: isImage
             ? DecorationImage(
