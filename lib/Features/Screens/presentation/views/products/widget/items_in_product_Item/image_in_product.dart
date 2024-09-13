@@ -13,7 +13,7 @@ class ImageProductInHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: kHeight(context) >= 770 && kHeight(context) <= 810 ? 140 : 180,
+      height: kHeight(context) >= 770 && kHeight(context) <= 810 ? 130 : 170,
       width: kWidth(context),
       clipBehavior: Clip.antiAlias,
       decoration: const BoxDecoration(

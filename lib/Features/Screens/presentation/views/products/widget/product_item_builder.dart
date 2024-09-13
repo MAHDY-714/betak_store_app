@@ -6,7 +6,6 @@ import 'package:betak_store_app/Features/Screens/presentation/views/products/wid
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/items_in_product_Item/image_in_product.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/items_in_product_Item/info_product.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/items_in_product_Item/precentage_widget.dart';
-import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/styles/decorations.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';

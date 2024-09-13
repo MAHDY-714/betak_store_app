@@ -15,6 +15,7 @@ class ProductModel extends Equatable {
   final String? brand;
   final String? collection;
   final double? rating;
+  final int? reviews;
   final double? price;
   final double? priceWas;
   final double? priceSaving;
@@ -35,6 +36,7 @@ class ProductModel extends Equatable {
     this.brand,
     this.collection,
     this.rating,
+    this.reviews,
     this.price,
     this.priceWas,
     this.priceSaving,
@@ -56,6 +58,7 @@ class ProductModel extends Equatable {
         brand: json['brand'],
         collection: json['collection'],
         rating: json['rating'],
+        reviews: json['reviews'],
         price: json['price'],
         priceWas: json['price_was'],
         priceSaving: json['price_saving'],
@@ -82,6 +85,7 @@ class ProductModel extends Equatable {
         'brand': brand,
         'collection': collection,
         'rating': rating,
+        'reviews': reviews,
         'price': price,
         'price_was': priceWas,
         'price_saving': priceSaving,
@@ -105,6 +109,7 @@ class ProductModel extends Equatable {
       brand,
       collection,
       rating,
+      reviews,
       price,
       priceWas,
       priceSaving,

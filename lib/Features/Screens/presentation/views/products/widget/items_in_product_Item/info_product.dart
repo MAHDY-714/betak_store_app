@@ -3,6 +3,7 @@ import 'package:betak_store_app/Features/Screens/presentation/views/products/wid
 import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/styles/text_styles.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
+import 'package:betak_store_app/core/utils/images.dart';
 import 'package:flutter/material.dart';
 
 class InfoProduct extends StatelessWidget {
@@ -13,10 +14,11 @@ class InfoProduct extends StatelessWidget {
   final ProductModel? productModel;
   @override
   Widget build(BuildContext context) {
+    int cells = 2;
     return Align(
       alignment: const AlignmentDirectional(-.85, 1.18),
       child: Container(
-        height: kHeight(context) >= 770 && kHeight(context) <= 810 ? 100 : 130,
+        height: kHeight(context) >= 770 && kHeight(context) <= 810 ? 110 : 120,
         width: kWidth(context),
         alignment: AlignmentDirectional.centerStart,
         padding: const EdgeInsetsDirectional.symmetric(horizontal: 4),
@@ -39,19 +41,79 @@ class InfoProduct extends StatelessWidget {
                     : 13,
               ),
             ),
-            Container(
-                width: 70,
-                height: 30,
-                padding: const EdgeInsets.all(1.0),
-                decoration: BoxDecoration(
-                  // color: AppColor.backgroundForAllItemsInProductDarkColor,
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(
-                    color: AppColor.backgroundLayer2,
-                    width: .5,
+            if (productModel!.variants != null)
+              Container(
+                  width: 70,
+                  height: 30,
+                  padding: const EdgeInsets.all(1.0),
+                  decoration: BoxDecoration(
+                    // color: AppColor.backgroundForAllItemsInProductDarkColor,
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(
+                      color: AppColor.backgroundLayer2,
+                      width: .5,
+                    ),
                   ),
-                ),
-                child: const ChoseColorForProduct()),
+                  child: const ChoseColorForProduct())
+            else if (productModel!.rating != null ||
+                productModel!.reviews != null)
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        '${productModel!.reviews!}',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyles.textStyle12.copyWith(
+                          color: const Color(0xFA000000),
+                          fontSize:
+                              kHeight(context) >= 770 && kHeight(context) <= 810
+                                  ? 11
+                                  : 14,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 4,
+                      ),
+                      const Image(
+                          height: 13,
+                          width: 13,
+                          color: Color(0xFA000000),
+                          image: AssetImage(
+                            AssetsImages.profileIcon,
+                          )),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        productModel!.rating!.toStringAsFixed(cells),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyles.priceStyleInInLayer2.copyWith(
+                          color: AppColor.blueDarkColor,
+                          // height: 1.5,
+                          fontSize:
+                              kHeight(context) >= 770 && kHeight(context) <= 810
+                                  ? 10
+                                  : 13,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 2,
+                      ),
+                      const Image(
+                          height: 15,
+                          width: 15,
+                          image: AssetImage(
+                            AssetsImages.starIcon,
+                          )),
+                    ],
+                  ),
+                ],
+              ),
             Row(
               children: [
                 Text(

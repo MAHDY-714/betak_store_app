@@ -108,7 +108,7 @@ class Decorations {
         ),
         border: Border.all(
             color: borderWidthForProductColor, width: borderWidthForProduct),
-        color: AppColor.backgroundLayer2,
+        color: Colors.transparent,
         image: isImage
             ? DecorationImage(
                 fit: BoxFit.fill,

@@ -23,7 +23,7 @@ class GoToProductAllInfoButton extends StatelessWidget {
           child: Container(
             width: 55,
             height: 55,
-            padding: const EdgeInsetsDirectional.only(start: 7.0, top: 8.0),
+            padding: const EdgeInsetsDirectional.only(start: 8.0, top: 8.0),
             decoration:
                 Decorations.goToProductAllInfoButtonBoxDecorationsOutSide(
                     urlImage: productModel.thumbnails![0].last, isImage: false),
