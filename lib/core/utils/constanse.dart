@@ -60,7 +60,7 @@ const kListTitlesCategoriesInHome = [
   'Stove',
   'Air Fryer',
   'Coffee Machine',
-  'Smart TV',
+  'Televisions',
   'Lamps',
   'Lamps Hades',
   'Hammer',

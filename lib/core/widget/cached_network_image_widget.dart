@@ -1,4 +1,5 @@
 import 'package:betak_store_app/core/styles/app_color.dart';
+import 'package:betak_store_app/core/utils/images.dart';
 import 'package:betak_store_app/core/widget/circle_loading_indicator.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -25,10 +26,26 @@ class CachedNetworkImageWidget extends StatelessWidget {
         imageUrl: imageProduct,
         progressIndicatorBuilder: (context, url, downloadProgress) =>
             const CircleLoadingIndicatorWidget(),
-        errorWidget: (context, url, error) => const Icon(
-          Icons.error,
-          color: AppColor.focusederrorBorderAndRemove,
-          size: 40,
+        errorWidget: (context, url, error) => Center(
+          child: Container(
+            height: 70,
+            width: 70,
+            padding: const EdgeInsetsDirectional.all(4),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: AppColor.redDeepColor.withOpacity(.03),
+              border: Border.all(
+                color: AppColor.redDeepColor,
+                width: 3,
+              ),
+            ),
+            child: const Image(
+              color: AppColor.redDeepColor,
+              image: AssetImage(
+                AssetsImages.logo,
+              ),
+            ),
+          ),
         ),
       ),
     );

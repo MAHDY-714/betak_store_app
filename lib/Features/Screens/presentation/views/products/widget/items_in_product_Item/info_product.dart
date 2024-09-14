@@ -41,29 +41,28 @@ class InfoProduct extends StatelessWidget {
                     : 13,
               ),
             ),
-            if (productModel!.variants != null)
-              Container(
-                  width: 70,
-                  height: 30,
-                  padding: const EdgeInsets.all(1.0),
-                  decoration: BoxDecoration(
-                    // color: AppColor.backgroundForAllItemsInProductDarkColor,
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                      color: AppColor.backgroundLayer2,
-                      width: .5,
-                    ),
-                  ),
-                  child: const ChoseColorForProduct())
-            else if (productModel!.rating != null ||
-                productModel!.reviews != null)
+            // if (productModel!.variants != null)
+            //   Container(
+            //       width: 70,
+            //       height: 30,
+            //       padding: const EdgeInsets.all(1.0),
+            //       decoration: BoxDecoration(
+            //         // color: AppColor.backgroundForAllItemsInProductDarkColor,
+            //         borderRadius: BorderRadius.circular(8),
+            //         border: Border.all(
+            //           color: AppColor.backgroundLayer2,
+            //           width: .5,
+            //         ),
+            //       ),
+            //       child: const ChoseColorForProduct())
+            if (productModel!.rating != null || productModel!.reviews != null)
               Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Row(
                     children: [
                       Text(
-                        '${productModel!.reviews!}',
+                        '${productModel!.reviews ?? 0}',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyles.textStyle12.copyWith(
@@ -89,7 +88,7 @@ class InfoProduct extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        productModel!.rating!.toStringAsFixed(cells),
+                        '${productModel!.rating?.toStringAsFixed(2) ?? 0.00}',
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyles.priceStyleInInLayer2.copyWith(
@@ -118,6 +117,7 @@ class InfoProduct extends StatelessWidget {
               children: [
                 Text(
                   '${productModel!.price!.round()}\$',
+                  // '99999',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyles.priceStyleInInLayer2.copyWith(
@@ -130,6 +130,7 @@ class InfoProduct extends StatelessWidget {
                 if (productModel!.priceWas != null)
                   Text(
                     '${productModel!.priceWas!.round()}\$',
+                    // '99999',
                     style: TextStyles.priceWasInProductDetailsStyle.copyWith(
                         color: AppColor.errorBorderAndRemoveAndIcons,
                         fontSize:
