@@ -1,4 +1,5 @@
 import 'package:betak_store_app/Features/Screens/data/models/my_cart_data_model/item_info_model.dart';
+import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/cart_body_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/categories/categories_in_main_category_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/products_body_view.dart';
@@ -61,8 +62,8 @@ class AppRouter {
       path: kProductDetailsView,
       pageBuilder: (context, state) {
         return CustomTransitionPage(
-          child: const ProductDetailsView(
-              // productInfoInMyCartModel: state.extra as ProductInfoInMyCartModel,
+          child:  ProductDetailsView(
+              productModel: state.extra as ProductModel,
               ),
           transitionDuration: const Duration(seconds: 2),
           barrierDismissible: true,

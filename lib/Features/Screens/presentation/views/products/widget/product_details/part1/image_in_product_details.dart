@@ -1,6 +1,7 @@
+import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
 import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
-import 'package:betak_store_app/core/utils/images.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class ImageInProductDetails extends StatelessWidget {
@@ -8,15 +9,17 @@ class ImageInProductDetails extends StatelessWidget {
     super.key,
     required this.index,
     required this.child,
+    required this.productResults,
   });
 
   final int index;
   final Widget child;
+  final ProductResults productResults;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: kHeight(context) * .35,
+      height: kHeight(context) * .4,
       width: kWidth(context),
       decoration: BoxDecoration(
         color: AppColor.backgroundImageCategore,
@@ -27,14 +30,14 @@ class ImageInProductDetails extends StatelessWidget {
           ),
         ),
         image: DecorationImage(
-          scale: 2.5,
+          fit: BoxFit.cover,
           alignment: const Alignment(.1, -.3),
-          image: AssetImage(
-            AssetsImages.listCategoriesInHome[index],
-          ),
+          image: CachedNetworkImageProvider(
+              productResults.images![index].last.toString()),
         ),
       ),
       child: child,
     );
   }
 }
+// BlocProvider.of<ProductDetailsCubit>(context).imageIndex

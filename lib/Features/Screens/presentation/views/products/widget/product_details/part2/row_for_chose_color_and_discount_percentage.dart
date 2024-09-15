@@ -1,3 +1,5 @@
+import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
+import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part2/chose_color_for_product.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part2/percentage_in_product_details.dart';
 import 'package:betak_store_app/core/styles/app_color.dart';
@@ -9,8 +11,12 @@ class RowForChoseColorAndDiscountPercentage extends StatelessWidget {
   const RowForChoseColorAndDiscountPercentage({
     super.key,
     required this.textDiscount,
+    required this.productModel,
+    required this.productResults,
   });
   final double textDiscount;
+  final ProductModel productModel;
+  final ProductResults productResults;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -32,23 +38,26 @@ class RowForChoseColorAndDiscountPercentage extends StatelessWidget {
                   width: 1.0,
                 ),
               ),
-              child: const Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     'Color',
                     textAlign: TextAlign.start,
-                    maxLines: 3,
+                    maxLines: 1,
                     // style: TextStyles.textInProductDetails,
                     style: TextStyles.textStyle16,
                   ),
-                  ChoseColorForProduct(),
+                  ChoseColorForProduct(
+                    productModel: productModel,
+                  )
                 ],
               ),
             ),
           ),
           PercentageInProductDetails(
-            textDiscount: '${textDiscount.round()}',
+            textDiscount:
+                '${productResults.promotion != null ? productResults.promotion!.percentage!.round() : 0}',
           ),
         ],
       ),

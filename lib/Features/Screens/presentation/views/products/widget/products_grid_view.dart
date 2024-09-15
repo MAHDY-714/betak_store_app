@@ -41,7 +41,7 @@ class ProductsGridView extends StatelessWidget {
               onTapGoProductAllInfo: () async {
                 GoRouter.of(context).push(
                   AppRouter.kProductDetailsView,
-                  extra: productInfoInMyCartModel,
+                  extra: cub.productModel[index],
                 );
               },
               imageProduct:

@@ -1,13 +1,21 @@
+import 'dart:developer';
+
+import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
+import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part1/swich_images_product_item_builder.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
-import 'package:betak_store_app/core/utils/images.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SwichImagesProductListView extends StatelessWidget {
   const SwichImagesProductListView(
-      {super.key, required this.index, this.onTapSwichImagesProduct});
+      {super.key,
+      required this.index,
+      this.onTapSwichImagesProduct,
+      required this.productResults});
   final int index;
   final void Function()? onTapSwichImagesProduct;
+  final ProductResults productResults;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -16,9 +24,12 @@ class SwichImagesProductListView extends StatelessWidget {
       child: ListView.separated(
         itemBuilder: (BuildContext context, int index) {
           return SwichImagesProductItemBuilder(
-            images: AssetsImages.listCategoriesInHome[index],
+            imageProduct: productResults.images![index].last.toString(),
             onTapSwichImagesProduct: () {
-              kIndex = index;
+              BlocProvider.of<ProductDetailsCubit>(context)
+                  .changeImagePreview(index: index);
+
+              log(productResults.toString());
             },
           );
         },
@@ -27,7 +38,7 @@ class SwichImagesProductListView extends StatelessWidget {
             width: 4,
           );
         },
-        itemCount: AssetsImages.listCategoriesInHome.length,
+        itemCount: productResults.images!.length,
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
       ),

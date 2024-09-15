@@ -1,5 +1,4 @@
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part2/chose_color_for_product.dart';
 import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/styles/text_styles.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
@@ -14,7 +13,6 @@ class InfoProduct extends StatelessWidget {
   final ProductModel? productModel;
   @override
   Widget build(BuildContext context) {
-    int cells = 2;
     return Align(
       alignment: const AlignmentDirectional(-.85, 1.18),
       child: Container(
@@ -41,20 +39,6 @@ class InfoProduct extends StatelessWidget {
                     : 13,
               ),
             ),
-            // if (productModel!.variants != null)
-            //   Container(
-            //       width: 70,
-            //       height: 30,
-            //       padding: const EdgeInsets.all(1.0),
-            //       decoration: BoxDecoration(
-            //         // color: AppColor.backgroundForAllItemsInProductDarkColor,
-            //         borderRadius: BorderRadius.circular(8),
-            //         border: Border.all(
-            //           color: AppColor.backgroundLayer2,
-            //           width: .5,
-            //         ),
-            //       ),
-            //       child: const ChoseColorForProduct())
             if (productModel!.rating != null || productModel!.reviews != null)
               Column(
                 mainAxisSize: MainAxisSize.min,

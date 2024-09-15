@@ -60,20 +60,13 @@ class Decorations {
       width: 0.5,
     ),
   );
-  static BoxDecoration swichImagesProductBoxDecoration(
-      {required String images}) {
+  static BoxDecoration swichImagesProductBoxDecoration() {
     return BoxDecoration(
       color: AppColor.backgroundImageCategore,
       borderRadius: BorderRadius.circular(8),
       border: Border.all(
         color: AppColor.backgroundLayer2.withOpacity(.2),
         width: 1.0,
-      ),
-      image: DecorationImage(
-        scale: 5,
-        image: AssetImage(
-          images,
-        ),
       ),
     );
   }
