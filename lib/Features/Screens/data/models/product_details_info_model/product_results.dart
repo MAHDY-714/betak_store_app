@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-
 import 'brand.dart';
 import 'fulfillment.dart';
 import 'info_and_guide.dart';
@@ -57,8 +56,8 @@ class ProductResults extends Equatable {
       upc: json['upc'] as String?,
       modelNumber: json['model_number'] as String?,
       storeSkuNumber: json['store_sku_number'] as String?,
-      rating: json['rating'] as String?,
-      reviews: json['reviews'] as String?,
+      rating: json['rating'],
+      reviews: json['reviews'],
       images: json['images'] as List<dynamic>?,
       price: json['price'],
       promotion: json['promotion'] == null

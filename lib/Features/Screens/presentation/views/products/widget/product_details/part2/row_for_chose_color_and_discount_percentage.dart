@@ -10,11 +10,9 @@ import 'package:flutter/material.dart';
 class RowForChoseColorAndDiscountPercentage extends StatelessWidget {
   const RowForChoseColorAndDiscountPercentage({
     super.key,
-    required this.textDiscount,
     required this.productModel,
     required this.productResults,
   });
-  final double textDiscount;
   final ProductModel productModel;
   final ProductResults productResults;
   @override

@@ -56,7 +56,7 @@ class Decorations {
     color: AppColor.backgroundForAllItemsInProductDarkColor,
     borderRadius: BorderRadius.circular(16),
     border: Border.all(
-      color: const Color(0xFF686767),
+      color: AppColor.sky2Color,
       width: 0.5,
     ),
   );

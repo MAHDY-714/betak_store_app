@@ -21,16 +21,21 @@ String kRating({
   required double rating,
 }) {
   String ratingEmoji;
-  if (rating >= 5) {
+  if (rating > 4.7 && rating <= 5) {
     ratingEmoji = '🤩';
-  } else if (rating >= 4 && rating < 5) {
+    // ratingEmoji = '🥇';
+  } else if (rating >= 4 && rating < 4.7) {
     ratingEmoji = '☺️';
+    // ratingEmoji = '🥈';
   } else if (rating >= 3 && rating < 4) {
     ratingEmoji = '🙂';
+    // ratingEmoji = '🥉';
   } else if (rating >= 2 && rating < 3) {
     ratingEmoji = '😠';
-  } else {
+  } else if (rating >= 1 && rating < 2) {
     ratingEmoji = '😡';
+  } else {
+    ratingEmoji = '🫣';
   }
   return ratingEmoji;
 }
