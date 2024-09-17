@@ -1,3 +1,4 @@
+import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part6/data_cell_item.dart';
 import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/styles/text_styles.dart';
@@ -7,10 +8,10 @@ import 'package:flutter/material.dart';
 class DetailsInfoView extends StatelessWidget {
   const DetailsInfoView(
       {super.key,
-      required this.moreInfo,
+      required this.productResults,
       required this.indexItem,
       required this.listLength});
-  final List<dynamic> moreInfo;
+  final ProductResults productResults;
   final int indexItem;
   final int listLength;
   @override
@@ -62,12 +63,12 @@ class DetailsInfoView extends StatelessWidget {
                       cells: <DataCell>[
                         dataCell(context, index,
                             text:
-                                '${moreInfo[indexItem]['value'][index]['name']}',
+                                '${productResults.specifications![indexItem].value![index].name}',
                             textStyle: TextStyles.toggleSign,
                             width: .35),
                         dataCell(context, index,
                             text:
-                                '${moreInfo[indexItem]['value'][index]['value']}',
+                                '${productResults.specifications![indexItem].value![index].value  }',
                             textStyle: TextStyles
                                 .textRecommendationsInProductDetailsStyle),
                       ],

@@ -1,5 +1,6 @@
-import 'package:betak_store_app/core/styles/app_color.dart';
+import 'package:betak_store_app/core/styles/decorations.dart';
 import 'package:betak_store_app/core/styles/text_styles.dart';
+import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 
 class MoreInfoButton extends StatelessWidget {
@@ -28,39 +29,22 @@ class MoreInfoButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         height: 50,
-        width: 100,
+        width: kWidth(context) >= 340 && kWidth(context) <= 380
+            ? kWidth(context) * .2
+            : kWidth(context) * .3,
         alignment: Alignment.center,
         padding: const EdgeInsets.symmetric(horizontal: 8),
-        decoration: BoxDecoration(
-          color: Colors.grey.withOpacity(.07),
-          border: BorderDirectional(
-            top: const BorderSide(
-              color: AppColor.backgroundImageCategore,
-              width: 1,
-            ),
-            start: BorderSide(
-              color: AppColor.backgroundImageCategore,
-              width: startBorder ?? 1,
-            ),
-            end: BorderSide(
-              color: AppColor.backgroundImageCategore,
-              width: endBorder ?? 1,
-            ),
-            bottom: const BorderSide(
-              color: AppColor.backgroundImageCategore,
-              width: 1,
-            ),
-          ),
-          borderRadius: BorderRadiusDirectional.only(
-            topStart: Radius.circular(topStartBorderRadius ?? 8),
-            bottomStart: Radius.circular(bottomStartBorderRadius ?? 8),
-            topEnd: Radius.circular(topEndBorderRadius ?? 8),
-            bottomEnd: Radius.circular(bottomEndBorderRadius ?? 8),
-          ),
+        decoration: Decorations.moreInfoButtonBoxDecoration(
+          startBorder: startBorder,
+          endBorder: endBorder,
+          topStartBorderRadius: topStartBorderRadius,
+          bottomStartBorderRadius: bottomStartBorderRadius,
+          topEndBorderRadius: topEndBorderRadius,
+          bottomEndBorderRadius: bottomEndBorderRadius,
         ),
         child: Text(
           nameButton,
-          style: TextStyles.textDiscount,
+          style: TextStyles.textStyle11,
         ),
       ),
     );

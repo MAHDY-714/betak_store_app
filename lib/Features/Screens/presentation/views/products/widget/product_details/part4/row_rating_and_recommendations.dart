@@ -11,6 +11,7 @@ class RowRatingAndRecommendations extends StatelessWidget {
   final ProductResults productResults;
   @override
   Widget build(BuildContext context) {
+    var scaffoldKey = GlobalKey<ScaffoldState>();
     String rating =
         double.parse(productResults.rating ?? '0').toStringAsFixed(2);
     int reviews = double.parse(productResults.reviews ?? '0').round();
@@ -27,6 +28,9 @@ class RowRatingAndRecommendations extends StatelessWidget {
             RowForRate(
               rateValue: double.parse(rating),
               rateCounter: reviews,
+              onTap: () {
+                // scaffoldKey.currentState!.showBottomSheet((context) => const RateBodyView());
+              },
             ),
             const SizedBox(width: 8),
           ],

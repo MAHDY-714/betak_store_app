@@ -16,7 +16,7 @@ class InfoProduct extends StatelessWidget {
     return Align(
       alignment: const AlignmentDirectional(-.85, 1.18),
       child: Container(
-        height: kHeight(context) >= 770 && kHeight(context) <= 810 ? 110 : 120,
+        height: kHeight(context) >= 770 && kHeight(context) <= 810 ? 110 : 135,
         width: kWidth(context),
         alignment: AlignmentDirectional.centerStart,
         padding: const EdgeInsetsDirectional.symmetric(horizontal: 4),
@@ -36,7 +36,7 @@ class InfoProduct extends StatelessWidget {
               style: TextStyles.nameProductStyleInInLayer2.copyWith(
                 fontSize: kHeight(context) >= 770 && kHeight(context) <= 810
                     ? 10
-                    : 13,
+                    : 12,
               ),
             ),
             if (productModel!.rating != null || productModel!.reviews != null)
@@ -106,7 +106,7 @@ class InfoProduct extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyles.priceStyleInInLayer2.copyWith(
                     fontSize: kHeight(context) >= 770 && kHeight(context) <= 810
-                        ? 13
+                        ? 12
                         : 16,
                   ),
                 ),

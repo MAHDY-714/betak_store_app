@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:betak_store_app/core/utils/images.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,7 @@ class CategoryHomeItemBuilder extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           clipBehavior: Clip.antiAlias,
           child: Container(
-            width: 80,
+            width: kWidth(context) > 340 && kWidth(context) <= 380 ? 70 : 80,
             decoration: BoxDecoration(
               color: const Color(0xFFF2F2F2),
               border: BorderDirectional(

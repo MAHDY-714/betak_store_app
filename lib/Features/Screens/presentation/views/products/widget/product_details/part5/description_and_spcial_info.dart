@@ -1,8 +1,10 @@
 import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part3/text_in_product_details.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part5/description_text.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part5/special_info.dart';
 import 'package:betak_store_app/core/styles/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class DescriptionAndDelivery extends StatelessWidget {
   const DescriptionAndDelivery({super.key, required this.productResults});
@@ -15,18 +17,21 @@ class DescriptionAndDelivery extends StatelessWidget {
           text: 'Description',
           style: TextStyles.priceStyleInInLayer2,
         ),
+        const SizedBox(height: 8.0),
         DescriptionText(
           text: productResults.description.toString(),
         ),
         const SizedBox(height: 20.0),
-        const TextInProductDetails(
-          text: 'Delivering',
-          style: TextStyles.priceStyleInInLayer2,
+        SpecialInfo(
+          infoList: productResults.bullets!,
+          itemCount: productResults.bullets!.length,
+          title: 'Material & used',
         ),
-        TextInProductDetails(
-          text:
-              'Earliest delivery date: ${productResults.fulfillment!.options![0].deliveryDate ?? 'There is no specific delivery date '}',
-          style: TextStyles.textRecommendationsInProductDetailsStyle,
+        const SizedBox(height: 20.0),
+        SpecialInfo(
+          infoList: productResults.highlights!,
+          itemCount: productResults.highlights!.length,
+          title: 'Highlights',
         ),
         const SizedBox(height: 20.0),
       ],

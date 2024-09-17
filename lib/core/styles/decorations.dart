@@ -192,4 +192,42 @@ class Decorations {
           image: AssetImage(image),
         ),
       );
+
+  static BoxDecoration moreInfoButtonBoxDecoration({
+  double? startBorder,
+  double? endBorder,
+  double? topStartBorderRadius,
+  double? bottomStartBorderRadius,
+  double? topEndBorderRadius,
+  double? bottomEndBorderRadius,
+}) {
+  return BoxDecoration(
+    color: Colors.grey.withOpacity(.07),
+    border: BorderDirectional(
+      top: const BorderSide(
+        color: AppColor.backgroundImageCategore,
+        width: 1,
+      ),
+      start: BorderSide(
+        color: AppColor.backgroundImageCategore,
+        width: startBorder ?? 1,
+      ),
+      end: BorderSide(
+        color: AppColor.backgroundImageCategore,
+        width: endBorder ?? 1,
+      ),
+      bottom: const BorderSide(
+        color: AppColor.backgroundImageCategore,
+        width: 1,
+      ),
+    ),
+    borderRadius: BorderRadiusDirectional.only(
+      topStart: Radius.circular(topStartBorderRadius ?? 8),
+      bottomStart: Radius.circular(bottomStartBorderRadius ?? 8),
+      topEnd: Radius.circular(topEndBorderRadius ?? 8),
+      bottomEnd: Radius.circular(bottomEndBorderRadius ?? 8),
+    ),
+  );
+}
+
 }

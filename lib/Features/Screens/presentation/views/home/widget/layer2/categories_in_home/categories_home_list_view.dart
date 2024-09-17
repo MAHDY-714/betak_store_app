@@ -14,7 +14,7 @@ class CategoriesHomeListView extends StatelessWidget {
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
         return SizedBox(
-          height: 96,
+          height: kWidth(context) > 340 && kWidth(context) <= 380 ? 86 : 96,
           child: ListView.builder(
             itemBuilder: (context, index) {
               return CategoryHomeItemBuilder(

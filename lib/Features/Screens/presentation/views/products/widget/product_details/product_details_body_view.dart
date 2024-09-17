@@ -43,12 +43,14 @@ class ProductDetailsBodyView extends StatelessWidget {
                           productModel: productModel,
                           productResults: cub.productResults!),
                     ),
-                    const SliverToBoxAdapter(
+                     SliverToBoxAdapter(
                       child: Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.symmetric(vertical: 20.0),
-                            child: RowForMoreInfo(),
+                            padding: const EdgeInsets.symmetric(vertical: 20.0),
+                            child: RowForMoreInfo(
+                              productResults: cub.productResults!
+                            ),
                           ),
                         ],
                       ),
