@@ -35,8 +35,9 @@ class ProductDetailsCubit extends Cubit<ProductDetailsState> {
   void changeImagePreview({required int index}) {
     imageIndex = index;
     emit(GetProductDetailsChangeImagePreviewState());
-  } 
-   void choseProductColor({required int index}) {
+  }
+
+  void choseProductColor({required int index}) {
     colorIndex = index;
     emit(GetProductDetailsChoseProductColorState());
   }

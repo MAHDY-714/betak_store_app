@@ -2,6 +2,7 @@ import 'package:betak_store_app/Features/Screens/data/models/product_details_inf
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part6/deatils_info.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part6/more_info_button.dart';
 import 'package:betak_store_app/core/functions/show_bottom_sheet_function.dart';
+import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 
 class RowForMoreInfo extends StatelessWidget {
@@ -21,21 +22,13 @@ class RowForMoreInfo extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         MoreInfoButton(
-          nameButton: 'Details',
+          nameButton: 'Certifications',
           startBorder: .01,
           topStartBorderRadius: 0,
           bottomStartBorderRadius: 0,
-          onTap: () => showBottomSheetBody(
-            context,
-            DetailsInfoView(
-              productResults: productResults,
-              indexItem: 0,
-              listLength: productResults.specifications![0].value!.length,
-            ),
-          ),
-        ),
-        MoreInfoButton(
-          nameButton: 'Certifications',
+          width: kWidth(context) >= 340 && kWidth(context) <= 380
+              ? kWidth(context) * .31
+              : kWidth(context) * .3,
           onTap: () => showBottomSheetBody(
             context,
             DetailsInfoView(
@@ -46,10 +39,27 @@ class RowForMoreInfo extends StatelessWidget {
           ),
         ),
         MoreInfoButton(
+          nameButton: 'Details',
+          width: kWidth(context) >= 340 && kWidth(context) <= 380
+              ? kWidth(context) * .21
+              : kWidth(context) * .3,
+          onTap: () => showBottomSheetBody(
+            context,
+            DetailsInfoView(
+              productResults: productResults,
+              indexItem: 0,
+              listLength: productResults.specifications![0].value!.length,
+            ),
+          ),
+        ),
+        MoreInfoButton(
           nameButton: 'Dimentions',
           endBorder: 0.1,
           topEndBorderRadius: 0,
           bottomEndBorderRadius: 0,
+          width: kWidth(context) >= 340 && kWidth(context) <= 380
+              ? kWidth(context) * .31
+              : kWidth(context) * .3,
           onTap: () => showBottomSheetBody(
             context,
             DetailsInfoView(

@@ -1,5 +1,8 @@
+import 'dart:developer';
+
 import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/row_for_rate.dart';
+import 'package:betak_store_app/core/services/api_keys.dart';
 import 'package:betak_store_app/core/styles/decorations.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +14,6 @@ class RowRatingAndRecommendations extends StatelessWidget {
   final ProductResults productResults;
   @override
   Widget build(BuildContext context) {
-    var scaffoldKey = GlobalKey<ScaffoldState>();
     String rating =
         double.parse(productResults.rating ?? '0').toStringAsFixed(2);
     int reviews = double.parse(productResults.reviews ?? '0').round();
@@ -30,6 +32,7 @@ class RowRatingAndRecommendations extends StatelessWidget {
               rateCounter: reviews,
               onTap: () {
                 // scaffoldKey.currentState!.showBottomSheet((context) => const RateBodyView());
+                log(kFullReviews.length.toString());
               },
             ),
             const SizedBox(width: 8),

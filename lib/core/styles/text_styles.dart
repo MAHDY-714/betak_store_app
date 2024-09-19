@@ -139,11 +139,6 @@ abstract class TextStyles {
     fontFamily: FontFamily.bitter300,
     letterSpacing: 2,
   );
-  static const textStyle13 = TextStyle(
-    color: AppColor.greenColor,
-    fontSize: 13,
-    fontFamily: FontFamily.orbitron900,
-  );
   static const textStyle14 = TextStyle(
     color: Colors.white,
     fontSize: 14,
@@ -181,18 +176,23 @@ abstract class TextStyles {
     fontFamily: FontFamily.orbitron900,
     letterSpacing: 2,
   );
-
-  static const priceInProductDetailsStyle = TextStyle(
-    color: Colors.white,
-    fontSize: 18,
-    fontFamily: FontFamily.orbitron900,
-  );
-  static const priceWasInProductDetailsStyle = TextStyle(
+  static const priceTextStyle9 = TextStyle(
     color: Colors.white70,
     fontSize: 9,
     fontFamily: FontFamily.orbitron900,
     decoration: TextDecoration.lineThrough,
   );
+  static const priceTextStyle13 = TextStyle(
+    color: AppColor.greenColor,
+    fontSize: 13,
+    fontFamily: FontFamily.orbitron900,
+  );
+  static const priceTextStyle18 = TextStyle(
+    color: Colors.white,
+    fontSize: 18,
+    fontFamily: FontFamily.orbitron900,
+  );
+
   static const textRecommendationsInProductDetailsStyle = TextStyle(
     color: Colors.white70,
     fontSize: 12,

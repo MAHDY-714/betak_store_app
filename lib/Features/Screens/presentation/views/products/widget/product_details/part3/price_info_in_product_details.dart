@@ -17,17 +17,27 @@ class PriceInfoInProductDetails extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text(
-                '${productResults.price!.round()}💲',
-                style: TextStyles.priceInProductDetailsStyle,
-              ),
+              if (productResults.price != null)
+                Text(
+                  '${productResults.price!.round()}💲',
+                  style: TextStyles.priceTextStyle18,
+                )
+              // SizedBox(
+              //   width: productResults.price != null? 4 : 0,
+              // )
+
+              else
+                const Text(
+                  'out of stock!',
+                  style: TextStyles.textStyle16Error,
+                ),
               const SizedBox(
                 width: 4,
               ),
               if (productResults.promotion != null)
                 Text(
                   '${productResults.promotion!.original!.round()}💲',
-                  style: TextStyles.priceWasInProductDetailsStyle,
+                  style: TextStyles.priceTextStyle9,
                 ),
             ],
           ),
@@ -47,7 +57,7 @@ class PriceInfoInProductDetails extends StatelessWidget {
                 ),
                 Text(
                   '${productResults.promotion!.save!.round()}💲',
-                  style: TextStyles.textStyle13,
+                  style: TextStyles.priceTextStyle13,
                 ),
               ],
             ),

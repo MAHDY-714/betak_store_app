@@ -5,7 +5,7 @@ import 'package:betak_store_app/Features/Screens/presentation/views/products/wid
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part3/text_in_product_details.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/reviews/rate_body_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/row_rating_and_recommendations.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part5/description_and_spcial_info.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part5/description_and_special_info.dart';
 import 'package:betak_store_app/core/functions/show_bottom_sheet_function.dart';
 import 'package:flutter/material.dart';
 
@@ -33,12 +33,13 @@ class AllInfoProductDetails extends StatelessWidget {
           text: productResults.title!,
         ),
         const SizedBox(height: 20.0),
+        
         PriceInfoInProductDetails(productResults: productResults),
         RowRatingAndRecommendations(
           onTap: () => showBottomSheetBody(context, const RateBodyView()),
           productResults: productResults,
         ),
-        DescriptionAndDelivery(
+        DescriptionAndSpecialInfo(
           productResults: productResults,
         ),
       ],

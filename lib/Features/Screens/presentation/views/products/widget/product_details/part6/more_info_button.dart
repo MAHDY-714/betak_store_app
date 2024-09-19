@@ -1,6 +1,5 @@
 import 'package:betak_store_app/core/styles/decorations.dart';
 import 'package:betak_store_app/core/styles/text_styles.dart';
-import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 
 class MoreInfoButton extends StatelessWidget {
@@ -14,6 +13,7 @@ class MoreInfoButton extends StatelessWidget {
     this.topEndBorderRadius,
     this.bottomEndBorderRadius,
     this.onTap,
+    required this.width,
   });
   final String nameButton;
   final double? startBorder;
@@ -23,15 +23,14 @@ class MoreInfoButton extends StatelessWidget {
   final double? topEndBorderRadius;
   final double? bottomEndBorderRadius;
   final void Function()? onTap;
+  final double width;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
       child: Container(
         height: 50,
-        width: kWidth(context) >= 340 && kWidth(context) <= 380
-            ? kWidth(context) * .2
-            : kWidth(context) * .3,
+        width: width,
         alignment: Alignment.center,
         padding: const EdgeInsets.symmetric(horizontal: 8),
         decoration: Decorations.moreInfoButtonBoxDecoration(
@@ -44,7 +43,7 @@ class MoreInfoButton extends StatelessWidget {
         ),
         child: Text(
           nameButton,
-          style: TextStyles.textStyle11,
+          style: TextStyles.textStyle10,
         ),
       ),
     );

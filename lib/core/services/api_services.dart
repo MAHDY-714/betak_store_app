@@ -9,8 +9,8 @@ class ApiService {
   ApiService(this._dio);
 //q=value&hd_sort=best_match&engine=home_depot
   Future<Map<String, dynamic>> getProducts({required String endPoint}) async {
-    var response =
-        await _dio.get('$_baseUrl?api_key=${ApiKeys.serpApiKey}&country=us&$endPoint');
+    var response = await _dio
+        .get('$_baseUrl?api_key=${ApiKeys.serpApiKey}&country=us&$endPoint');
     return response.data;
   }
 
@@ -19,3 +19,5 @@ class ApiService {
 //    engine=home_depot_product&product_id=321035976
 //    endPoint=> engine=home_depot_product&product_id=321035976
 }
+
+// endPoinet=> q=furnishings&product_id=326182591&engine=home_depot_product_reviews

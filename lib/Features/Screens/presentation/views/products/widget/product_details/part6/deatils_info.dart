@@ -68,7 +68,7 @@ class DetailsInfoView extends StatelessWidget {
                             width: .35),
                         dataCell(context, index,
                             text:
-                                '${productResults.specifications![indexItem].value![index].value  }',
+                                '${productResults.specifications![indexItem].value![index].value}',
                             textStyle: TextStyles
                                 .textRecommendationsInProductDetailsStyle),
                       ],

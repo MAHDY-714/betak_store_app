@@ -64,7 +64,7 @@ class MyCartItemBuilder extends StatelessWidget {
                     InfoPriceAndTotalInMyCart(
                       title: 'Total: ',
                       price: total,
-                      style: TextStyles.textStyle13,
+                      style: TextStyles.priceTextStyle13,
                     ),
                     const SizedBox(height: 16),
                     CountOfUnitsAndRemoveItemWidget(

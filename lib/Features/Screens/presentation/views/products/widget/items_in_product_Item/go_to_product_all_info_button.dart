@@ -15,7 +15,8 @@ class GoToProductAllInfoButton extends StatelessWidget {
   final ProductModel productModel;
   @override
   Widget build(BuildContext context) {
-    double buttonSize = kWidth(context) > 340 && kWidth(context) <= 380 ? 50 : 60;
+    double buttonSize =
+        kWidth(context) > 340 && kWidth(context) <= 380 ? 50 : 60;
     return GestureDetector(
       onTap: onTap,
       child: Padding(

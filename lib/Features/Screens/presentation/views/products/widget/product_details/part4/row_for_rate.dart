@@ -25,7 +25,7 @@ class RowForRate extends StatelessWidget {
               kRating(
                 rating: rateValue,
               ),
-              style: TextStyles.priceInProductDetailsStyle,
+              style: TextStyles.priceTextStyle18,
             ),
             const SizedBox(width: 8),
             Text(

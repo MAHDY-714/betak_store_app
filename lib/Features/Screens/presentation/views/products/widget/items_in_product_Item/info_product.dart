@@ -115,7 +115,7 @@ class InfoProduct extends StatelessWidget {
                   Text(
                     '${productModel!.priceWas!.round()}\$',
                     // '99999',
-                    style: TextStyles.priceWasInProductDetailsStyle.copyWith(
+                    style: TextStyles.priceTextStyle9.copyWith(
                         color: AppColor.errorBorderAndRemoveAndIcons,
                         fontSize:
                             kHeight(context) >= 770 && kHeight(context) <= 810
