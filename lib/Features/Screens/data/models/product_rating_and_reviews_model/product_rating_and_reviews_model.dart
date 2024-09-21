@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'rating.dart';
 import 'review.dart';
 
-class ProductReviewsModel extends Equatable {
+class ProductRatingAndReviewsModel extends Equatable {
   final int? totalReview;
   final double? overallRating;
   final int? totalPositiveRecommendation;
@@ -11,7 +11,7 @@ class ProductReviewsModel extends Equatable {
   final List<Rating>? ratings;
   final List<Review>? reviews;
 
-  const ProductReviewsModel({
+  const ProductRatingAndReviewsModel({
     this.totalReview,
     this.overallRating,
     this.totalPositiveRecommendation,
@@ -20,8 +20,8 @@ class ProductReviewsModel extends Equatable {
     this.reviews,
   });
 
-  factory ProductReviewsModel.fromJson(Map<String, dynamic> json) {
-    return ProductReviewsModel(
+  factory ProductRatingAndReviewsModel.fromJson(Map<String, dynamic> json) {
+    return ProductRatingAndReviewsModel(
       totalReview: json['total_review'] as int?,
       overallRating: (json['overall_rating'] as num?)?.toDouble(),
       totalPositiveRecommendation:

@@ -1,11 +1,11 @@
-import 'dart:developer';
 
 import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/row_for_rate.dart';
-import 'package:betak_store_app/core/services/api_keys.dart';
 import 'package:betak_store_app/core/styles/decorations.dart';
+import 'package:betak_store_app/core/utils/app_router.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class RowRatingAndRecommendations extends StatelessWidget {
   const RowRatingAndRecommendations(
@@ -21,7 +21,7 @@ class RowRatingAndRecommendations extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 20.0),
       child: Container(
         width: kWidth(context) * .75,
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        padding: const EdgeInsets.all(10),
         decoration: Decorations
             .rowForRateAndRecomendationsInProductDetailsBoxDecorations,
         child: Column(
@@ -30,10 +30,7 @@ class RowRatingAndRecommendations extends StatelessWidget {
             RowForRate(
               rateValue: double.parse(rating),
               rateCounter: reviews,
-              onTap: () {
-                // scaffoldKey.currentState!.showBottomSheet((context) => const RateBodyView());
-                log(kFullReviews.length.toString());
-              },
+              onTap: onTap,
             ),
             const SizedBox(width: 8),
           ],

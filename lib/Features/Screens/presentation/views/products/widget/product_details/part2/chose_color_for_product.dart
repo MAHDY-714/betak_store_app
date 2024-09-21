@@ -1,5 +1,5 @@
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
-import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit.dart';
+import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit/product_details_cubit.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';

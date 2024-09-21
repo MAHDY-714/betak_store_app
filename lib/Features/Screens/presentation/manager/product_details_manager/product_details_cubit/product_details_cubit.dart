@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
 import 'package:betak_store_app/Features/Screens/data/repo/home_repo/home_repo.dart';
-import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_state.dart';
+import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit/product_details_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProductDetailsCubit extends Cubit<ProductDetailsState> {

@@ -3,6 +3,7 @@ import 'package:betak_store_app/Features/Screens/data/models/product_model/produ
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/cart_body_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/categories/categories_in_main_category_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/products_body_view.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/rating_amd_reviews/rate_body_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/profiles/widget/screens_in_items/screens_in_items_body_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/screens_view.dart';
@@ -65,6 +66,29 @@ class AppRouter {
           child: ProductDetailsView(
             productModel: state.extra as ProductModel,
           ),
+          transitionDuration: const Duration(seconds: 2),
+          barrierDismissible: true,
+          reverseTransitionDuration: const Duration(seconds: 1),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            return CustomPageTranstionAnimations.slideTransitionBottomToTop(
+              context,
+              animation,
+              secondaryAnimation,
+              child,
+              widget: child,
+            );
+          },
+        );
+      },
+    ),
+    GoRoute(
+      path: kRateDetails,
+      pageBuilder: (context, state) {
+        return CustomTransitionPage(
+          child: Scaffold(
+              body: RateAndReviewBodyView(
+            productModel: state.extra as ProductModel,
+          )),
           transitionDuration: const Duration(seconds: 2),
           barrierDismissible: true,
           reverseTransitionDuration: const Duration(seconds: 1),

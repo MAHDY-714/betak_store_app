@@ -26,9 +26,11 @@ class RowForMoreInfo extends StatelessWidget {
           startBorder: .01,
           topStartBorderRadius: 0,
           bottomStartBorderRadius: 0,
-          width: kWidth(context) >= 340 && kWidth(context) <= 380
-              ? kWidth(context) * .31
-              : kWidth(context) * .3,
+          width: kWidthCondtions(
+            context,
+            valueIsTrue: kWidth(context) * .31,
+            valueIsFalse: kWidth(context) * .32,
+          ),
           onTap: () => showBottomSheetBody(
             context,
             DetailsInfoView(
@@ -40,9 +42,11 @@ class RowForMoreInfo extends StatelessWidget {
         ),
         MoreInfoButton(
           nameButton: 'Details',
-          width: kWidth(context) >= 340 && kWidth(context) <= 380
-              ? kWidth(context) * .21
-              : kWidth(context) * .3,
+          width: kWidthCondtions(
+            context,
+            valueIsTrue: kWidth(context) * .21,
+            valueIsFalse: kWidth(context) * .21,
+          ),
           onTap: () => showBottomSheetBody(
             context,
             DetailsInfoView(
@@ -57,9 +61,11 @@ class RowForMoreInfo extends StatelessWidget {
           endBorder: 0.1,
           topEndBorderRadius: 0,
           bottomEndBorderRadius: 0,
-          width: kWidth(context) >= 340 && kWidth(context) <= 380
-              ? kWidth(context) * .31
-              : kWidth(context) * .3,
+          width: kWidthCondtions(
+            context,
+            valueIsTrue: kWidth(context) * .31,
+            valueIsFalse: kWidth(context) * .32,
+          ),
           onTap: () => showBottomSheetBody(
             context,
             DetailsInfoView(

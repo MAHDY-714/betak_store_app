@@ -1,6 +1,6 @@
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/Features/Screens/data/repo/home_repo/home_repo_implement.dart';
-import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit.dart';
+import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit/product_details_cubit.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/product_details_body_view.dart';
 import 'package:betak_store_app/core/utils/service_locator.dart';
 import 'package:flutter/material.dart';

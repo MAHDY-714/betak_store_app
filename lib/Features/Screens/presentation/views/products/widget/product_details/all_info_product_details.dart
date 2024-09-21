@@ -3,11 +3,13 @@ import 'package:betak_store_app/Features/Screens/data/models/product_model/produ
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part2/row_for_chose_color_and_discount_percentage.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part3/price_info_in_product_details.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part3/text_in_product_details.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/reviews/rate_body_view.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/row_rating_and_recommendations.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/rating_amd_reviews/rate_body_view.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/row_rating_and_review.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part5/description_and_special_info.dart';
 import 'package:betak_store_app/core/functions/show_bottom_sheet_function.dart';
+import 'package:betak_store_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class AllInfoProductDetails extends StatelessWidget {
   const AllInfoProductDetails({
@@ -33,10 +35,14 @@ class AllInfoProductDetails extends StatelessWidget {
           text: productResults.title!,
         ),
         const SizedBox(height: 20.0),
-        
         PriceInfoInProductDetails(productResults: productResults),
         RowRatingAndRecommendations(
-          onTap: () => showBottomSheetBody(context, const RateBodyView()),
+          onTap: productModel.rating != null
+              ? () {
+                  GoRouter.of(context)
+                      .push(AppRouter.kRateDetails, extra: productModel);
+                }
+              : () {},
           productResults: productResults,
         ),
         DescriptionAndSpecialInfo(

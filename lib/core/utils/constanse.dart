@@ -8,6 +8,16 @@ double kWidth(context) {
   return MediaQuery.of(context).size.width;
 }
 
+dynamic kWidthCondtions(
+  context, {
+  required dynamic valueIsTrue,
+  required dynamic valueIsFalse,
+}) {
+  return kWidth(context) >= 340 && kWidth(context) <= 380
+      ? valueIsTrue
+      : valueIsFalse;
+}
+
 int kIndex = 0;
 int kIndexColor = 0;
 const kListRatingStates = [

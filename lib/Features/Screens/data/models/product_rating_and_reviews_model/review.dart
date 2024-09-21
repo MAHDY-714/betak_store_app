@@ -7,7 +7,7 @@ class Review extends Equatable {
   final String? id;
   final String? text;
   final int? rating;
-  final List<String>? badges;
+  final List<dynamic>? badges;
   final Reviewer? reviewer;
   final int? totalNegativeFeedback;
   final int? totalPositiveFeedback;
@@ -30,7 +30,7 @@ class Review extends Equatable {
         id: json['id'] as String?,
         text: json['text'] as String?,
         rating: json['rating'] as int?,
-        badges: json['badges'] as List<String>?,
+        badges: json['badges'] as List<dynamic>?,
         reviewer: json['reviewer'] == null
             ? null
             : Reviewer.fromJson(json['reviewer'] as Map<String, dynamic>),

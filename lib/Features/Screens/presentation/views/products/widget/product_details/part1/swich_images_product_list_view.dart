@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
-import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit.dart';
+import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit/product_details_cubit.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part1/swich_images_product_item_builder.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';

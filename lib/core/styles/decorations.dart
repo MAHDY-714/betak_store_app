@@ -229,4 +229,39 @@ class Decorations {
       ),
     );
   }
+
+  static BoxDecoration rateAndReviewBodyViewBoxDecorations({
+    bool isBorderColor = true,
+    Color bodyColor = AppColor.backgroundForAllItemsInProductDarkColor,
+  }) {
+    return BoxDecoration(
+      color: bodyColor,
+      border: isBorderColor == true
+          ? const BorderDirectional(
+              top: BorderSide(
+                color: AppColor.backgroundImageCategore,
+                width: .5,
+              ),
+              start: BorderSide(
+                color: AppColor.backgroundImageCategore,
+                width: .01,
+              ),
+              end: BorderSide(
+                color: AppColor.backgroundImageCategore,
+                width: .01,
+              ),
+              bottom: BorderSide(
+                color: AppColor.backgroundImageCategore,
+                width: .01,
+              ),
+            )
+          : null,
+      borderRadius: const BorderRadiusDirectional.only(
+        bottomStart: Radius.circular(0.0),
+        bottomEnd: Radius.circular(0.0),
+        topEnd: Radius.circular(32.0),
+        topStart: Radius.circular(32.0),
+      ),
+    );
+  }
 }

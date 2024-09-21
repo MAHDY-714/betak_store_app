@@ -138,6 +138,12 @@ abstract class TextStyles {
     fontSize: 12,
     fontFamily: FontFamily.bitter300,
     letterSpacing: 2,
+  ); 
+   static const textStyle13 = TextStyle(
+    color: Colors.white,
+    fontSize: 13,
+    fontFamily: FontFamily.bitter300,
+    letterSpacing: 2,
   );
   static const textStyle14 = TextStyle(
     color: Colors.white,

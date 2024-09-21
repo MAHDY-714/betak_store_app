@@ -1,5 +1,8 @@
+import 'dart:developer';
+
 import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
+import 'package:betak_store_app/Features/Screens/data/models/product_rating_and_reviews_model/product_rating_and_reviews_model.dart';
 import 'package:betak_store_app/Features/Screens/data/repo/home_repo/home_repo.dart';
 import 'package:betak_store_app/core/services/api_services.dart';
 import 'package:betak_store_app/core/services/errors/failures.dart';
@@ -42,6 +45,26 @@ class HomeRepoImplement implements HomeRepo {
       ProductResults productDetailsModel = ProductResults.fromJson(
           data['product_results'] as Map<String, dynamic>);
       return right(productDetailsModel);
+    } catch (e) {
+      if (e is DioException) {
+        return left(ServerFailure.formDioExceptions(e));
+      } else {
+        return left(ServerFailure(e.toString()));
+      }
+    }
+  }
+
+  @override
+  Future<Either<Failures, ProductRatingAndReviewsModel>> getProductReview(
+      {required String productId}) async {
+    // q=furnishings&product_id=326182591&engine=home_depot_product_reviews
+    try {
+      var data = await apiService.getProducts(
+          endPoint: '&product_id=$productId&engine=home_depot_product_reviews');
+      ProductRatingAndReviewsModel productReviewsModel =
+          ProductRatingAndReviewsModel.fromJson(data);
+      log(productReviewsModel.toString());
+      return right(productReviewsModel);
     } catch (e) {
       if (e is DioException) {
         return left(ServerFailure.formDioExceptions(e));

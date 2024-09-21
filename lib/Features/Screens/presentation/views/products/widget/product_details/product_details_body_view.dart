@@ -1,6 +1,6 @@
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
-import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit.dart';
-import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_state.dart';
+import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit/product_details_cubit.dart';
+import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit/product_details_state.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/all_info_product_details.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part1/image_in_product_details.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part6/row_for_more_info.dart';
