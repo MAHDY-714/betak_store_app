@@ -3,7 +3,7 @@ import 'package:betak_store_app/Features/Screens/data/models/product_model/produ
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/cart_body_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/categories/categories_in_main_category_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/products_body_view.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/rating_amd_reviews/rate_body_view.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/rating_amd_reviews/rating_and_reviews_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/profiles/widget/screens_in_items/screens_in_items_body_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/screens_view.dart';
@@ -22,7 +22,7 @@ class AppRouter {
   static const kSignUpView = '/signUpView';
   static const kSignInView = '/signInView';
   static const kProductDetailsView = '/ProductDetailsView';
-  static const kRateDetails = '/RateDetails';
+  static const kRatingAndReviewsView = '/RatingAndReviewsView';
   static const kCategoriesInMainCategoryView = '/CategoriesInMainCategoryView';
   static const kProductsBodyView = '/ProductsBodyView';
   static const kCartBodyView = '/CartBodyView';
@@ -82,11 +82,11 @@ class AppRouter {
       },
     ),
     GoRoute(
-      path: kRateDetails,
+      path: kRatingAndReviewsView,
       pageBuilder: (context, state) {
         return CustomTransitionPage(
           child: Scaffold(
-              body: RateAndReviewBodyView(
+              body: RatingAndReviewsView(
             productModel: state.extra as ProductModel,
           )),
           transitionDuration: const Duration(seconds: 2),

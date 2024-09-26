@@ -13,7 +13,7 @@ class ScreensInItemsBodyView extends StatelessWidget {
         Text(
           title,
           textAlign: TextAlign.center,
-          style: TextStyles.textStyle22,
+          style: TextStyles.textStyle27,
         ),
       ],
     );

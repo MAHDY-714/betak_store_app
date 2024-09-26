@@ -24,7 +24,7 @@ class RowForChoseColorAndDiscountPercentage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Padding(
-            padding: const EdgeInsetsDirectional.only(top: 8.0),
+            padding: const EdgeInsetsDirectional.only(top: 11.0),
             child: Container(
               width: kWidth(context) * .75,
               padding: const EdgeInsets.all(8.0),

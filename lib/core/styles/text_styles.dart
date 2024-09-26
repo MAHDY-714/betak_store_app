@@ -138,8 +138,8 @@ abstract class TextStyles {
     fontSize: 12,
     fontFamily: FontFamily.bitter300,
     letterSpacing: 2,
-  ); 
-   static const textStyle13 = TextStyle(
+  );
+  static const textStyle13 = TextStyle(
     color: Colors.white,
     fontSize: 13,
     fontFamily: FontFamily.bitter300,
@@ -150,6 +150,12 @@ abstract class TextStyles {
     fontSize: 14,
     fontFamily: FontFamily.bitter300,
     letterSpacing: 2,
+  );
+  static const textStyle9Blue = TextStyle(
+    color: AppColor.sky2Color,
+    fontSize: 10,
+    letterSpacing: 2,
+    fontFamily: FontFamily.bitter100,
   );
   static const textStyle15 = TextStyle(
     color: Colors.white,
@@ -163,17 +169,24 @@ abstract class TextStyles {
     letterSpacing: 1,
     fontFamily: FontFamily.bitter300,
   );
+  static const textStyle20 = TextStyle(
+    color: Colors.white,
+    fontSize: 20,
+    letterSpacing: 1,
+    fontFamily: FontFamily.platypi900,
+  );
+
+  static const textStyle27 = TextStyle(
+    color: Colors.white,
+    fontSize: 27,
+    letterSpacing: 1,
+    fontFamily: FontFamily.platypi900,
+  );
   static const textStyle16Error = TextStyle(
     color: AppColor.redDeepColor,
     fontSize: 16,
     letterSpacing: 1,
     fontFamily: FontFamily.bitter300,
-  );
-  static const textStyle22 = TextStyle(
-    color: Colors.white,
-    fontSize: 22,
-    letterSpacing: 1,
-    fontFamily: FontFamily.bitter500,
   );
 
   static const textPriceInItemMyCartStyle10 = TextStyle(

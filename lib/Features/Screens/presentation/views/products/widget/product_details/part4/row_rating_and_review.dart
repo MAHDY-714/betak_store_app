@@ -1,17 +1,19 @@
-
 import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
+import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/row_for_rate.dart';
 import 'package:betak_store_app/core/styles/decorations.dart';
-import 'package:betak_store_app/core/utils/app_router.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class RowRatingAndRecommendations extends StatelessWidget {
   const RowRatingAndRecommendations(
-      {super.key, this.onTap, required this.productResults});
+      {super.key,
+      this.onTap,
+      required this.productResults,
+      required this.productModel});
   final void Function()? onTap;
   final ProductResults productResults;
+  final ProductModel productModel;
   @override
   Widget build(BuildContext context) {
     String rating =
@@ -20,8 +22,10 @@ class RowRatingAndRecommendations extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 20.0),
       child: Container(
-        width: kWidth(context) * .75,
-        padding: const EdgeInsets.all(10),
+        width: productResults.reviews!.length <= 6
+            ? kWidth(context) * .75
+            : kWidth(context) * .8,
+        padding: const EdgeInsets.all(8),
         decoration: Decorations
             .rowForRateAndRecomendationsInProductDetailsBoxDecorations,
         child: Column(
@@ -31,6 +35,7 @@ class RowRatingAndRecommendations extends StatelessWidget {
               rateValue: double.parse(rating),
               rateCounter: reviews,
               onTap: onTap,
+              productModel: productModel,
             ),
             const SizedBox(width: 8),
           ],
