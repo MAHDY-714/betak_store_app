@@ -21,7 +21,11 @@ class RowForRate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double iconSize = rateCounter.toString().length <= 6 ? 18.0 : 15.0;
+    double iconSize = kWidthCondtions(
+      context,
+      valueIsTrue: 15.0,
+      valueIsFalse: 20.0,
+    );
     return Center(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,16 +36,22 @@ class RowForRate extends StatelessWidget {
                 kRating(
                   rating: rateValue,
                 ),
-                style: TextStyles.priceTextStyle18,
+                style: TextStyles.textStyle20,
               ),
               const SizedBox(width: 8),
               Text(
                 '$rateValue',
-                style: TextStyles.textRateValueInProductDetailsStyle,
+                // '4.99',
+                style: kWidthCondtions(
+                  context,
+                  valueIsTrue: TextStyles.priceTextStyle18,
+                  valueIsFalse:
+                      TextStyles.priceTextStyle18.copyWith(fontSize: 25),
+                ),
               ),
             ],
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 24),
           Row(
             crossAxisAlignment: CrossAxisAlignment.baseline,
             textBaseline: TextBaseline.alphabetic,
@@ -50,16 +60,16 @@ class RowForRate extends StatelessWidget {
                   height: iconSize,
                   width: iconSize,
                   color: AppColor.amberColor,
-                  image: const AssetImage(
-                    AssetsImages.profileIcon,
-                  )),
+                  image: const AssetImage(AssetsImages.profileIcon)),
               const SizedBox(width: 8),
               Text(
                 '$rateCounter',
                 // '9999999999',
-                style: rateCounter.toString().length <= 6
-                    ? TextStyles.textStyle11
-                    : TextStyles.textStyle11,
+                style: kWidthCondtions(
+                  context,
+                  valueIsTrue: TextStyles.textStyle11,
+                  valueIsFalse: TextStyles.textStyle16,
+                ),
               ),
               const Spacer(),
               ShowRatingButton(

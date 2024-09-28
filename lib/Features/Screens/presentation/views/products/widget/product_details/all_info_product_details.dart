@@ -34,7 +34,7 @@ class AllInfoProductDetails extends StatelessWidget {
         ),
         const SizedBox(height: 20.0),
         PriceInfoInProductDetails(productResults: productResults),
-        RowRatingAndRecommendations(
+        RowRatingAndReviewsInProductDetails(
           onTap: productModel.rating != null
               ? () {
                   GoRouter.of(context).push(

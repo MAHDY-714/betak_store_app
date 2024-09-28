@@ -1,6 +1,7 @@
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/styles/text_styles.dart';
+import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
 
@@ -23,30 +24,50 @@ class ShowRatingButton extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text(
+            Text(
               'Show Ratings ▲',
-              style: TextStyles.textStyle9Blue,
+              style: kWidthCondtions(
+                context,
+                valueIsTrue: TextStyles.textStyle10Blue,
+                valueIsFalse: TextStyles.textStyle13Blue,
+              ),
             ),
+            const SizedBox(height: 2),
             Container(
               height: .7,
-              width: 110,
+              width: kWidthCondtions(
+                context,
+                valueIsTrue: 115.0,
+                valueIsFalse: 130.0,
+              ),
               color: AppColor.sky2Color,
             ),
+            const SizedBox(height: 2),
           ],
         ),
       ),
       fallback: (context) => Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Text(
+          Text(
             'No Rating Yet',
-            style: TextStyles.textStyle10R,
+            style: kWidthCondtions(
+              context,
+              valueIsTrue: TextStyles.textStyle10R,
+              valueIsFalse: TextStyles.textStyle13R,
+            ),
           ),
+          const SizedBox(height: 2),
           Container(
             height: .7,
-            width: 95,
+            width: kWidthCondtions(
+              context,
+              valueIsTrue: 92.0,
+              valueIsFalse: 105.0,
+            ),
             color: AppColor.errorBorderAndRemoveAndIcons,
           ),
+          const SizedBox(height: 2),
         ],
       ),
     );

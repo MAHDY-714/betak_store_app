@@ -121,6 +121,12 @@ abstract class TextStyles {
     fontFamily: FontFamily.inter700,
     letterSpacing: 1,
   );
+  static const textStyle10Blue = TextStyle(
+    color: AppColor.sky2Color,
+    fontSize: 10,
+    letterSpacing: 2,
+    fontFamily: FontFamily.bitter100,
+  );
   static const textStyle10R = TextStyle(
     color: AppColor.errorBorderAndRemoveAndIcons,
     fontSize: 10,
@@ -145,18 +151,25 @@ abstract class TextStyles {
     fontFamily: FontFamily.bitter300,
     letterSpacing: 2,
   );
+  static const textStyle13Blue = TextStyle(
+    color: AppColor.sky2Color,
+    fontSize: 13,
+    letterSpacing: 2,
+    fontFamily: FontFamily.bitter100,
+  );
+  static const textStyle13R = TextStyle(
+    color: AppColor.errorBorderAndRemoveAndIcons,
+    fontSize: 13,
+    letterSpacing: 1,
+    fontFamily: FontFamily.bitter500,
+  );
   static const textStyle14 = TextStyle(
     color: Colors.white,
     fontSize: 14,
     fontFamily: FontFamily.bitter300,
     letterSpacing: 2,
   );
-  static const textStyle9Blue = TextStyle(
-    color: AppColor.sky2Color,
-    fontSize: 10,
-    letterSpacing: 2,
-    fontFamily: FontFamily.bitter100,
-  );
+
   static const textStyle15 = TextStyle(
     color: Colors.white,
     fontSize: 15,
