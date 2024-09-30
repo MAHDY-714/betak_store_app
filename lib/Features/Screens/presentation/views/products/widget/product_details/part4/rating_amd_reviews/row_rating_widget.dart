@@ -1,6 +1,6 @@
 import 'package:betak_store_app/Features/Screens/data/models/product_rating_and_reviews_model/product_rating_and_reviews_model.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/rating_amd_reviews/rating/rate_bar_list_view.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/rating_amd_reviews/rating/ovarall_rating_and_recommendations.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/rating_amd_reviews/rating_details/rate_details/rating_details_list_view.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/rating_amd_reviews/rating_details/overall_rate_details_and_recommendations/overall_rating_and_recommendations.dart';
 import 'package:betak_store_app/core/styles/decorations.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +28,7 @@ class RowRatingWidget extends StatelessWidget {
           OverallRatingAndRecommendations(
             productRatingAndReviewsModel: productRatingAndReviewsModel,
           ),
-          RateAndReviewListView(
+          RatingDetailsListView(
             productRatingAndReviewsModel: productRatingAndReviewsModel,
           ),
         ],

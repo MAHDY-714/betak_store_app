@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:betak_store_app/core/styles/app_color.dart';
+import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:betak_store_app/core/utils/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -11,7 +12,7 @@ class RateingStars extends StatelessWidget {
     required this.rateInitialValue,
     required this.starsCount,
     this.starSize = 15,
-    this.width = 120,
+    this.width = 140,
   });
 
   final double rateInitialValue;
@@ -22,7 +23,7 @@ class RateingStars extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width,
+      width: kWidthCondtions(context, valueIsTrue: 120.0, valueIsFalse: 140.0),
       child: Transform.flip(
         flipX: false,
         child: RatingBar.builder(

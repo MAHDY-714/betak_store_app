@@ -5,11 +5,11 @@ import 'package:betak_store_app/core/widget/circle_loading_indicator.dart';
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'rating_bar_item.dart';
+import 'rating_details_item.dart';
 import 'package:flutter/material.dart';
 
-class RateAndReviewListView extends StatelessWidget {
-  const RateAndReviewListView(
+class RatingDetailsListView extends StatelessWidget {
+  const RatingDetailsListView(
       {super.key, required this.productRatingAndReviewsModel});
   final ProductRatingAndReviewsModel? productRatingAndReviewsModel;
 
@@ -22,6 +22,7 @@ class RateAndReviewListView extends StatelessWidget {
         return SizedBox(
           width: kWidth(context) * .58,
           // height: kHeight(context) * .25,
+          // color: Colors.blue,
           child: ConditionalBuilder(
             condition: productRatingAndReviewsModel != null,
             builder: (context) => ListView.builder(
@@ -30,7 +31,7 @@ class RateAndReviewListView extends StatelessWidget {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (BuildContext context, int index) {
-                return RowRatingBarItemBuilder(
+                return RowRatingDetailsItemBuilder(
                   rateInitialValue: cub
                       .productReviewsModel!.ratings![index].stars!
                       .toDouble(),

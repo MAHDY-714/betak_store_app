@@ -1,5 +1,6 @@
 import 'package:betak_store_app/Features/Screens/data/models/product_rating_and_reviews_model/product_rating_and_reviews_model.dart';
 import 'package:betak_store_app/core/styles/text_styles.dart';
+import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 
 class OverallRatingWidget extends StatelessWidget {
@@ -21,13 +22,19 @@ class OverallRatingWidget extends StatelessWidget {
       children: [
         Text(
           rating,
-          // '4.99',
-          style: TextStyles.textStyle27,
+          // '1.00',
+          style: kWidthCondtions(
+            context,
+            valueIsTrue: TextStyles.textStyle27,
+            valueIsFalse: TextStyles.textStyle27.copyWith(fontSize: 33),
+          ),
         ),
-        const Text(
-          '/5',
-          style: TextStyles.textStyle16,
-        ),
+        Text('/5',
+            style: kWidthCondtions(
+              context,
+              valueIsTrue: TextStyles.textStyle16,
+              valueIsFalse: TextStyles.textStyle20,
+            )),
       ],
     );
   }

@@ -1,9 +1,10 @@
-import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/rating_amd_reviews/rating/rating_stars.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/rating_amd_reviews/rating/text_rate_counter.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/rating_amd_reviews/rating_details/rating_stars.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/rating_amd_reviews/rating_details/rate_details/text_rate_counter.dart';
+import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 
-class RowRatingBarItemBuilder extends StatelessWidget {
-  const RowRatingBarItemBuilder({
+class RowRatingDetailsItemBuilder extends StatelessWidget {
+  const RowRatingDetailsItemBuilder({
     super.key,
     this.rateInitialValue = 5,
     required this.rateCounter,
@@ -24,6 +25,11 @@ class RowRatingBarItemBuilder extends StatelessWidget {
         RateingStars(
           rateInitialValue: rateInitialValue,
           starsCount: starsCount,
+          starSize: kWidthCondtions(
+            context,
+            valueIsTrue: 15.0,
+            valueIsFalse: 18.0,
+          ),
         ),
       ],
     );

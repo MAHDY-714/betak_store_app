@@ -13,8 +13,13 @@ class TextRateCounter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      // color: Colors.blue,
       height: 40,
-      width: kWidth(context) * .20,
+      width: kWidthCondtions(
+        context,
+        valueIsTrue: kWidth(context) * .20,
+        valueIsFalse: kWidth(context) * .22,
+      ),
       child: Align(
         alignment: AlignmentDirectional.centerEnd,
         child: Text(
@@ -22,7 +27,12 @@ class TextRateCounter extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
           maxLines: 2,
           '($rateCounter)',
-          style: TextStyles.textStyle10W60,
+          // '(9999999999)',
+          style: kWidthCondtions(
+            context,
+            valueIsTrue: TextStyles.textStyle10W60,
+            valueIsFalse: TextStyles.textStyle10W60.copyWith(fontSize: 13),
+          ),
         ),
       ),
     );
