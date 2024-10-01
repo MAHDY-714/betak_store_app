@@ -9,14 +9,19 @@ class CachedNetworkImageWidget extends StatelessWidget {
     super.key,
     required this.imageProduct,
     this.shapeIsCircle = false,
+    this.height,
+    this.width,
   });
 
   final String imageProduct;
   final bool shapeIsCircle;
-
+  final double? height;
+  final double? width;
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: height,
+      width: width,
       clipBehavior: Clip.antiAlias,
       decoration: const BoxDecoration(
           // shape: BoxShape.circle,

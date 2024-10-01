@@ -235,7 +235,7 @@ class Decorations {
     border: BorderDirectional(
       bottom: BorderSide(
         color: AppColor.backgroundImageCategore.withOpacity(.1),
-        width: 1,
+         width: 1,
       ),
     ),
   );

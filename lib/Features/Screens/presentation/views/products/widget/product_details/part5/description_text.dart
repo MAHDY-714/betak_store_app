@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 
 class DescriptionText extends StatelessWidget {
-  const DescriptionText({super.key, required this.text});
+  const DescriptionText({super.key, required this.text, this.style, this.padingHorizontal = 12.0});
   final String text;
+  final TextStyle? style;
+  final double padingHorizontal;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4),
+      padding:  EdgeInsets.symmetric(horizontal: padingHorizontal, vertical: 4),
       child: ReadMoreText(
         text,
         trimMode: TrimMode.Line,
@@ -17,7 +19,7 @@ class DescriptionText extends StatelessWidget {
         trimExpandedText: 'less',
         moreStyle: TextStyles.orAndReviewStyle,
         lessStyle: TextStyles.orAndReviewStyle,
-        style: TextStyles.textRecommendationsInProductDetailsStyle,
+        style: style ?? TextStyles.textRecommendationsInProductDetailsStyle,
       ),
     );
   }

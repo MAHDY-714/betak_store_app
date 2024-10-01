@@ -1,6 +1,6 @@
 import 'package:betak_store_app/Features/Screens/data/models/product_rating_and_reviews_model/product_rating_and_reviews_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/rating_amd_reviews/rating_details/overall_rate_details_and_recommendations/overall_rating_widget.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/rating_amd_reviews/rating_details/rating_stars.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/rating_amd_reviews/rating_details/rating_stars_in_row_rating_widget.dart';
 import 'package:betak_store_app/core/styles/text_styles.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +21,7 @@ class OverallRateAndOverallReveiwInLeftPart extends StatelessWidget {
         OverallRatingWidget(
             productRatingAndReviewsModel: productRatingAndReviewsModel),
         Center(
-          child: RateingStars(
+          child: RateingStarsInRowRatingWidget(
             rateInitialValue: productRatingAndReviewsModel!.overallRating!,
             starsCount: 5,
             starSize:

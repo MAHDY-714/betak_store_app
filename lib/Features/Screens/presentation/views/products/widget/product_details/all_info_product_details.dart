@@ -6,6 +6,7 @@ import 'package:betak_store_app/Features/Screens/presentation/views/products/wid
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/row_rating_and_review.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part5/description_and_special_info.dart';
 import 'package:betak_store_app/core/utils/app_router.dart';
+import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -28,21 +29,19 @@ class AllInfoProductDetails extends StatelessWidget {
           productModel: productModel,
           productResults: productResults,
         ),
-        const SizedBox(height: 20.0),
+        const SizedBox(height: kPaddingInAllInsideProductDetailsVertical),
         TextInProductDetails(
           text: productResults.title!,
         ),
-        const SizedBox(height: 20.0),
+        const SizedBox(height: kPaddingInAllInsideProductDetailsVertical),
         PriceInfoInProductDetails(productResults: productResults),
         RowRatingAndReviewsInProductDetails(
-          onTap: productModel.rating != null
-              ? () {
-                  GoRouter.of(context).push(
-                    AppRouter.kRatingAndReviewsView,
-                    extra: productModel,
-                  );
-                }
-              : () {},
+          onTap: () {
+            GoRouter.of(context).push(
+              AppRouter.kRatingAndReviewsView,
+              extra: productModel,
+            );
+          },
           productResults: productResults,
           productModel: productModel,
         ),

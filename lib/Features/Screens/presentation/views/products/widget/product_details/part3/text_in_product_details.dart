@@ -6,7 +6,7 @@ class TextInProductDetails extends StatelessWidget {
   const TextInProductDetails({
     super.key,
     required this.text,
-    this.paddingWidth = 12,
+    this.paddingWidth = kPaddingInAllInsideProductDetailsHorizontal,
     this.style,
     this.percintageWidth = 1,
   });

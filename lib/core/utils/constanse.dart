@@ -20,6 +20,8 @@ dynamic kWidthCondtions(
 
 int kIndex = 0;
 int kIndexColor = 0;
+const kPaddingInAllInsideProductDetailsHorizontal = 12.0;
+const kPaddingInAllInsideProductDetailsVertical = 20.0;
 const kListRatingStates = [
   '😡',
   '😠',

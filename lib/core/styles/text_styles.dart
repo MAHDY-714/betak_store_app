@@ -109,6 +109,12 @@ abstract class TextStyles {
     fontFamily: FontFamily.inter700,
   );
   //used in {textfield in sign & in product details [text in product details] & in text chose color}
+  static const textStyle9 = TextStyle(
+    color: Colors.white30,
+    fontSize: 9,
+    letterSpacing: 2,
+    fontFamily: FontFamily.bitter100,
+  );
   static const textStyle10 = TextStyle(
     color: Colors.white,
     fontSize: 10,

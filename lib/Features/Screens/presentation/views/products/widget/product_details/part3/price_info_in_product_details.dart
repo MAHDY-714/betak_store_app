@@ -1,5 +1,6 @@
 import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
 import 'package:betak_store_app/core/styles/text_styles.dart';
+import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 
 class PriceInfoInProductDetails extends StatelessWidget {
@@ -13,7 +14,7 @@ class PriceInfoInProductDetails extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4),
+          padding: const EdgeInsets.symmetric(horizontal: kPaddingInAllInsideProductDetailsHorizontal, vertical: 4),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -44,7 +45,7 @@ class PriceInfoInProductDetails extends StatelessWidget {
         ),
         if (productResults.promotion != null)
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4),
+            padding: const EdgeInsets.symmetric(horizontal: kPaddingInAllInsideProductDetailsHorizontal, vertical: 4),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [

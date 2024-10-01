@@ -6,19 +6,17 @@ import 'package:betak_store_app/core/utils/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class RateingStars extends StatelessWidget {
-  const RateingStars({
+class RateingStarsInRowRatingWidget extends StatelessWidget {
+  const RateingStarsInRowRatingWidget({
     super.key,
     required this.rateInitialValue,
     required this.starsCount,
     this.starSize = 15,
-    this.width = 140,
   });
 
   final double rateInitialValue;
   final int starsCount;
   final double starSize;
-  final double width;
 
   @override
   Widget build(BuildContext context) {

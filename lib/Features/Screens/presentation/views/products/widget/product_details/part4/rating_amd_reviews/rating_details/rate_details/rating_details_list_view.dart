@@ -33,7 +33,7 @@ class RatingDetailsListView extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 return RowRatingDetailsItemBuilder(
                   rateInitialValue: cub
-                      .productReviewsModel!.ratings![index].stars!
+                      .productRatingAndReviewsModel!.ratings![index].stars!
                       .toDouble(),
                   rateCounter:
                       productRatingAndReviewsModel!.ratings![index].count!,

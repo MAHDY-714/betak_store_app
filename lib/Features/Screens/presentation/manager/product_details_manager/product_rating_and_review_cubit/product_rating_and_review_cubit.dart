@@ -12,7 +12,7 @@ class ProductRatingAndReviewCubit extends Cubit<ProductRatingAndReviewState> {
       : super(ProductRatingAndReviewInitial());
   final HomeRepo homeRepo;
 
-  ProductRatingAndReviewsModel? productReviewsModel;
+  ProductRatingAndReviewsModel? productRatingAndReviewsModel;
 
   Future<void> getProductReviewDetails({required String productId}) async {
     emit(ProductRatingAndReviewLoading());
@@ -23,7 +23,7 @@ class ProductRatingAndReviewCubit extends Cubit<ProductRatingAndReviewState> {
         emit(ProductRatingAndReviewFaliure(errorMessage: faliure.errorMessage));
       },
       (productReview) {
-        productReviewsModel =
+        productRatingAndReviewsModel =
             ProductRatingAndReviewsModel.fromJson(productReview.toJson());
         emit(ProductRatingAndReviewSuccess());
       },

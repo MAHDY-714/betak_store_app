@@ -23,7 +23,9 @@ class RowRatingAndReviewsInProductDetails extends StatelessWidget {
             productResults.reviews != null ? productResults.reviews! : '0')
         .round();
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 20.0),
+      padding: const EdgeInsets.symmetric(
+          horizontal: kPaddingInAllInsideProductDetailsHorizontal,
+          vertical: kPaddingInAllInsideProductDetailsVertical),
       child: Container(
         width: kWidth(context) * .75,
         padding: const EdgeInsets.all(8),

@@ -17,7 +17,7 @@ class OverallRatingAndRecommendations extends StatelessWidget {
     return Container(
       width: kWidth(context) * .37,
       // color: Colors.red,
-      padding: const EdgeInsetsDirectional.symmetric(vertical: 8),
+      padding: const EdgeInsetsDirectional.symmetric(vertical: 8), 
       child: ConditionalBuilder(
         condition: productRatingAndReviewsModel != null,
         builder: (context) => Column(
