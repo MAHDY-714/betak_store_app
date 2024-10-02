@@ -39,7 +39,7 @@ class Layer2BodyView extends StatelessWidget {
                     children: [
                       TitleWidget(
                         title: kListTitlesCategoriesInHome[cub.categoryIndex],
-                        padding: 8,
+                        paddingH: 8,
                       ),
                       const CategoriesHomeListView(),
                       const SizedBox(height: 16),

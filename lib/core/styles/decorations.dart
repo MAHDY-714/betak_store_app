@@ -235,7 +235,21 @@ class Decorations {
     border: BorderDirectional(
       bottom: BorderSide(
         color: AppColor.backgroundImageCategore.withOpacity(.1),
-         width: 1,
+        width: 1,
+      ),
+    ),
+  );
+
+  static BoxDecoration reviewDetailsItemBoxDecoration = BoxDecoration(
+    color: AppColor.sky2Color.withOpacity(.05),
+    border: BorderDirectional(
+      bottom: BorderSide(
+        color: AppColor.backgroundImageCategore.withOpacity(.1),
+        width: 1,
+      ),
+      top: BorderSide(
+        color: AppColor.backgroundImageCategore.withOpacity(.1),
+        width: 1,
       ),
     ),
   );

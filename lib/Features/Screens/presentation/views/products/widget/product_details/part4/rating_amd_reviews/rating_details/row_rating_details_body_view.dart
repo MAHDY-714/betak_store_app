@@ -5,8 +5,8 @@ import 'package:betak_store_app/core/styles/decorations.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 
-class RowRatingWidget extends StatelessWidget {
-  const RowRatingWidget({
+class RowRatingDetailsBodyView extends StatelessWidget {
+  const RowRatingDetailsBodyView({
     super.key,
     required this.productRatingAndReviewsModel,
   });

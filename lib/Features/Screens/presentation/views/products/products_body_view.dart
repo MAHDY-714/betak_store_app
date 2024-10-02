@@ -21,7 +21,7 @@ class ProductsBodyView extends StatelessWidget {
                 children: [
                   TitleWidget(
                     title: title ?? 'All Product',
-                    padding: 8.0,
+                    paddingH: 8.0,
                   ),
                   ProductsGridView(),
                 ],
