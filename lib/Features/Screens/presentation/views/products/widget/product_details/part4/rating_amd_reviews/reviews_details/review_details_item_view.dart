@@ -37,7 +37,9 @@ class ReviewDetailsItemBuilder extends StatelessWidget {
           children: [
             Text(
               '${productRatingAndReviewsModel!.reviews![index].reviewer!.name}',
-              style: TextStyles.textStyle10W60.copyWith(fontSize: 13.0),
+              style: TextStyles.textStyle10W60.copyWith(
+                  fontSize: kWidthCondtions(context,
+                      valueIsTrue: 13.0, valueIsFalse: 17.0)),
             ),
             RowReviewDateAndRate(
               reviewDateTime: reviewDateTime,
@@ -48,7 +50,11 @@ class ReviewDetailsItemBuilder extends StatelessWidget {
               DescriptionText(
                 text: productRatingAndReviewsModel!.reviews![index].text
                     .toString(),
-                style: TextStyles.textStyle11,
+                style: kWidthCondtions(
+                  context,
+                  valueIsTrue: TextStyles.textStyle11,
+                  valueIsFalse: TextStyles.textStyle15,
+                ),
                 padingHorizontal: 4.0,
               ),
             const SizedBox(height: 4.0),
@@ -77,22 +83,27 @@ class RowReviewDateAndRate extends StatelessWidget {
       children: [
         Text(
           reviewDateTime,
-          style: TextStyles.textStyle9,
+          style: TextStyles.textStyle9.copyWith(
+              fontSize: kWidthCondtions(context,
+                  valueIsTrue: 9.0, valueIsFalse: 12.0)),
         ),
         const Spacer(),
         Text(
           '(${productRatingAndReviewsModel!.reviews![index].rating!.toDouble()})',
-          style: TextStyles.textStyle10W60.copyWith(fontSize: 10),
+          style: TextStyles.textStyle10W60.copyWith(
+              fontSize: kWidthCondtions(context,
+                  valueIsTrue: 10.0, valueIsFalse: 13.0)),
         ),
         const SizedBox(
           width: 4,
         ),
         RateingStarsInRowRatingWidget(
-          rateInitialValue:
-              productRatingAndReviewsModel!.reviews![index].rating!.toDouble(),
-          starsCount: 5,
-          // starSize: 12,
-        ),
+            rateInitialValue: productRatingAndReviewsModel!
+                .reviews![index].rating!
+                .toDouble(),
+            starsCount: 5,
+            starSize: kWidthCondtions(context,
+                valueIsTrue: 15.0, valueIsFalse: 18.0)),
       ],
     );
   }

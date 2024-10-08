@@ -22,7 +22,7 @@ class MoreOrLessReviewsCommentRowWidget extends StatelessWidget {
       alignment: AlignmentDirectional.bottomCenter,
       child: Container(
         width: kWidth(context),
-        height: 50,
+        height: 60,
         padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 8.0),
         decoration: BoxDecoration(
           color: AppColor.sky2Color.withOpacity(.1),

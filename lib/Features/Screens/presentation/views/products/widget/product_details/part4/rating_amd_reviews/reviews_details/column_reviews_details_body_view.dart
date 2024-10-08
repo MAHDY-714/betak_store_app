@@ -30,34 +30,30 @@ class ColumnReviewsDetailsBodyView extends StatelessWidget {
       builder: (context, state) {
         return Column(
           children: [
-            Column(
-              children: [
-                const SizedBox(
-                  height: 10,
-                ),
-                const TitleWidget(
-                  title: 'Reviews Comments',
-                  paddingH: kPaddingInAllInsideProductDetailsHorizontal,
-                  fontSizeT: 16,
-                  fontSizeF: 20,
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                ConditionalBuilder(
-                  condition: productRatingAndReviewsModel?.reviews != null,
-                  builder: (context) => ReviewDetailsListView(
-                    productRatingAndReviewsModel: productRatingAndReviewsModel,
-                    moreReviews:
-                        productRatingAndReviewsModel!.reviews!.length <= 10
-                            ? productRatingAndReviewsModel!.reviews!.length
-                            : cub.reviewsComment,
-                  ),
-                  fallback: (context) => SizedBox(
-                      height: kHeight(context) * .5,
-                      child: const CircleLoadingIndicatorWidget()),
-                ),
-              ],
+            const SizedBox(
+              height: 10,
+            ),
+            const TitleWidget(
+              title: 'Reviews Comments',
+              paddingH: kPaddingInAllInsideProductDetailsHorizontal,
+              fontSizeT: 16,
+              fontSizeF: 20,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ConditionalBuilder(
+              condition: productRatingAndReviewsModel?.reviews != null,
+              builder: (context) => ReviewDetailsListView(
+                productRatingAndReviewsModel: productRatingAndReviewsModel,
+                moreReviews:
+                    productRatingAndReviewsModel!.reviews!.length <= 10
+                        ? productRatingAndReviewsModel!.reviews!.length
+                        : cub.reviewsComment,
+              ),
+              fallback: (context) => SizedBox(
+                  height: kHeight(context) * .5,
+                  child: const CircleLoadingIndicatorWidget()),
             ),
           ],
         );

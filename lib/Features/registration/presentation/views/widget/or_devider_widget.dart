@@ -20,7 +20,7 @@ class OrDeviderWidget extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 4.0),
           child: Text(
             'OR',
-            style: TextStyles.orAndReviewStyle,
+            style: TextStyles.textStyle12Blue,
           ),
         ),
         Container(

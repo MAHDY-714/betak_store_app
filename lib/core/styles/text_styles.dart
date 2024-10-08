@@ -63,13 +63,6 @@ abstract class TextStyles {
     fontFamily: FontFamily.bitter500,
   );
 
-  static const orAndReviewStyle = TextStyle(
-    color: AppColor.sky2Color,
-    fontSize: 12,
-    letterSpacing: 2,
-    fontFamily: FontFamily.bitter100,
-  );
-
   static const searchInHome = TextStyle(
     color: Colors.black26,
     fontSize: 13,
@@ -151,6 +144,13 @@ abstract class TextStyles {
     fontFamily: FontFamily.bitter300,
     letterSpacing: 2,
   );
+    static const textStyle12Blue = TextStyle(
+    color: AppColor.sky2Color,
+    fontSize: 12,
+    letterSpacing: 2,
+    fontFamily: FontFamily.bitter100,
+  );
+  
   static const textStyle13 = TextStyle(
     color: Colors.white,
     fontSize: 13,
