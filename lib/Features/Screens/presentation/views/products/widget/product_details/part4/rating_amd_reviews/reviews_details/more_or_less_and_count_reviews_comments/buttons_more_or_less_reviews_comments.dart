@@ -1,4 +1,5 @@
 import 'package:betak_store_app/core/styles/app_color.dart';
+import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 
@@ -14,6 +15,8 @@ class ButtonMoreOrLessReviewsComments extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double iconSize =
+        kWidthCondtions(context, valueIsTrue: 26.0, valueIsFalse: 35.0);
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -22,7 +25,7 @@ class ButtonMoreOrLessReviewsComments extends StatelessWidget {
           child: Icon(
             FontAwesome.circle_chevron_up_solid,
             color: AppColor.skyColor.withOpacity(.4),
-            size: 26.0,
+            size: iconSize,
           ),
         ),
         const SizedBox(
@@ -33,7 +36,7 @@ class ButtonMoreOrLessReviewsComments extends StatelessWidget {
           child: Icon(
             FontAwesome.circle_chevron_down_solid,
             color: AppColor.skyColor.withOpacity(.4),
-            size: 26.0,
+            size: iconSize,
           ),
         ),
         const SizedBox(
