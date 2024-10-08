@@ -5,9 +5,13 @@ import 'package:betak_store_app/Features/Screens/presentation/views/products/wid
 import 'package:flutter/material.dart';
 
 class ReviewDetailsListView extends StatelessWidget {
-  const ReviewDetailsListView({super.key, this.productRatingAndReviewsModel});
+  const ReviewDetailsListView(
+      {super.key,
+      this.productRatingAndReviewsModel,
+      required this.moreReviews});
   final ProductRatingAndReviewsModel? productRatingAndReviewsModel;
-  
+  final int moreReviews;
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -18,9 +22,7 @@ class ReviewDetailsListView extends StatelessWidget {
           index: index,
         );
       },
-      itemCount: productRatingAndReviewsModel!.reviews!.length <= 10
-          ? productRatingAndReviewsModel?.reviews!.length
-          : 10,
+      itemCount: moreReviews,
       physics: const NeverScrollableScrollPhysics(),
       scrollDirection: Axis.vertical,
       shrinkWrap: true,

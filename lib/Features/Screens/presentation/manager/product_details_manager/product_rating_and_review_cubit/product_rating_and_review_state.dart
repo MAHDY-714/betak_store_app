@@ -18,3 +18,15 @@ final class ProductRatingAndReviewFaliure extends ProductRatingAndReviewState {
 
   const ProductRatingAndReviewFaliure({required this.errorMessage});
 }
+
+final class ProductRatingAndReviewGetMoreReviewsComments
+    extends ProductRatingAndReviewState {}
+
+final class ProductRatingAndReviewMoreReviewsComments
+    extends ProductRatingAndReviewState {}
+
+final class ProductRatingAndReviewGetLessReviewsComments
+    extends ProductRatingAndReviewState {}
+
+final class ProductRatingAndReviewLessReviewsComments
+    extends ProductRatingAndReviewState {}

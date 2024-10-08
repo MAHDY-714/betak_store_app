@@ -13,7 +13,7 @@ class ProductRatingAndReviewCubit extends Cubit<ProductRatingAndReviewState> {
   final HomeRepo homeRepo;
 
   ProductRatingAndReviewsModel? productRatingAndReviewsModel;
-
+  int reviewsComment = 10;
   Future<void> getProductReviewDetails({required String productId}) async {
     emit(ProductRatingAndReviewLoading());
     var response = await homeRepo.getProductReview(productId: productId);
@@ -28,5 +28,42 @@ class ProductRatingAndReviewCubit extends Cubit<ProductRatingAndReviewState> {
         emit(ProductRatingAndReviewSuccess());
       },
     );
+  }
+
+  int moreReviewsComments({
+    ProductRatingAndReviewsModel? productRatingAndReviewsModel,
+  }) {
+    if (productRatingAndReviewsModel!.reviews != null) {
+      if (productRatingAndReviewsModel.reviews!.length <= 10) {
+        reviewsComment = productRatingAndReviewsModel.reviews!.length;
+        emit(ProductRatingAndReviewGetMoreReviewsComments());
+      } else if (productRatingAndReviewsModel.reviews!.length >
+          reviewsComment) {
+        reviewsComment += 10;
+        reviewsComment =
+            productRatingAndReviewsModel.reviews!.length < reviewsComment
+                ? productRatingAndReviewsModel.reviews!.length
+                : reviewsComment * 1;
+        emit(ProductRatingAndReviewMoreReviewsComments());
+      }
+    }
+    emit(ProductRatingAndReviewGetMoreReviewsComments());
+    return reviewsComment;
+  }
+
+  int lessReviewsComments({
+    ProductRatingAndReviewsModel? productRatingAndReviewsModel,
+  }) {
+    if (productRatingAndReviewsModel!.reviews != null) {
+      if (productRatingAndReviewsModel.reviews!.length <= 10) {
+        reviewsComment = productRatingAndReviewsModel.reviews!.length;
+        emit(ProductRatingAndReviewGetLessReviewsComments());
+      } else if (productRatingAndReviewsModel.reviews!.length > 10) {
+        reviewsComment = 10;
+        emit(ProductRatingAndReviewLessReviewsComments());
+      }
+    }
+    emit(ProductRatingAndReviewGetLessReviewsComments());
+    return reviewsComment;
   }
 }
