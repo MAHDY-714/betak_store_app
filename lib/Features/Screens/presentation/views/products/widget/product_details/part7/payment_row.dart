@@ -22,10 +22,10 @@ class PaymentRow extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       decoration: BoxDecoration(
         color: Colors.grey.withOpacity(.02),
-        border: const BorderDirectional(
+        border: BorderDirectional(
           top: BorderSide(
-            color: AppColor.backgroundImageCategore,
-            width: .07,
+            color: AppColor.skyLightColor,
+            width: 1,
           ),
         ),
       ),

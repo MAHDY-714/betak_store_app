@@ -66,6 +66,8 @@ class AppColor {
   static const green2Color = Color(0x9F08B50E);
   static const green3Color = Color(0xFF006604);
   static const greyColor = Color(0xFF1D202B);
+  // static Color skyColorWithOpacity = const Color(0xFFB2C0E5).withOpacity(.4);
+  static Color skyLightColor = const Color(0xFF323644);
   static const skyColor = Color(0xFFB2C0E5);
   static const sky2Color = Color(0xFFA2C7FB);
   static const sky3Color = Color(0xFF4F83CD);

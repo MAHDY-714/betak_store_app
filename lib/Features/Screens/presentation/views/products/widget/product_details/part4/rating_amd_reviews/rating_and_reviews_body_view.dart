@@ -22,10 +22,14 @@ class RatingAndReviewsBodyView extends StatelessWidget {
     return BlocBuilder<ProductRatingAndReviewCubit,
         ProductRatingAndReviewState>(
       builder: (BuildContext context, ProductRatingAndReviewState state) {
-        return Column(
+        return Stack(
           children: [
             SizedBox(
-              height: kHeight(context) * .9,
+              height: kHeightCondtions(
+                context,
+                valueIsTrue: kHeight(context) * .89,
+                valueIsFalse: kHeight(context) * .9,
+              ),
               child: CustomScrollView(
                 physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.vertical,

@@ -18,6 +18,16 @@ dynamic kWidthCondtions(
       : valueIsFalse;
 }
 
+dynamic kHeightCondtions(
+  context, {
+  required dynamic valueIsTrue,
+  required dynamic valueIsFalse,
+}) {
+  return kHeight(context) >= 760 && kHeight(context) <= 850
+      ? valueIsTrue
+      : valueIsFalse;
+}
+
 int kIndex = 0;
 int kIndexColor = 0;
 const kPaddingInAllInsideProductDetailsHorizontal = 12.0;
