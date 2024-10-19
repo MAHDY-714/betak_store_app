@@ -7,7 +7,7 @@ class Decorations {
   static const Color borderWidthForProductColor = AppColor.sky4Color;
   static BoxDecoration insideProductHomeItemBuilderBoxDecorations =
       BoxDecoration(
-          color: AppColor.backgroundImageCategore,
+          color: AppColor.backgroundImageWhiteColor,
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
             color: borderWidthForProductColor,
@@ -62,7 +62,7 @@ class Decorations {
   );
   static BoxDecoration swichImagesProductBoxDecoration() {
     return BoxDecoration(
-      color: AppColor.backgroundImageCategore,
+      color: AppColor.backgroundImageWhiteColor,
       borderRadius: BorderRadius.circular(8),
       border: Border.all(
         color: AppColor.backgroundLayer2.withOpacity(.2),
@@ -205,19 +205,19 @@ class Decorations {
       color: Colors.grey.withOpacity(.07),
       border: BorderDirectional(
         top: const BorderSide(
-          color: AppColor.backgroundImageCategore,
+          color: AppColor.backgroundImageWhiteColor,
           width: 1,
         ),
         start: BorderSide(
-          color: AppColor.backgroundImageCategore,
+          color: AppColor.backgroundImageWhiteColor,
           width: startBorder ?? 1,
         ),
         end: BorderSide(
-          color: AppColor.backgroundImageCategore,
+          color: AppColor.backgroundImageWhiteColor,
           width: endBorder ?? 1,
         ),
         bottom: const BorderSide(
-          color: AppColor.backgroundImageCategore,
+          color: AppColor.backgroundImageWhiteColor,
           width: 1,
         ),
       ),

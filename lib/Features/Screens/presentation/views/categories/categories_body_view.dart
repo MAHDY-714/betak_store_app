@@ -1,4 +1,5 @@
 import 'package:betak_store_app/Features/Screens/presentation/views/categories/widget/main_category/list_view_main_category.dart';
+import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 
@@ -34,27 +35,33 @@ class _CategoriesBodyViewState extends State<CategoriesBodyView>
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                height: kHeight(context) * .9,
-                width: kWidth(context),
-                padding: const EdgeInsetsDirectional.all(16),
-                child: const Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Expanded(child: ListViewMainCategory()),
-                  ],
+    return Container(
+      height: kHeight(context),
+      width: kWidth(context),
+      color: AppColor.backgroundLayer2,
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  height: kHeight(context),
+                  width: kWidth(context),
+                  padding: const EdgeInsetsDirectional.only(
+                      top: 16.0, end: 16.0, start: 16.0, bottom: 64),
+                  child: const Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Expanded(child: ListViewMainCategory()),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

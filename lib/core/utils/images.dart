@@ -45,6 +45,7 @@ abstract class AssetsImages {
 
   static const homeIcon = "$navbarPath/homeIcon.png";
   static const productsIcon = "$navbarPath/productsIcon.png";
+  static const searchIcon = "$navbarPath/searchIcon.png";
   static const myCartIcon = "$navbarPath/myCartIcon.png";
   static const myCartIcon1 = "$navbarPath/myCartIcon1.png";
   static const categoriesIcon = "$navbarPath/categoriesIcon.png";

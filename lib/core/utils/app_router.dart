@@ -2,11 +2,12 @@ import 'package:betak_store_app/Features/Screens/data/models/my_cart_data_model/
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/cart_body_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/categories/categories_in_main_category_view.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/products/products_body_view.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details/part4/rating_amd_reviews/rating_and_reviews_view.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/products/widget/product_details_view.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/products_body_view.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part4/rating_and_reviews/rating_and_reviews_view.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/profiles/widget/screens_in_items/screens_in_items_body_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/screens_view.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/search/search_body_view.dart';
 import 'package:betak_store_app/Features/registration/presentation/views/sign_in_view.dart';
 import 'package:betak_store_app/core/styles/animation_transotions.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +29,7 @@ class AppRouter {
   static const kCartBodyView = '/CartBodyView';
   static const kScreensInItemsBodyView = '/ScreensInItemsBodyView';
   static const kLogOutFromProfile = '/LogOutFromProfile';
+  static const kSearchBodyView = '/SearchBodyView';
   static final router = GoRouter(routes: [
     GoRoute(
       path: '/',
@@ -207,6 +209,26 @@ class AppRouter {
           reverseTransitionDuration: const Duration(seconds: 1),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             return CustomPageTranstionAnimations.slideTransitionLeftToRight(
+              context,
+              animation,
+              secondaryAnimation,
+              child,
+              widget: child,
+            );
+          },
+        );
+      },
+    ),
+    GoRoute(
+      path: kSearchBodyView,
+      pageBuilder: (context, state) {
+        return CustomTransitionPage(
+          child: SearchBodyView(),
+          transitionDuration: const Duration(seconds: 2),
+          barrierDismissible: true,
+          reverseTransitionDuration: const Duration(seconds: 1),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            return CustomPageTranstionAnimations.slideTransitionBottomToTop(
               context,
               animation,
               secondaryAnimation,

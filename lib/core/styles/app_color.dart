@@ -52,7 +52,7 @@ class AppColor {
   static const itemSelectedInHomeBottomNavBar = Color(0xB3FFFFFF);
   static const itemUnSelectedInHomeBottomNavBar = Color(0x61FFFFFF);
   static const backgroundLayer2 = Color(0xff040813);
-  static const backgroundImageCategore = Color(0xFFF2F2F2); //0xFFF2F2F2
+  static const backgroundImageWhiteColor = Color(0xFFF2F2F2); //0xFFF2F2F2
   static const backgroundForAllItemsRedColor = Color(0xFFB90000);
   static const backgroundForAllItemsInProductDarkColor = Color(0xFF0C0F19);
   static const redDeepColor = Color(0xFF700606);

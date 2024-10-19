@@ -73,4 +73,10 @@ class HomeRepoImplement implements HomeRepo {
       }
     }
   }
+
+  @override
+  Future<Either<Failures, String>> getCtegoriesInCategoriesScreen(
+      {required String qValue, required String sortValue}) {
+    throw UnimplementedError();
+  }
 }

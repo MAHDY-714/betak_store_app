@@ -1,3 +1,4 @@
+import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -14,7 +15,10 @@ class CartBodyView extends StatelessWidget {
   final ProductInfoInMyCartModel? productInfoInMyCartModel;
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
+      height: kHeight(context),
+      width: kWidth(context),
+      color: AppColor.backgroundLayer2,
       padding: const EdgeInsets.all(16.0),
       child: CustomScrollView(
         physics: const NeverScrollableScrollPhysics(),

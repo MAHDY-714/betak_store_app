@@ -41,7 +41,7 @@ abstract class TextStyles {
   //used in {textField & your save in price info in product details & use in counter number rate this product}
   static const hintTextStyle = TextStyle(
     color: Colors.white38,
-    fontSize: 11,
+    fontSize: 10,
     letterSpacing: 2,
     fontFamily: FontFamily.bitter100,
   );
@@ -144,13 +144,13 @@ abstract class TextStyles {
     fontFamily: FontFamily.bitter300,
     letterSpacing: 2,
   );
-    static const textStyle12Blue = TextStyle(
+  static const textStyle12Blue = TextStyle(
     color: AppColor.sky2Color,
     fontSize: 12,
     letterSpacing: 2,
     fontFamily: FontFamily.bitter100,
   );
-  
+
   static const textStyle13 = TextStyle(
     color: Colors.white,
     fontSize: 13,

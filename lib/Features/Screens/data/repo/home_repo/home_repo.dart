@@ -15,8 +15,14 @@ abstract class HomeRepo {
   Future<Either<Failures, ProductResults>> getProductDetails({
     required String productId,
   });
+
   // q=furnishings&product_id=326182591&engine=home_depot_product_reviews
   Future<Either<Failures, ProductRatingAndReviewsModel>> getProductReview({
     required String productId,
+  });
+  //q=value&hd_sort=best_match&engine=home_depot
+    Future<Either<Failures, String>> getCtegoriesInCategoriesScreen({
+    required String qValue,
+    required String sortValue,
   });
 }

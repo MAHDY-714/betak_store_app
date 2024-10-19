@@ -43,10 +43,10 @@ focusedUnderLineInputBorder
 errorUnderLineInputBorder
 focusedErrorUnderLineInputBorder
            */
-          enabledBorder: enabledUnderLineInputBorder,
-          focusedBorder: focusedUnderLineInputBorder,
-          errorBorder: errorUnderLineInputBorder,
-          focusedErrorBorder: focusedErrorUnderLineInputBorder,
+ enabledBorder: BordersStyle.signInAndUpEnabledUnderLineInputBorder,
+          focusedBorder: BordersStyle.signInAndUpFocusedUnderLineInputBorder,
+          errorBorder: BordersStyle.signInAndUpErrorUnderLineInputBorder,
+          focusedErrorBorder: BordersStyle.signInAndUpFocusedErrorUnderLineInputBorder,
           filled: true,
           fillColor: Colors.grey.withOpacity(.04),
           contentPadding: const EdgeInsetsDirectional.symmetric(
