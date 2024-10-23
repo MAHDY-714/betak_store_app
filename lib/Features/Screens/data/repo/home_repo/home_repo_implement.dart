@@ -15,10 +15,10 @@ class HomeRepoImplement implements HomeRepo {
 
   HomeRepoImplement(this.apiService);
   @override
-  Future<Either<Failures, List<ProductModel>>> getCtegoriesInHomeProduct(
+  Future<Either<Failures, List<ProductModel>>> getProducts(
       {required String qValue, required String sortValue}) async {
     try {
-      var data = await apiService.getProducts(
+      var data = await apiService.getData(
           endPoint: 'q=$qValue&hd_sort=$sortValue&engine=home_depot');
       List<ProductModel> listProductsInfoModel = [];
       for (var product in data['products']) {
@@ -38,7 +38,7 @@ class HomeRepoImplement implements HomeRepo {
   Future<Either<Failures, ProductResults>> getProductDetails(
       {required String productId}) async {
     try {
-      var data = await apiService.getProducts(
+      var data = await apiService.getData(
         endPoint: 'engine=home_depot_product&product_id=$productId',
       );
       // log(data['product_results'].toString());
@@ -59,7 +59,7 @@ class HomeRepoImplement implements HomeRepo {
       {required String productId}) async {
     // q=furnishings&product_id=326182591&engine=home_depot_product_reviews
     try {
-      var data = await apiService.getProducts(
+      var data = await apiService.getData(
           endPoint: '&product_id=$productId&engine=home_depot_product_reviews');
       ProductRatingAndReviewsModel productReviewsModel =
           ProductRatingAndReviewsModel.fromJson(data);
@@ -72,11 +72,5 @@ class HomeRepoImplement implements HomeRepo {
         return left(ServerFailure(e.toString()));
       }
     }
-  }
-
-  @override
-  Future<Either<Failures, String>> getCtegoriesInCategoriesScreen(
-      {required String qValue, required String sortValue}) {
-    throw UnimplementedError();
   }
 }

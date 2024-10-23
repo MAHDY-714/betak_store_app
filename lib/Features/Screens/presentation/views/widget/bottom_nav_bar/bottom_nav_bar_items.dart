@@ -10,25 +10,26 @@ List<PersistentBottomNavBarItem> bottomNavBarItems(
   context,
 ) {
   return [
-    persistentBottomNavBarItem(context, index,
+    persistentBottomNavBarItem(context, index, 0,
         icon: AssetsImages.homeIcon, title: 'Home'),
-    persistentBottomNavBarItem(context, index,
+    persistentBottomNavBarItem(context, index, 1,
         icon: AssetsImages.myCartIcon, title: 'My Cart'),
-    persistentBottomNavBarItem(context, index,
+    persistentBottomNavBarItem(context, index, 2,
         icon: AssetsImages.productsIcon, title: 'Categories'),
-    persistentBottomNavBarItem(context, index,
+    persistentBottomNavBarItem(context, index, 3,
         icon: AssetsImages.profileIcon, title: 'Profile'),
   ];
 }
 
 PersistentBottomNavBarItem persistentBottomNavBarItem(
   context,
-  index, {
+  index,
+  indexSellect, {
   required String icon,
   required String title,
 }) {
   double iconSize =
-      kWidthCondtions(context, valueIsTrue: 20.0, valueIsFalse: 25.0);
+      kWidthCondtions(context, valueIsTrue: 20.0, valueIsFalse: 26.0);
   Color colorSelected = AppColor.itemSelectedInHomeBottomNavBar;
   Color colorUnSelected = AppColor.itemUnSelectedInHomeBottomNavBar;
   TextStyle titleStyle = TextStyles.textStyle10W60.copyWith(
@@ -50,7 +51,7 @@ PersistentBottomNavBarItem persistentBottomNavBarItem(
         icon,
         height: iconSize,
         width: iconSize,
-        color: index == 1 ? colorSelected : colorUnSelected,
+        color: index == indexSellect ? colorSelected : colorUnSelected,
       ),
     ),
     textStyle: titleStyle,

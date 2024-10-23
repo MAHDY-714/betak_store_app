@@ -22,7 +22,10 @@ class NavBarCubit extends Cubit<NavBarState> {
   ];
 
   Widget? widget;
-  void bottomNavBarScreen(index, context) {
+  void bottomNavBarScreen(
+    index,
+    context,
+  ) {
     currentScreen = index;
     switch (currentScreen) {
       case 0:

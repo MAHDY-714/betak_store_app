@@ -26,6 +26,9 @@ class ListViewMainCategory extends StatelessWidget {
         );
       },
       itemCount: AssetsImages.listMainCategories.length,
+      physics: const NeverScrollableScrollPhysics(),
+      // physics: const BouncingScrollPhysics(),
+      // shrinkWrap: true,
     );
   }
 }

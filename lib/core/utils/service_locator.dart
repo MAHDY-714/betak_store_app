@@ -13,4 +13,5 @@ void setupServiceLocator() {
       RegistrationRepoImaplement(FirebaseAuthService(FirebaseAuth.instance)));
 
   getIt.registerSingleton(HomeRepoImplement(ApiService(Dio())));
+
 }

@@ -12,12 +12,13 @@ class HomeCubit extends Cubit<HomeState> {
   String categoryName = 'Chair';
   int categoryIndex = 0;
   List<ProductModel> productModel = [];
+  List<ProductModel> productModelFormCategories = [];
   Future<void> getProducts({
     required String qValue,
     String? sortValue,
   }) async {
     emit(GetProductsLoadingState());
-    var data = await homeRepo.getCtegoriesInHomeProduct(
+    var data = await homeRepo.getProducts(
       qValue: qValue,
       sortValue: sortValue ?? "best_match",
       // sortValue: sortValue ?? "best_match",
@@ -55,8 +56,30 @@ class HomeCubit extends Cubit<HomeState> {
       getProducts(qValue: kListTitlesCategoriesInHome[8].toString());
     } else if (index == 9) {
       getProducts(qValue: kListTitlesCategoriesInHome[9].toString());
+    } else {
+      getProducts(qValue: kListTitlesCategoriesInHome[0].toString());
     }
     log(kListTitlesCategoriesInHome[categoryIndex].toString());
     log(categoryIndex.toString());
+  }
+
+  Future<void> getCategoriesProducts({
+    required String qValue,
+    String? sortValue,
+  }) async {
+    emit(GetCategoriesProductsLoadingState());
+    var data = await homeRepo.getProducts(
+      qValue: qValue,
+      sortValue: sortValue ?? "best_match",
+    );
+    data.fold((failure) {
+      log(failure.errorMessage);
+      emit(GetCategoriesProductsFailureState(failure.errorMessage));
+    }, (products) {
+      log('the first Categore Product');
+      log(products.toString());
+      productModelFormCategories = products;
+      emit(GetCategoriesProductsSuccessState(productModel: products));
+    });
   }
 }

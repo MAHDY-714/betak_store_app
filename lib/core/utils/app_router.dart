@@ -2,7 +2,7 @@ import 'package:betak_store_app/Features/Screens/data/models/my_cart_data_model/
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/cart_body_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/categories/categories_in_main_category_view.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/products_body_view.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/categories/widget/products_in_main_category/products_in_main_category_body_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part4/rating_and_reviews/rating_and_reviews_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/profiles/widget/screens_in_items/screens_in_items_body_view.dart';
@@ -134,7 +134,7 @@ class AppRouter {
       pageBuilder: (context, state) {
         return CustomTransitionPage(
           child: Scaffold(
-              body: ProductsBodyView(
+              body: ProductsInMainCategoryBodyView(
             title: state.extra as String,
           )),
           transitionDuration: const Duration(seconds: 2),

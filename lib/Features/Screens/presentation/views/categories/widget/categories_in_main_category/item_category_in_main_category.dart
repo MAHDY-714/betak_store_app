@@ -17,7 +17,7 @@ class ItemCategoryInMainCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.symmetric(vertical: 8.0),
+      padding: const EdgeInsetsDirectional.symmetric(vertical: 4.0),
       child: GestureDetector(
         onTap: onTap,
         child: Container(
@@ -26,12 +26,14 @@ class ItemCategoryInMainCategory extends StatelessWidget {
           padding: const EdgeInsetsDirectional.only(end: 8.0),
           decoration: BoxDecoration(
             color: AppColor.backgroundForAllItemsInProductDarkColor,
-            border: Border.all(color: AppColor.borderLogoSign, width: .4),
+            border: Border.all(color: AppColor.skyNightColor, width: 3.75),
             borderRadius: BorderRadius.circular(16.0),
           ),
           child: Row(
             children: [
-              ImageInMainCategory(imageCategories: imageCategories),
+              ImageInMainCategory(
+                imageCategories: imageCategories,
+              ),
               const SizedBox(width: 5),
               Expanded(
                   child: RowInMainCategory(

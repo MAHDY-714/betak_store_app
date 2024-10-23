@@ -87,6 +87,7 @@ abstract class TextStyles {
     fontSize: 10,
     color: AppColor.blueDarkColor,
     fontFamily: FontFamily.bitter900,
+  
   );
   static const priceStyleInInLayer2 = TextStyle(
     color: AppColor.sky4Color,

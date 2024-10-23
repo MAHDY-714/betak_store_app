@@ -1,4 +1,6 @@
+import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/styles/font_family.dart';
+import 'package:betak_store_app/core/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -17,11 +19,9 @@ class RowNameAndIconInMainCategory extends StatelessWidget {
           nameCategore,
           maxLines: 2,
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            color: Colors.white70,
+          style: TextStyles.textStyle10W60.copyWith(
             fontSize: 25,
             fontFamily: FontFamily.bitter600,
-            letterSpacing: 3,
           ),
         ),
         const Opacity(
@@ -29,7 +29,7 @@ class RowNameAndIconInMainCategory extends StatelessWidget {
           child: Icon(
             FontAwesomeIcons.angleRight,
             size: 80,
-            color: Colors.white,
+            color: AppColor.backgroundImageWhiteColor,
             // grade: .5,
           ),
         ),

@@ -18,8 +18,7 @@ class CategoriesInMainCategoryBodyView extends StatelessWidget {
               Container(
                 height: kHeight(context),
                 width: kWidth(context),
-                padding: const EdgeInsetsDirectional.only(
-                    start: 16.0, top: 16.0, bottom: 16.0, end: 16.0),
+                padding: const EdgeInsetsDirectional.all(8.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [

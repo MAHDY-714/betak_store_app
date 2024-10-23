@@ -253,4 +253,40 @@ class Decorations {
       ),
     ),
   );
+
+  static BoxDecoration itemMainCategoreBoxDecoration({required String images}) {
+    return BoxDecoration(
+      color: AppColor.backgroundForAllItemsInProductDarkColor,
+      border: Border.all(color: AppColor.skyNightColor, width: 3.75),
+      borderRadius: BorderRadius.circular(16.0),
+      image: DecorationImage(
+        fit: BoxFit.fitWidth,
+        opacity: .5,
+        image: AssetImage(
+          images,
+        ),
+      ),
+    );
+  }
+
+  static BoxDecoration imageInItemInMainCategoryBoxDecoration(
+      {required String imageCategories}) {
+    return BoxDecoration(
+      color: Colors.transparent,
+      border: BorderDirectional(
+        end: BorderSide(color: AppColor.skyNightColor, width: 5),
+      ),
+      borderRadius: const BorderRadiusDirectional.only(
+        topStart: Radius.circular(10.0),
+        bottomStart: Radius.circular(10.0),
+        topEnd: Radius.circular(0.0),
+        bottomEnd: Radius.circular(0.0),
+      ),
+      image: DecorationImage(
+        fit: BoxFit.cover,
+        opacity: .5,
+        image: AssetImage(imageCategories),
+      ),
+    );
+  }
 }

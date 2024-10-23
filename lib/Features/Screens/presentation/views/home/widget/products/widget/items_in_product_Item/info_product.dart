@@ -16,7 +16,8 @@ class InfoProduct extends StatelessWidget {
     return Align(
       alignment: const AlignmentDirectional(-.85, 1.18),
       child: Container(
-        height: kHeight(context) >= 770 && kHeight(context) <= 810 ? 110 : 135,
+        height:
+            kHeightCondtions(context, valueIsTrue: 120.0, valueIsFalse: 135.0),
         width: kWidth(context),
         alignment: AlignmentDirectional.centerStart,
         padding: const EdgeInsetsDirectional.symmetric(horizontal: 4),
@@ -31,13 +32,11 @@ class InfoProduct extends StatelessWidget {
             Text(
               productModel!.title.toString(),
               maxLines:
-                  kHeight(context) >= 770 && kHeight(context) <= 810 ? 2 : 3,
+                  kHeight(context) >= 770 && kHeight(context) <= 810 ? 2 : 2,
               overflow: TextOverflow.ellipsis,
               style: TextStyles.nameProductStyleInInLayer2.copyWith(
-                fontSize: kHeight(context) >= 770 && kHeight(context) <= 810
-                    ? 10
-                    : 12,
-              ),
+                  fontSize: kHeightCondtions(context,
+                      valueIsTrue: 10.0, valueIsFalse: 12.5)),
             ),
             if (productModel!.rating != null || productModel!.reviews != null)
               Column(
@@ -51,10 +50,8 @@ class InfoProduct extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         style: TextStyles.textStyle12.copyWith(
                           color: const Color(0xFA000000),
-                          fontSize:
-                              kHeight(context) >= 770 && kHeight(context) <= 810
-                                  ? 11
-                                  : 14,
+                          fontSize: kHeightCondtions(context,
+                              valueIsTrue: 11.0, valueIsFalse: 14.0),
                         ),
                       ),
                       const SizedBox(
@@ -78,10 +75,8 @@ class InfoProduct extends StatelessWidget {
                         style: TextStyles.priceStyleInInLayer2.copyWith(
                           color: AppColor.blueDarkColor,
                           // height: 1.5,
-                          fontSize:
-                              kHeight(context) >= 770 && kHeight(context) <= 810
-                                  ? 10
-                                  : 13,
+                          fontSize: kHeightCondtions(context,
+                              valueIsTrue: 10.0, valueIsFalse: 13.0),
                         ),
                       ),
                       const SizedBox(

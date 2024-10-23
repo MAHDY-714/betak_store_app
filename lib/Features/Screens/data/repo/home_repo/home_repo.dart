@@ -6,7 +6,7 @@ import 'package:dartz/dartz.dart';
 
 abstract class HomeRepo {
   //q=value&hd_sort=best_match&engine=home_depot
-  Future<Either<Failures, List<ProductModel>>> getCtegoriesInHomeProduct({
+  Future<Either<Failures, List<ProductModel>>> getProducts({
     required String qValue,
     required String sortValue,
   });
@@ -21,8 +21,7 @@ abstract class HomeRepo {
     required String productId,
   });
   //q=value&hd_sort=best_match&engine=home_depot
-    Future<Either<Failures, String>> getCtegoriesInCategoriesScreen({
-    required String qValue,
-    required String sortValue,
-  });
+  //   Future<Either<Failures, String>> getCtegoriesInCategoriesScreen({
+  //   required String qValue,
+  // });
 }

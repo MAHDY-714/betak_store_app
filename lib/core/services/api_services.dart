@@ -8,7 +8,7 @@ class ApiService {
   final String _baseUrl = 'https://serpapi.com/search.json';
   ApiService(this._dio);
 //q=value&hd_sort=best_match&engine=home_depot
-  Future<Map<String, dynamic>> getProducts({required String endPoint}) async {
+  Future<Map<String, dynamic>> getData({required String endPoint}) async {
     var response = await _dio
         .get('$_baseUrl?api_key=${ApiKeys.serpApiKey}&country=us&$endPoint');
     return response.data;

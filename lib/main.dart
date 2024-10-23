@@ -37,7 +37,7 @@ class BetakStoreApp extends StatelessWidget {
         BlocProvider(
           create: (context) => HomeCubit(getIt.get<HomeRepoImplement>())
             ..getProducts(qValue: kListTitlesCategoriesInHome[0].toString()),
-        )
+        ),
       ],
       child: MaterialApp.router(
         theme: ThemeData.dark(

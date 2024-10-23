@@ -29,12 +29,12 @@ class ProductItemBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double heighBodyProduct = 320;
+    double heighBodyProduct =
+        kHeightCondtions(context, valueIsTrue: 305.0, valueIsFalse: 350.0);
     // double widthBodyProduct = kWidth(context) * .456;
     return Container(
       // width: kWidth(context) * .456,
       height: heighBodyProduct,
-      padding: const EdgeInsetsDirectional.all(8),
       decoration: Decorations.outsideproductHomeItemBuilderBoxDecorations,
       child: Stack(
         alignment: const AlignmentDirectional(0, 1),
@@ -52,7 +52,7 @@ class ProductItemBuilder extends StatelessWidget {
                 children: [
                   Stack(
                     children: [
-                      ImageProductInHome(
+                      ImageProductInItemBuilder(
                         imageProduct: imageProduct,
                       ),
                       Padding(

@@ -20,4 +20,16 @@ final class GetProductsFailureState extends HomeState {
   GetProductsFailureState(this.errorMessage);
 }
 
-final class HomeChangeCategoriesState extends HomeState {}
+final class GetCategoriesProductsLoadingState extends HomeState {}
+
+final class GetCategoriesProductsSuccessState extends HomeState {
+  final List<ProductModel> productModel;
+
+  GetCategoriesProductsSuccessState({required this.productModel});
+}
+
+final class GetCategoriesProductsFailureState extends HomeState {
+  final String errorMessage;
+
+  GetCategoriesProductsFailureState(this.errorMessage);
+}

@@ -49,8 +49,8 @@ class AppColor {
   static const errorBorderAndRemoveAndIcons = Color(0xFF901313);
   static const focusederrorBorderAndRemove = Color(0xFFD10404);
   static const logoBackgoundColor = Colors.black12;
-  static const itemSelectedInHomeBottomNavBar = Color(0xB3FFFFFF);
-  static const itemUnSelectedInHomeBottomNavBar = Color(0x61FFFFFF);
+  static const itemSelectedInHomeBottomNavBar = Color(0xBDFFFFFF);
+  static const itemUnSelectedInHomeBottomNavBar = Color(0x30FFFFFF);
   static const backgroundLayer2 = Color(0xff040813);
   static const backgroundImageWhiteColor = Color(0xFFF2F2F2); //0xFFF2F2F2
   static const backgroundForAllItemsRedColor = Color(0xFFB90000);
@@ -67,6 +67,7 @@ class AppColor {
   static const green3Color = Color(0xFF006604);
   static const greyColor = Color(0xFF1D202B);
   // static Color skyColorWithOpacity = const Color(0xFFB2C0E5).withOpacity(.4);
+  static Color skyNightColor = const Color(0xFF0C141F);
   static Color skyLightColor = const Color(0xFF323644);
   static const skyColor = Color(0xFFB2C0E5);
   static const sky2Color = Color(0xFFA2C7FB);

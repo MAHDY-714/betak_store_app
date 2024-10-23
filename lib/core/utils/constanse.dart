@@ -109,7 +109,7 @@ const kListFurnituresCategoriesName = [
   "Dining Table",
   "Gaming Chair",
   "Library",
-  "Sofas",
+  "Sofa",
   "Tables",
   "Wardrobes",
 ];
@@ -129,7 +129,7 @@ const kListElectricalAppliancesCategoriesName = [
   "Smart TV",
   "Air Conditioner",
   "Vacuum Cleaner",
-  "Iron Appliance",
+  "Ironing Appliance",
   "Washing Appliance",
 ];
 

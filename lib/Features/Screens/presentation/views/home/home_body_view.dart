@@ -42,10 +42,12 @@ class _HomeBodyViewState extends State<HomeBodyView>
           slivers: [
             SliverAppBar(
               backgroundColor: AppColor.backgroundLayer2,
+              leading: const SizedBox(width: 0.0),
               elevation: 0,
               pinned: false,
               centerTitle: false,
-              expandedHeight: 220,
+              expandedHeight: kHeightCondtions(context,
+                  valueIsTrue: 220.0, valueIsFalse: 265.0),
               surfaceTintColor: AppColor.backgroundLayer2,
               flexibleSpace: FlexibleSpaceBar(
                 background: animationController.value.isFinite
