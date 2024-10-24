@@ -28,8 +28,7 @@ class SwichImagesProductListView extends StatelessWidget {
             onTapSwichImagesProduct: () {
               BlocProvider.of<ProductDetailsCubit>(context)
                   .changeImagePreview(index: index);
-
-              log(productResults.toString());
+              log(productResults.images![index].last.toString());
             },
           );
         },

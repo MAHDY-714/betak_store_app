@@ -18,8 +18,7 @@ class PaymentRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0),
       decoration: BoxDecoration(
         color: Colors.grey.withOpacity(.02),
         border: BorderDirectional(
@@ -29,7 +28,7 @@ class PaymentRow extends StatelessWidget {
           ),
         ),
       ),
-      alignment: AlignmentDirectional.center,
+      alignment: AlignmentDirectional.bottomCenter,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,

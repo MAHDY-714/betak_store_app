@@ -3,8 +3,9 @@ import 'package:betak_store_app/Features/Screens/presentation/manager/product_de
 import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit/product_details_state.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/all_info_product_details.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part1/image_in_product_details.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part6/row_for_more_info.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part6/row_for_Specifications_info.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part7/payment_row.dart';
+import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:betak_store_app/core/widget/circle_loading_indicator.dart';
 import 'package:betak_store_app/core/widget/error_text_widget.dart';
@@ -23,19 +24,29 @@ class ProductDetailsBodyView extends StatelessWidget {
     return BlocBuilder<ProductDetailsCubit, ProductDetailsState>(
       builder: (BuildContext context, ProductDetailsState state) {
         return Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             ConditionalBuilder(
               condition: cub.productResults != null,
               builder: (context) => SizedBox(
-                height: kHeight(context) * .85,
+                height: kHeightCondtions(context,
+                    valueIsTrue: kHeight(context) * .85,
+                    valueIsFalse: kHeight(context) * .88),
                 width: kWidth(context),
                 child: CustomScrollView(
                   slivers: [
-                    SliverToBoxAdapter(
-                      child: ImageInProductDetails(
-                        index: cub.imageIndex,
-                        productResults: cub.productResults!,
+                    SliverAppBar(
+                      backgroundColor: AppColor.backgroundLayer2,
+                      leading: const SizedBox(width: 0.0),
+                      elevation: 0,
+                      pinned: false,
+                      centerTitle: false,
+                      expandedHeight: kHeight(context) * .42,
+                      surfaceTintColor: AppColor.backgroundLayer2,
+                      flexibleSpace: FlexibleSpaceBar(
+                        background: ImageInProductDetails(
+                          index: cub.imageIndex,
+                          productResults: cub.productResults!,
+                        ),
                       ),
                     ),
                     SliverToBoxAdapter(
@@ -44,14 +55,10 @@ class ProductDetailsBodyView extends StatelessWidget {
                           productResults: cub.productResults!),
                     ),
                     SliverToBoxAdapter(
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 20.0),
-                            child: RowForMoreInfo(
-                                productResults: cub.productResults!),
-                          ),
-                        ],
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 20.0),
+                        child: RowForSpecificationsInfoWidget(
+                            productResults: cub.productResults!),
                       ),
                     ),
                   ],
@@ -69,10 +76,13 @@ class ProductDetailsBodyView extends StatelessWidget {
                           child: ErrorTextWidget(
                               errorMessage: state.errorMessage))),
             ),
-            PaymentRow(
-              onTapPayment: () {
-                cub.getProductDetails(productId: '321035976');
-              },
+            Align(
+              alignment: AlignmentDirectional.bottomCenter,
+              child: PaymentRow(
+                onTapPayment: () {
+                  cub.getProductDetails(productId: '321035976');
+                },
+              ),
             ),
           ],
         );

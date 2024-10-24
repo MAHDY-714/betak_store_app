@@ -1,21 +1,18 @@
-import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
+import 'package:betak_store_app/Features/Screens/data/models/specifications_info_model/specifications_info_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part6/data_cell_item.dart';
 import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/styles/text_styles.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 
-class DetailsInfoView extends StatelessWidget {
-  const DetailsInfoView(
-      {super.key,
-      required this.productResults,
-      required this.indexItem,
-      required this.listLength});
-  final ProductResults productResults;
-  final int indexItem;
-  final int listLength;
+class SpecificationsTableInfoView extends StatelessWidget {
+  const SpecificationsTableInfoView(
+      {super.key, required this.specificationsInfoModel});
+  final SpecificationsInfoModel specificationsInfoModel;
+
   @override
   Widget build(BuildContext context) {
+    // String item = productResults.specifications!;
     return SafeArea(
       child: Container(
         width: kWidth(context),
@@ -51,7 +48,7 @@ class DetailsInfoView extends StatelessWidget {
                 ],
                 rows: List.generate(
                   // growable: false,
-                  listLength,
+                  specificationsInfoModel.listLength,
                   (index) {
                     return DataRow(
                       selected: index.isEven ? true : false,
@@ -63,12 +60,12 @@ class DetailsInfoView extends StatelessWidget {
                       cells: <DataCell>[
                         dataCell(context, index,
                             text:
-                                '${productResults.specifications![indexItem].value![index].name}',
+                                '${specificationsInfoModel.productResults.specifications![specificationsInfoModel.indexItem].value![index].name}',
                             textStyle: TextStyles.toggleSign,
-                            width: .35),
+                            width: .32),
                         dataCell(context, index,
                             text:
-                                '${productResults.specifications![indexItem].value![index].value}',
+                                '${specificationsInfoModel.productResults.specifications![specificationsInfoModel.indexItem].value![index].value}',
                             textStyle: TextStyles
                                 .textRecommendationsInProductDetailsStyle),
                       ],

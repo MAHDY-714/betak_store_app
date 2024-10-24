@@ -3,8 +3,8 @@ import 'package:betak_store_app/core/styles/text_styles.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 
-class MoreInfoButton extends StatelessWidget {
-  const MoreInfoButton({
+class SpecificationsInfoButton extends StatelessWidget {
+  const SpecificationsInfoButton({
     super.key,
     required this.nameButton,
     this.startBorder,

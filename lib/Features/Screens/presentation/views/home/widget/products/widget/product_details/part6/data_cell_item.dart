@@ -17,9 +17,10 @@ DataCell dataCell(
           ? AppColor.backgroundForAllItemsInProductDarkColor
           : Colors.transparent,
       alignment: AlignmentDirectional.centerStart,
-      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 4.0),
       child: Text(
         text,
+        textAlign: TextAlign.start,
         style: textStyle ?? TextStyles.toggleSign,
       ),
     ),
