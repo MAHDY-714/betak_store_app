@@ -3,7 +3,7 @@ import 'package:betak_store_app/Features/Screens/presentation/manager/product_de
 import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit/product_details_state.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/all_info_product_details.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part1/image_in_product_details.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part6/row_for_Specifications_info.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part6/row_for_specifications_info.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part7/payment_row.dart';
 import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
@@ -27,41 +27,43 @@ class ProductDetailsBodyView extends StatelessWidget {
           children: [
             ConditionalBuilder(
               condition: cub.productResults != null,
-              builder: (context) => SizedBox(
-                height: kHeightCondtions(context,
-                    valueIsTrue: kHeight(context) * .85,
-                    valueIsFalse: kHeight(context) * .88),
-                width: kWidth(context),
-                child: CustomScrollView(
-                  slivers: [
-                    SliverAppBar(
-                      backgroundColor: AppColor.backgroundLayer2,
-                      leading: const SizedBox(width: 0.0),
-                      elevation: 0,
-                      pinned: false,
-                      centerTitle: false,
-                      expandedHeight: kHeight(context) * .42,
-                      surfaceTintColor: AppColor.backgroundLayer2,
-                      flexibleSpace: FlexibleSpaceBar(
-                        background: ImageInProductDetails(
-                          index: cub.imageIndex,
-                          productResults: cub.productResults!,
+              builder: (context) => Expanded(
+                child: SizedBox(
+                  // height: kHeightCondtions(context,
+                  //     valueIsTrue: kHeight(context) * .864,
+                  //     valueIsFalse: kHeight(context) * .88),
+                  width: kWidth(context),
+                  child: CustomScrollView(
+                    slivers: [
+                      SliverAppBar(
+                        backgroundColor: AppColor.backgroundLayer2,
+                        leading: const SizedBox(width: 0.0),
+                        elevation: 0,
+                        pinned: false,
+                        centerTitle: false,
+                        expandedHeight: kHeight(context) * .42,
+                        surfaceTintColor: AppColor.backgroundLayer2,
+                        flexibleSpace: FlexibleSpaceBar(
+                          background: ImageInProductDetails(
+                            index: cub.imageIndex,
+                            productResults: cub.productResults!,
+                          ),
                         ),
                       ),
-                    ),
-                    SliverToBoxAdapter(
-                      child: AllInfoProductDetails(
-                          productModel: productModel,
-                          productResults: cub.productResults!),
-                    ),
-                    SliverToBoxAdapter(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 20.0),
-                        child: RowForSpecificationsInfoWidget(
+                      SliverToBoxAdapter(
+                        child: AllInfoProductDetails(
+                            productModel: productModel,
                             productResults: cub.productResults!),
                       ),
-                    ),
-                  ],
+                      SliverToBoxAdapter(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 20.0),
+                          child: RowForSpecificationsInfoWidget(
+                              productResults: cub.productResults!),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               fallback: (context) => state is! GetProductDetailsFailureState

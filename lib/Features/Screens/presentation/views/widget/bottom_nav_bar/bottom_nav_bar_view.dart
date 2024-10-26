@@ -15,6 +15,7 @@ class BottomNavBarView extends StatelessWidget {
 
     var cubi = BlocProvider.of<NavBarCubit>(context);
     var cubiHome = BlocProvider.of<HomeCubit>(context);
+    int durationAnimation = 300;
     return BlocConsumer<NavBarCubit, NavBarState>(
         listener: (context, state) {},
         builder: (context, state) {
@@ -34,19 +35,19 @@ class BottomNavBarView extends StatelessWidget {
             backgroundColor: AppColor.backgroundLayer2,
             // bottomScreenMargin: 32.0,
             isVisible: true,
-            animationSettings: const NavBarAnimationSettings(
+            animationSettings: NavBarAnimationSettings(
               onNavBarHideAnimation: OnHideAnimationSettings(
-                duration: Duration(milliseconds: 800),
+                duration: Duration(milliseconds: durationAnimation),
                 curve: Curves.fastOutSlowIn,
               ),
               navBarItemAnimation: ItemAnimationSettings(
-                duration: Duration(milliseconds: 800),
+                duration: Duration(milliseconds: durationAnimation + 100),
                 curve: Curves.fastOutSlowIn,
               ),
               screenTransitionAnimation: ScreenTransitionAnimationSettings(
                 curve: Curves.fastOutSlowIn,
                 animateTabTransition: true,
-                duration: Duration(milliseconds: 800),
+                duration: Duration(milliseconds: durationAnimation),
                 screenTransitionAnimationType:
                     ScreenTransitionAnimationType.slide,
               ),

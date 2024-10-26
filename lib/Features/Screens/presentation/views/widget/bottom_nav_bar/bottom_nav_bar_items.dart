@@ -36,7 +36,7 @@ PersistentBottomNavBarItem persistentBottomNavBarItem(
     fontSize: kWidthCondtions(context, valueIsTrue: 17.0, valueIsFalse: 20.0),
   );
   double contentPadding =
-      kWidthCondtions(context, valueIsTrue: 8.0, valueIsFalse: 6.0);
+      kWidthCondtions(context, valueIsTrue: 4.0, valueIsFalse: 6.0);
   const paddingend = 4.0;
   return PersistentBottomNavBarItem(
     activeColorPrimary: AppColor.sky4Color.withOpacity(.04), //hilight

@@ -3,12 +3,15 @@ import 'dart:developer';
 import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
 import 'package:betak_store_app/Features/Screens/data/repo/home_repo/home_repo.dart';
 import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit/product_details_state.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProductDetailsCubit extends Cubit<ProductDetailsState> {
   ProductDetailsCubit(this.homeRepo) : super((InitialProductDetailsState()));
   final HomeRepo homeRepo;
   int imageIndex = 0;
+  String? currentImage;
+  String? prevImage;
   int colorIndex = 0;
   ProductResults? productResults;
   String? errorMessage;
@@ -32,8 +35,21 @@ class ProductDetailsCubit extends Cubit<ProductDetailsState> {
     }
   }
 
-  void changeImagePreview({required int index}) {
-    imageIndex = index;
+  void changeImagePreview(
+      {required int index,
+      required AnimationController animationController,
+      ProductResults? productResults}) {
+    currentImage = productResults!.images![index].last.toString();
+    // if (animationController.isDismissed) {
+    //   animationController.forward(from: 0.0);
+
+    //   prevImage = currentImage;
+    // } else if (animationController.isCompleted) {
+    animationController.forward(from: 0.0).whenComplete(() {
+      imageIndex = index;
+      prevImage = currentImage;
+    });
+    // }
     emit(GetProductDetailsChangeImagePreviewState());
   }
 

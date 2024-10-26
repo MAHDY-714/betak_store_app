@@ -66,7 +66,7 @@ class Decorations {
       borderRadius: BorderRadius.circular(8),
       border: Border.all(
         color: AppColor.backgroundLayer2.withOpacity(.2),
-        width: 1.0,
+        width: 1.25,
       ),
     );
   }

@@ -8,27 +8,35 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SwichImagesProductListView extends StatelessWidget {
-  const SwichImagesProductListView(
-      {super.key,
-      required this.index,
-      this.onTapSwichImagesProduct,
-      required this.productResults});
-  final int index;
-  final void Function()? onTapSwichImagesProduct;
+  const SwichImagesProductListView({
+    super.key,
+    required this.indexImageProductDetails,
+    required this.productResults,
+    required this.animationController,
+  });
+  final int indexImageProductDetails;
   final ProductResults productResults;
+  final AnimationController animationController;
+
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    var cubi = BlocProvider.of<ProductDetailsCubit>(context);
+    return Container(
       height: 50,
-      width: kWidth(context) * .7,
+      width: kWidth(context) * .75,
+      alignment: AlignmentDirectional.center,
       child: ListView.separated(
         itemBuilder: (BuildContext context, int index) {
           return SwichImagesProductItemBuilder(
             imageProduct: productResults.images![index].last.toString(),
             onTapSwichImagesProduct: () {
-              BlocProvider.of<ProductDetailsCubit>(context)
-                  .changeImagePreview(index: index);
-              log(productResults.images![index].last.toString());
+              cubi.changeImagePreview(
+                  index: index,
+                  animationController: animationController,
+                  productResults: productResults);
+              log(
+                productResults.images![index].last.toString(),
+              );
             },
           );
         },

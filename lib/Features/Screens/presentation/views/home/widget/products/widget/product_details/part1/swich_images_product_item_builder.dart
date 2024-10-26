@@ -22,9 +22,12 @@ class SwichImagesProductItemBuilder extends StatelessWidget {
           width: 50.0,
           height: 50.0,
           clipBehavior: Clip.antiAlias,
-          padding: const EdgeInsetsDirectional.all(4),
+          padding: const EdgeInsetsDirectional.all(1.0),
           decoration: Decorations.swichImagesProductBoxDecoration(),
-          child: CachedNetworkImageWidget(imageProduct: imageProduct),
+          child: ClipRRect(
+              borderRadius: BorderRadius.circular(6.0),
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              child: CachedNetworkImageWidget(imageProduct: imageProduct)),
         ),
       ),
     );
