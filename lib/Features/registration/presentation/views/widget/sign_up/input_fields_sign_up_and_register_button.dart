@@ -5,7 +5,7 @@ import 'package:betak_store_app/Features/registration/presentation/views/widget/
 import 'package:betak_store_app/Features/registration/presentation/views/widget/registeration_button_widget.dart';
 import 'package:betak_store_app/Features/registration/presentation/views/widget/text_form_sign_field.dart';
 import 'package:betak_store_app/core/styles/app_color.dart';
-import 'package:betak_store_app/core/utils/app_router.dart';
+import 'package:betak_store_app/core/utils/routers/app_router.dart';
 import 'package:betak_store_app/core/widget/circle_loading_indicator.dart';
 import 'package:betak_store_app/core/widget/show_toast_message.dart';
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';

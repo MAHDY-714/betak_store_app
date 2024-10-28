@@ -1,6 +1,6 @@
 import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/styles/text_styles.dart';
-import 'package:betak_store_app/core/utils/app_router.dart';
+import 'package:betak_store_app/core/utils/routers/app_router.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:betak_store_app/core/widget/borders_styles.dart';
 import 'package:flutter/material.dart';

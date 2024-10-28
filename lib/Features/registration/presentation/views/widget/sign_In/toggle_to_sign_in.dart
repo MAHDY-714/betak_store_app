@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../../core/styles/text_styles.dart';
-import '../../../../../../core/utils/app_router.dart';
+import '../../../../../../core/utils/routers/app_router.dart';
 
 class ToggleToSignIn extends StatelessWidget {
   const ToggleToSignIn({

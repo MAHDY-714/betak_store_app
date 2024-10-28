@@ -1,7 +1,7 @@
 import 'package:betak_store_app/Features/Screens/data/models/specifications_info_model/specifications_info_model.dart';
 import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part6/specifications_info_button.dart';
-import 'package:betak_store_app/core/utils/app_router.dart';
+import 'package:betak_store_app/core/utils/routers/app_router.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

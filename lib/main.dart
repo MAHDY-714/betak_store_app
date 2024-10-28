@@ -2,7 +2,7 @@ import 'package:betak_store_app/Features/Screens/data/repo/home_repo/home_repo_i
 import 'package:betak_store_app/Features/Screens/presentation/manager/home_manager/home_cubit.dart';
 import 'package:betak_store_app/Features/Screens/presentation/manager/nav_bar_manager/nav_bar_cubit/nav_bar_cubit.dart';
 import 'package:betak_store_app/core/styles/app_color.dart';
-import 'package:betak_store_app/core/utils/app_router.dart';
+import 'package:betak_store_app/core/utils/routers/app_router.dart';
 import 'package:betak_store_app/core/utils/bloc_observer.dart';
 import 'package:betak_store_app/core/utils/cache_helper.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';

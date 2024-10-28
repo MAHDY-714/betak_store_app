@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:betak_store_app/Features/Screens/presentation/manager/home_manager/home_cubit.dart';
 import 'package:betak_store_app/Features/Screens/presentation/manager/home_manager/home_state.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/categories/widget/categories_in_main_category/item_category_in_main_category.dart';
-import 'package:betak_store_app/core/utils/app_router.dart';
+import 'package:betak_store_app/core/utils/routers/app_router.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:betak_store_app/core/utils/images.dart';
 import 'package:flutter/material.dart';

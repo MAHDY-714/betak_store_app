@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/styles/app_color.dart';
-import '../../../../../core/utils/app_router.dart';
+import '../../../../../core/utils/routers/app_router.dart';
 import '../../../../../core/utils/constanse.dart';
 import 'logo_splash_view.dart';
 import 'text_splash_view.dart';

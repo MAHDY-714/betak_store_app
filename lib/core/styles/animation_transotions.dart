@@ -9,10 +9,8 @@ class CustomPageTranstionAnimations {
     const curve = Curves.ease;
 
     final tween = Tween(begin: begin, end: end);
-    final curvedAnimation = CurvedAnimation(
-      parent: animation,
-      curve: curve,
-    );
+    final curvedAnimation =
+        CurvedAnimation(parent: animation, curve: curve, reverseCurve: curve);
     return SlideTransition(
       position: tween.animate(curvedAnimation),
       child: widget,
@@ -30,6 +28,7 @@ class CustomPageTranstionAnimations {
     final curvedAnimation = CurvedAnimation(
       parent: animation,
       curve: curve,
+      reverseCurve: curve,
     );
     return SlideTransition(
       position: tween.animate(curvedAnimation),
@@ -45,14 +44,11 @@ class CustomPageTranstionAnimations {
     const curve = Curves.ease;
 
     final tween = Tween(begin: begin, end: end);
-    final curvedAnimation = CurvedAnimation(
-      parent: animation,
-      curve: curve,
-    );
+    final curvedAnimation =
+        CurvedAnimation(parent: animation, curve: curve, reverseCurve: curve);
     return SlideTransition(
       position: tween.animate(curvedAnimation),
       child: widget,
     );
   }
-
 }

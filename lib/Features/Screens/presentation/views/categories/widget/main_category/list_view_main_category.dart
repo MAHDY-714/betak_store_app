@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:betak_store_app/Features/Screens/presentation/views/categories/widget/main_category/item_main_categore.dart';
-import 'package:betak_store_app/core/utils/app_router.dart';
+import 'package:betak_store_app/core/utils/routers/app_router.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:betak_store_app/core/utils/images.dart';
 import 'package:flutter/material.dart';

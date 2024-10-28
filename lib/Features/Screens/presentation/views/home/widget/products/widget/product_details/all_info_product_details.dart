@@ -5,7 +5,7 @@ import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part3/text_in_product_details.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part4/row_rating_and_review.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part5/description_and_special_info.dart';
-import 'package:betak_store_app/core/utils/app_router.dart';
+import 'package:betak_store_app/core/utils/routers/app_router.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

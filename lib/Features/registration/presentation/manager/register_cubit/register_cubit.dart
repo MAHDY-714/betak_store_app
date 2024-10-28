@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:betak_store_app/Features/registration/data/model/user_info_model.dart';
 import 'package:betak_store_app/Features/registration/data/repo/registration_repo.dart';
-import 'package:betak_store_app/core/utils/app_router.dart';
+import 'package:betak_store_app/core/utils/routers/app_router.dart';
 import 'package:betak_store_app/core/utils/cache_helper.dart';
 import 'package:equatable/equatable.dart';
 import 'package:firebase_auth/firebase_auth.dart';

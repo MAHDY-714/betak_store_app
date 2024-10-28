@@ -1,4 +1,5 @@
 import 'package:betak_store_app/core/utils/constanse.dart';
+import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -23,9 +24,10 @@ class CartBodyView extends StatelessWidget {
       child: CustomScrollView(
         physics: const NeverScrollableScrollPhysics(),
         slivers: [
-          if (productInfoInMyCartModel != null)
-            SliverFillRemaining(
-              child: Column(
+          SliverFillRemaining(
+            child: ConditionalBuilder(
+              condition: productInfoInMyCartModel != null,
+              builder: (context) => Column(
                 children: [
                   MyCartListView(
                       productInfoInMyCartModel: productInfoInMyCartModel!),
@@ -36,10 +38,7 @@ class CartBodyView extends StatelessWidget {
                   ),
                 ],
               ),
-            )
-          else
-            const SliverFillRemaining(
-              child: Column(
+              fallback: (context) => const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
@@ -63,6 +62,7 @@ class CartBodyView extends StatelessWidget {
                 ],
               ),
             ),
+          ),
         ],
       ),
     );
