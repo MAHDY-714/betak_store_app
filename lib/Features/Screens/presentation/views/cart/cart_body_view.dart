@@ -8,12 +8,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../../../core/styles/app_color.dart';
 import '../../../../../core/styles/font_family.dart';
 import '../../../../../core/widget/payment_button.dart';
-import '../../../data/models/my_cart_data_model/item_info_model.dart';
+import '../../../data/models/my_cart_data_model/my_cart_model.dart';
 import 'widget/my_cart_list_view.dart';
 
 class CartBodyView extends StatelessWidget {
   const CartBodyView({super.key, this.productInfoInMyCartModel});
-  final ProductInfoInMyCartModel? productInfoInMyCartModel;
+  final MyCartModel? productInfoInMyCartModel;
   @override
   Widget build(BuildContext context) {
     return Container(

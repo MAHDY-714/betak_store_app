@@ -1,5 +1,5 @@
 import 'package:betak_store_app/Features/Screens/data/models/specifications_info_model/specifications_info_model.dart';
-import 'package:betak_store_app/Features/Screens/data/models/my_cart_data_model/item_info_model.dart';
+import 'package:betak_store_app/Features/Screens/data/models/my_cart_data_model/my_cart_model.dart';
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/cart_body_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/categories/categories_in_main_category_view.dart';
@@ -81,7 +81,7 @@ class AppRouter {
         child: (GoRouterState state) {
           return Scaffold(
             body: CartBodyView(
-              productInfoInMyCartModel: state.extra as ProductInfoInMyCartModel,
+              productInfoInMyCartModel: state.extra as MyCartModel,
             ),
           );
         },

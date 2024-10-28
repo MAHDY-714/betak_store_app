@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:betak_store_app/Features/Screens/data/models/my_cart_data_model/my_cart_model.dart';
 import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
 import 'package:betak_store_app/Features/Screens/data/repo/home_repo/home_repo.dart';
 import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit/product_details_state.dart';
@@ -14,6 +15,7 @@ class ProductDetailsCubit extends Cubit<ProductDetailsState> {
   String? prevImage;
   int colorIndex = 0;
   ProductResults? productResults;
+  MyCartModel? myCartModel;
   String? errorMessage;
   Future<void> getProductDetails({required String productId}) async {
     emit(GetProductDetailsLoadingState());
@@ -56,5 +58,9 @@ class ProductDetailsCubit extends Cubit<ProductDetailsState> {
   void choseProductColor({required int index}) {
     colorIndex = index;
     emit(GetProductDetailsChoseProductColorState());
+  }
+
+  void getProductsFromMyCart(ProductResults productResults) {
+    
   }
 }

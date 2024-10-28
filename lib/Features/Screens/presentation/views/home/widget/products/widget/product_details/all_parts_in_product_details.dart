@@ -10,8 +10,8 @@ import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class AllInfoProductDetails extends StatelessWidget {
-  const AllInfoProductDetails({
+class AllPartsInProductDetails extends StatelessWidget {
+  const AllPartsInProductDetails({
     super.key,
     required this.productModel,
     required this.productResults,

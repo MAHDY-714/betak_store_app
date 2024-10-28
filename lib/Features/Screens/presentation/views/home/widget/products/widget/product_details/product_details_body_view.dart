@@ -1,7 +1,7 @@
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit/product_details_cubit.dart';
 import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit/product_details_state.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/all_info_product_details.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/all_parts_in_product_details.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part1/image_in_product_details.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part6/row_for_specifications_info.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part7/payment_row.dart';
@@ -29,9 +29,6 @@ class ProductDetailsBodyView extends StatelessWidget {
               condition: cub.productResults != null,
               builder: (context) => Expanded(
                 child: SizedBox(
-                  // height: kHeightCondtions(context,
-                  //     valueIsTrue: kHeight(context) * .864,
-                  //     valueIsFalse: kHeight(context) * .88),
                   width: kWidth(context),
                   child: CustomScrollView(
                     slivers: [
@@ -51,16 +48,18 @@ class ProductDetailsBodyView extends StatelessWidget {
                         ),
                       ),
                       SliverToBoxAdapter(
-                        child: AllInfoProductDetails(
+                        child: AllPartsInProductDetails(
                             productModel: productModel,
                             productResults: cub.productResults!),
                       ),
                       SliverToBoxAdapter(
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 20.0),
-                          child: RowForSpecificationsInfoWidget(
-                              productResults: cub.productResults!),
-                        ),
+                        child: cub.productResults?.specifications != null
+                            ? Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 20.0),
+                                child: RowForSpecificationsInfoWidget(
+                                    productResults: cub.productResults!))
+                            : const SizedBox(height: 0.0, width: 0.0),
                       ),
                     ],
                   ),

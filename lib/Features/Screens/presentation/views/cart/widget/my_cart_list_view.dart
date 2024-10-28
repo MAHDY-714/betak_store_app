@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/images.dart';
-import '../../../../data/models/my_cart_data_model/item_info_model.dart';
+import '../../../../data/models/my_cart_data_model/my_cart_model.dart';
 import 'my_cart_item.dart';
 
 class MyCartListView extends StatelessWidget {
@@ -9,7 +9,7 @@ class MyCartListView extends StatelessWidget {
     super.key,
     required this.productInfoInMyCartModel,
   });
-  final ProductInfoInMyCartModel productInfoInMyCartModel;
+  final MyCartModel productInfoInMyCartModel;
   @override
   Widget build(BuildContext context) {
     return Expanded(
