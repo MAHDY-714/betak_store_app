@@ -209,9 +209,9 @@ abstract class TextStyles {
     fontFamily: FontFamily.bitter300,
   );
 
-  static const textPriceInItemMyCartStyle10 = TextStyle(
+  static const textPriceInItemMyCartStyle11 = TextStyle(
     color: Colors.white70,
-    fontSize: 10,
+    fontSize: 12,
     fontFamily: FontFamily.orbitron900,
     letterSpacing: 2,
   );

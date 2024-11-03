@@ -16,9 +16,9 @@ class ImageInMyCartItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: height,
-      width: kWidth(context) * .35,
+      width: kWidth(context) * .27,
       alignment: Alignment.center,
-      decoration: Decorations.cartItemBoxDecorations(images: image),
+      decoration: Decorations.imageInMyCartItemBoxDecorations(images: image),
     );
   }
 }

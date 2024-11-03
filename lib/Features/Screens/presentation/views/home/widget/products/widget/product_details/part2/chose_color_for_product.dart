@@ -1,17 +1,16 @@
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit/product_details_cubit.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part2/color_product_item.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ChoseColorForProduct extends StatelessWidget {
-  const ChoseColorForProduct(
-      {super.key, this.onTapChoseColor, required this.productModel});
-  final void Function()? onTapChoseColor;
+  const ChoseColorForProduct({super.key, required this.productModel});
   final ProductModel productModel;
   @override
   Widget build(BuildContext context) {
+    var cubi = BlocProvider.of<ProductDetailsCubit>(context);
     return Container(
       height: 30,
       width: kWidth(context) * .5,
@@ -22,33 +21,13 @@ class ChoseColorForProduct extends StatelessWidget {
       ),
       child: ListView.separated(
         itemBuilder: (BuildContext context, int index) {
-          return InkWell(
-            onTap: () {
-              BlocProvider.of<ProductDetailsCubit>(context)
-                  .choseProductColor(index: index);
+          return ColorProductItem(
+            index: index,
+            colorIndex: cubi.colorIndex,
+            productModel: productModel,
+            onTapChoseColor: () {
+              cubi.choseProductColor(index: index);
             },
-            child: Container(
-              height: 30,
-              width: 30,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: BlocProvider.of<ProductDetailsCubit>(context)
-                              .colorIndex ==
-                          index
-                      ? Colors.white
-                      : Colors.transparent,
-                  width: .5,
-                ),
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: CachedNetworkImageProvider(
-                      productModel.variants != null
-                          ? productModel.variants![index].thumbnail.toString()
-                          : productModel.thumbnails![index].last.toString()),
-                ),
-              ),
-            ),
           );
         },
         separatorBuilder: (BuildContext context, int index) =>

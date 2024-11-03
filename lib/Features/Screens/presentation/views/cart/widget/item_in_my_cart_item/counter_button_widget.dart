@@ -1,3 +1,4 @@
+import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 
 class CounterButtonWidget extends StatelessWidget {
@@ -14,10 +15,10 @@ class CounterButtonWidget extends StatelessWidget {
       onTap: onTap,
       child: Icon(
         counterIcon
-            ? Icons.add_circle_outline_outlined
+            ? Icons.add_circle_outline_rounded
             : Icons.remove_circle_outline_outlined,
-        color: Colors.white38,
-        size: 25,
+        color: counterIcon ? Colors.white70 : Colors.white54,
+        size: kWidthCondtions(context, valueIsTrue: 30.0, valueIsFalse: 35.0),
       ),
     );
   }

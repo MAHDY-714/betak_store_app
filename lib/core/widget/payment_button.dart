@@ -20,7 +20,20 @@ class PaymentButton extends StatelessWidget {
         alignment: Alignment.center,
         padding: const EdgeInsets.symmetric(horizontal: 8),
         decoration: BoxDecoration(
-          color: Colors.green,
+          color: const Color(0xFF5A60B9),
+          gradient: const LinearGradient(
+            begin: AlignmentDirectional.centerStart,
+            end: AlignmentDirectional.centerEnd,
+            colors: [
+              Color(0xFF4C51A3),
+              Color(0xFF5A60B9),
+              Color(0xFF6067CD),
+              Color(0xFF5A60B9),
+              Color(0xFF4C51A3),
+            ],
+          ),
+          // color: Color(0xFF591DFE),
+          // color: AppColor.green3Color,
           borderRadius: BorderRadiusDirectional.circular(16),
         ),
         child: Text(

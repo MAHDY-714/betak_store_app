@@ -6,18 +6,21 @@ class TextInMyCartItem extends StatelessWidget {
   const TextInMyCartItem({
     super.key,
     required this.title,
+    this.onTapRemoveItem,
   });
   final String title;
+  final void Function()? onTapRemoveItem;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 63,
       width: kWidth(context) * .5,
       child: Text(
         title,
-        maxLines: 3,
+        maxLines: 2,
         overflow: TextOverflow.ellipsis,
-        style: TextStyles.textRecommendationsInProductDetailsStyle,
+        style: TextStyles.textStyle10W60.copyWith(
+            fontSize: kWidthCondtions(context,
+                valueIsTrue: 11.5, valueIsFalse: 14.0)),
       ),
     );
   }

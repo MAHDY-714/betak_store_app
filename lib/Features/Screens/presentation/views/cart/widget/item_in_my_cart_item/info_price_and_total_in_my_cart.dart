@@ -1,4 +1,5 @@
 import 'package:betak_store_app/core/styles/text_styles.dart';
+import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 
 class InfoPriceAndTotalInMyCart extends StatelessWidget {
@@ -6,12 +7,11 @@ class InfoPriceAndTotalInMyCart extends StatelessWidget {
     super.key,
     required this.title,
     required this.price,
-    required this.style,
+    this.style = true,
   });
   final String title;
   final double price;
-  final TextStyle style;
-
+  final bool style;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -19,12 +19,23 @@ class InfoPriceAndTotalInMyCart extends StatelessWidget {
         Text(
           title,
           maxLines: 1,
-          style: TextStyles.textStyle10W60,
+          style: TextStyles.textStyle10W60.copyWith(
+            fontSize:
+                kWidthCondtions(context, valueIsTrue: 10.0, valueIsFalse: 13.0),
+          ),
         ),
         Text(
           '\$${price.round()}',
           maxLines: 1,
-          style: style,
+          style: style
+              ? TextStyles.textPriceInItemMyCartStyle11.copyWith(
+                  fontSize: kWidthCondtions(context,
+                      valueIsTrue: 11.0, valueIsFalse: 14.0),
+                )
+              : TextStyles.priceTextStyle13.copyWith(
+                  fontSize: kWidthCondtions(context,
+                      valueIsTrue: 15.0, valueIsFalse: 20.0),
+                ),
         ),
       ],
     );

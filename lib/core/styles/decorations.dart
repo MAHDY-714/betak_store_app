@@ -71,20 +71,101 @@ class Decorations {
     );
   }
 
-  static BoxDecoration cartItemBoxDecorations({required String images}) {
-    return BoxDecoration(
-      color: const Color(0xD9000000),
-      border: const BorderDirectional(
-        end: BorderSide(color: AppColor.borderLogoSign, width: 1.2),
+  static const myCartItemBoxDecoration = BoxDecoration(
+    color: Color(0xFF090E1A),
+    borderRadius: BorderRadiusDirectional.only(
+      topStart: Radius.circular(16.0),
+      bottomStart: Radius.circular(16.0),
+      // topEnd: Radius.circular(16.0),
+      // bottomEnd: Radius.circular(16.0),
+    ),
+    border: BorderDirectional(
+      bottom: BorderSide(
+        color: AppColor.itemUnSelectedInHomeBottomNavBar,
+        width: 2,
       ),
-      borderRadius: BorderRadius.circular(16.0),
+      top: BorderSide(
+        color: AppColor.itemUnSelectedInHomeBottomNavBar,
+        width: 2,
+      ),
+      start: BorderSide(
+        color: AppColor.itemUnSelectedInHomeBottomNavBar,
+        width: 2,
+      ),
+      // end: BorderSide(
+      //   color: AppColor.itemUnSelectedInHomeBottomNavBar,
+      //   width: 2,
+      // ),
+    ),
+  );
+
+  static BoxDecoration imageInMyCartItemBoxDecorations(
+      {required String images}) {
+    const Color color = Color(0xFF3D3F47);
+    return BoxDecoration(
+      color: const Color(0xFF090E1A),
+      border: const BorderDirectional(
+        end: BorderSide(
+          color: color,
+          width: 2.5,
+        ),
+        bottom: BorderSide(
+          color: color,
+          width: 0.1,
+        ),
+        top: BorderSide(
+          color: color,
+          width: 0.1,
+        ),
+      ),
+      borderRadius: const BorderRadiusDirectional.only(
+        topEnd: Radius.circular(16.0),
+        bottomEnd: Radius.circular(16.0),
+        topStart: Radius.circular(14.0),
+        bottomStart: Radius.circular(14.0),
+      ),
       image: DecorationImage(
         fit: BoxFit.cover,
         opacity: .5,
-        image: AssetImage(images),
+        image: CachedNetworkImageProvider(images),
       ),
     );
   }
+
+  static BoxDecoration countOfUnitsAndRemoveItemBoxDecoration = BoxDecoration(
+    color: AppColor.backgroundForAllItemsInProductDarkColor,
+    borderRadius: BorderRadius.circular(16.0),
+    border: const BorderDirectional(
+      top: BorderSide(
+        color: AppColor.itemUnSelectedInHomeBottomNavBar,
+        width: 2,
+      ),
+      bottom: BorderSide(
+        color: AppColor.itemUnSelectedInHomeBottomNavBar,
+        width: 2,
+      ),
+      start: BorderSide(
+        color: AppColor.itemUnSelectedInHomeBottomNavBar,
+        width: 1,
+      ),
+      end: BorderSide(
+        color: AppColor.itemUnSelectedInHomeBottomNavBar,
+        width: 1,
+      ),
+    ),
+  );
+
+  static BoxDecoration countOfUnitsItemBoxDecoration = BoxDecoration(
+      borderRadius: const BorderRadiusDirectional.all(
+        Radius.circular(14.0),
+      ),
+      color: AppColor.skyNightColor.withOpacity(.7),
+      border: const BorderDirectional(
+        top: BorderSide(
+          color: AppColor.itemUnSelectedInHomeBottomNavBar,
+          width: 2,
+        ),
+      ));
 
   static BoxDecoration goToProductAllInfoButtonBoxDecorationsInside({
     required urlImage,
