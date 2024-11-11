@@ -1,6 +1,7 @@
 import 'package:betak_store_app/Features/Screens/data/models/specifications_info_model/specifications_info_model.dart';
 import 'package:betak_store_app/Features/Screens/data/models/my_cart_data_model/my_cart_model.dart';
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
+import 'package:betak_store_app/Features/Screens/presentation/manager/my_cart_manager/my_cart_cubit.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/cart_body_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/categories/categories_in_main_category_view.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/categories/widget/products_in_main_category/products_in_main_category_body_view.dart';
@@ -13,6 +14,7 @@ import 'package:betak_store_app/Features/Screens/presentation/views/search/searc
 import 'package:betak_store_app/Features/registration/presentation/views/sign_in_view.dart';
 import 'package:betak_store_app/core/utils/routers/app_router_method.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../Features/onboarding/presentations/views/onboarding_view.dart';
@@ -79,9 +81,12 @@ class AppRouter {
       //*-CartBodyView
       AppRouterMethod.goRouteWithTransitionBottomToTop(
         child: (GoRouterState state) {
-          return Scaffold(
-            body: CartBodyView(
-              productInfoInMyCartModel: state.extra as MyCartModel,
+          return BlocProvider(
+            create: (BuildContext context) => MyCartCubit(),
+            child: const Scaffold(
+              body: CartBodyView(
+                // myCartModel: state.extra as MyCartModel,
+              ),
             ),
           );
         },

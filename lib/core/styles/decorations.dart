@@ -82,15 +82,15 @@ class Decorations {
     border: BorderDirectional(
       bottom: BorderSide(
         color: AppColor.itemUnSelectedInHomeBottomNavBar,
-        width: 2,
+        width: 2.5,
       ),
       top: BorderSide(
         color: AppColor.itemUnSelectedInHomeBottomNavBar,
-        width: 2,
+        width: 2.5,
       ),
       start: BorderSide(
         color: AppColor.itemUnSelectedInHomeBottomNavBar,
-        width: 2,
+        width: 2.5,
       ),
       // end: BorderSide(
       //   color: AppColor.itemUnSelectedInHomeBottomNavBar,

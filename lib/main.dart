@@ -1,5 +1,6 @@
 import 'package:betak_store_app/Features/Screens/data/repo/home_repo/home_repo_implement.dart';
 import 'package:betak_store_app/Features/Screens/presentation/manager/home_manager/home_cubit.dart';
+import 'package:betak_store_app/Features/Screens/presentation/manager/my_cart_manager/my_cart_cubit.dart';
 import 'package:betak_store_app/Features/Screens/presentation/manager/nav_bar_manager/nav_bar_cubit/nav_bar_cubit.dart';
 import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/utils/routers/app_router.dart';
@@ -37,6 +38,9 @@ class BetakStoreApp extends StatelessWidget {
         BlocProvider(
           create: (context) => HomeCubit(getIt.get<HomeRepoImplement>())
             ..getProducts(qValue: kListTitlesCategoriesInHome[0].toString()),
+        ),
+        BlocProvider(
+          create: (context) => MyCartCubit(),
         ),
       ],
       child: MaterialApp.router(

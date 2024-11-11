@@ -118,8 +118,8 @@ class InputSignUpFieldsAndRegisterButton extends StatelessWidget {
                 hintText: 'Password',
                 prefixIcon: Icons.lock_outline,
                 suffixIcon: cub.visIconSate
-                    ? FontAwesomeIcons.faceGrinWide
-                    : FontAwesomeIcons.faceGrinBeam,
+                    ? FontAwesomeIcons.faceGrinBeam
+                    : FontAwesomeIcons.faceGrinWide,
                 suffixIconColor:
                     cub.visIconSate ? Colors.white24 : AppColor.sky4Color,
                 isFinish: true,

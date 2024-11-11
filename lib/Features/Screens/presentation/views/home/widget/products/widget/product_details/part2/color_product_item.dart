@@ -10,7 +10,7 @@ class ColorProductItem extends StatelessWidget {
     this.index = 0,
     this.height = 30,
     this.width = 30,
-    required this.colorIndex,
+    this.colorIndex = 0,
     this.colorForItemInCart = false,
     this.colorFoItemInCartSelected = '',
   });

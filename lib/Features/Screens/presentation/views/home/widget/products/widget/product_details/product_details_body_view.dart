@@ -1,5 +1,6 @@
 import 'package:betak_store_app/Features/Screens/data/models/my_cart_data_model/my_cart_model.dart';
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
+import 'package:betak_store_app/Features/Screens/presentation/manager/my_cart_manager/my_cart_cubit.dart';
 import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit/product_details_cubit.dart';
 import 'package:betak_store_app/Features/Screens/presentation/manager/product_details_manager/product_details_cubit/product_details_state.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/all_parts_in_product_details.dart';
@@ -25,9 +26,17 @@ class ProductDetailsBodyView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var cubi = BlocProvider.of<ProductDetailsCubit>(context);
-
+    var cubiMyCart = BlocProvider.of<MyCartCubit>(context);
+    MyCartModel? myCartModel;
     return BlocBuilder<ProductDetailsCubit, ProductDetailsState>(
       builder: (BuildContext context, ProductDetailsState state) {
+        if (cubi.productResults != null) {
+          myCartModel = cubiMyCart.myCartModelData(
+            // productResults: cubi.productResults!,
+            productModel: productModel,
+            colorIndex: cubi.colorIndex,
+          );
+        }
         return Column(
           children: [
             ConditionalBuilder(
@@ -87,19 +96,20 @@ class ProductDetailsBodyView extends StatelessWidget {
               child: PaymentRow(
                 onTapPayment: () {
                   if (cubi.productResults != null) {
-                    GoRouter.of(context).push(AppRouter.kCartBodyView,
-                        extra: MyCartModel(
-                          productModel: productModel,
-                          productResults: cubi.productResults,
-                          color: productModel.variants != null
-                              ? productModel
-                                  .variants![cubi.colorIndex].thumbnail
-                                  .toString()
-                              : productModel.thumbnails![0].last,
-                        ));
+                    // BlocProvider.of<MyCartCubit>(context).getProductsInMyCart();
+                    GoRouter.of(context).push(
+                      AppRouter.kCartBodyView,
+                      extra: myCartModel!,
+                    );
                   }
                 },
-                // onTapMyCart: () {},
+                onTapMyCart: () {
+                  if (cubi.productResults != null) {
+                    BlocProvider.of<MyCartCubit>(context).addProductsInMyCart(
+                      myCartModel: myCartModel!,
+                    );
+                  }
+                },
               ),
             ),
           ],

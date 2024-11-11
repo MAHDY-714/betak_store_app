@@ -1,33 +1,29 @@
 import 'dart:developer';
 
-import 'package:betak_store_app/Features/Screens/data/models/product_details_info_model/product_results.dart';
+import 'package:betak_store_app/Features/Screens/data/models/my_cart_data_model/my_cart_model.dart';
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
+import 'package:betak_store_app/Features/Screens/presentation/manager/my_cart_manager/my_cart_cubit.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/widget/item_in_my_cart_item/count_of_unit_widget.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/widget/item_in_my_cart_item/image_in_my_cart_item.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/widget/item_in_my_cart_item/info_price_and_total_in_my_cart.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/widget/item_in_my_cart_item/text_in_my_cart_item.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part2/color_product_item.dart';
 import 'package:betak_store_app/core/styles/decorations.dart';
-import 'package:betak_store_app/core/styles/text_styles.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MyCartItemBuilder extends StatelessWidget {
   const MyCartItemBuilder({
     super.key,
-    required this.quantity,
+    this.myCartModel,
     this.productModel,
-    this.productResults,
-    required this.color,
   });
-
+  final MyCartModel? myCartModel;
   final ProductModel? productModel;
-  final ProductResults? productResults;
-  final int quantity;
-  final String color;
   @override
   Widget build(BuildContext context) {
-    // var cubi = BlocProvider.of<ProductDetailsCubit>(context);
+    // var cubi = BlocProvider.of<MyCartCubit>(context);
     double height =
         kHeightCondtions(context, valueIsTrue: 140.0, valueIsFalse: 160.0);
     double heightColorProductItem =
@@ -47,7 +43,7 @@ class MyCartItemBuilder extends StatelessWidget {
             onTapAdd: () => log('add 1 unit'),
             onTapMinus: () => log('remove 1 unit'),
             onTapRemoveItem: () => log('remove The Item'),
-            quantity: quantity,
+            quantity: myCartModel!.quantity,
             height: height,
           ),
           const SizedBox(width: 8.0),
@@ -62,7 +58,7 @@ class MyCartItemBuilder extends StatelessWidget {
                 children: [
                   ImageInMyCartItem(
                     height: height,
-                    image: productResults!.images![0].last.toString(),
+                    image: myCartModel!.image!,
                   ),
                   const SizedBox(width: 6.0),
                   Padding(
@@ -73,32 +69,29 @@ class MyCartItemBuilder extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         TextInMyCartItem(
-                          title: productResults!.title.toString(),
+                          title: myCartModel!.title.toString(),
                         ),
                         const Spacer(),
                         ColorProductItem(
-                          index: 0,
                           productModel: productModel,
                           height: heightColorProductItem,
                           width: heightColorProductItem,
-                          colorIndex: 0,
                           colorForItemInCart: true,
-                          colorFoItemInCartSelected: color,
+                          colorFoItemInCartSelected: myCartModel!.color!,
                         ),
                         const Spacer(),
                         InfoPriceAndTotalInMyCart(
                           title: 'Price: ',
-                          price: productResults!.price ?? 0.0,
+                          price: myCartModel!.price ?? 0.0,
                         ),
                         InfoPriceAndTotalInMyCart(
                           title: 'Total: ',
-                          price: productResults!.price! * quantity,
+                          price: myCartModel!.price! * 5,
                           style: false,
                         ),
                       ],
                     ),
                   ),
-                  const Spacer(),
                 ],
               ),
             ),

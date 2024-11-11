@@ -42,11 +42,6 @@ class ProductDetailsCubit extends Cubit<ProductDetailsState> {
       required AnimationController animationController,
       ProductResults? productResults}) {
     currentImage = productResults!.images![index].last.toString();
-    // if (animationController.isDismissed) {
-    //   animationController.forward(from: 0.0);
-
-    //   prevImage = currentImage;
-    // } else if (animationController.isCompleted) {
     animationController.forward(from: 0.0).whenComplete(() {
       imageIndex = index;
       prevImage = currentImage;
@@ -58,9 +53,5 @@ class ProductDetailsCubit extends Cubit<ProductDetailsState> {
   void choseProductColor({required int index}) {
     colorIndex = index;
     emit(GetProductDetailsChoseProductColorState());
-  }
-
-  void getProductsFromMyCart(ProductResults productResults) {
-    
   }
 }
