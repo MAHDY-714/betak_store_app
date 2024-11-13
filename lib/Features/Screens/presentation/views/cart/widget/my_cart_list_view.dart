@@ -20,7 +20,9 @@ class MyCartListView extends StatelessWidget {
           child: ListView.builder(
             itemBuilder: (context, index) {
               return MyCartItemBuilder(
+                myCartModelList: myCartModelList,
                 myCartModel: myCartModelList[index],
+                index: index,
               );
             },
             scrollDirection: Axis.vertical,

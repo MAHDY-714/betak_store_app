@@ -1,3 +1,4 @@
+import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/styles/text_styles.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,7 @@ class InfoPriceAndTotalInMyCart extends StatelessWidget {
           maxLines: 1,
           style: style
               ? TextStyles.textPriceInItemMyCartStyle11.copyWith(
+                  color: AppColor.backgroundImageWhiteColor,
                   fontSize: kWidthCondtions(context,
                       valueIsTrue: 11.0, valueIsFalse: 14.0),
                 )

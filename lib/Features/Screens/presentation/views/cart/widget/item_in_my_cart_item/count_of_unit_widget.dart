@@ -14,14 +14,19 @@ class CountOfUnitsAndRemoveItemWidget extends StatelessWidget {
     this.onTapRemoveItem,
     required this.quantity,
     required this.height,
+    required this.index,
   });
   final Function()? onTapAdd;
   final Function()? onTapMinus;
   final Function()? onTapRemoveItem;
   final int quantity;
+  final int index;
   final double height;
+
   @override
   Widget build(BuildContext context) {
+    // var cubi = BlocProvider.of<MyCartCubit>(context);
+
     return Container(
       height: height,
       width: kWidth(context) * .12,
@@ -52,9 +57,12 @@ class CountOfUnitsAndRemoveItemWidget extends StatelessWidget {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  CounterButtonWidget(onTap: onTapAdd),
+                  CounterButtonWidget(
+                    onTap: onTapAdd,
+                  ),
                   Text(
-                    '999',
+                    // '999',
+                    '$quantity',
                     maxLines: 1,
                     style: TextStyles.textStyle10W60.copyWith(
                       fontSize: kWidthCondtions(context,

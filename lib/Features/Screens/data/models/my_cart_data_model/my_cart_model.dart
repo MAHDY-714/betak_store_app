@@ -1,10 +1,12 @@
 import 'dart:developer';
 import 'package:equatable/equatable.dart';
 
+// ignore: must_be_immutable
 class MyCartModel extends Equatable {
   final String? productId;
   final String? image;
   final String? color;
+  final String? colorName;
   final String? title;
   final double? price;
   final double? save;
@@ -12,11 +14,12 @@ class MyCartModel extends Equatable {
   final double? original;
   final String? modelNumber;
   final String? brand;
-  final int quantity;
-  const MyCartModel({
+  late int quantity;
+  MyCartModel({
     required this.productId,
     required this.image,
     required this.color,
+    required this.colorName,
     required this.title,
     required this.price,
     required this.save,
@@ -27,9 +30,10 @@ class MyCartModel extends Equatable {
     this.quantity = 1,
   });
 
-  double totalPrice() {
+  double totalPrice(price, quantity) {
     log('payment');
-    return price ?? 0.0 * quantity;
+    double total = price ?? 0.0 * quantity;
+    return total;
   }
 
   factory MyCartModel.formJson(json) {
@@ -37,6 +41,7 @@ class MyCartModel extends Equatable {
       productId: json['productId'],
       image: json['image'],
       color: json['color'],
+      colorName: json['colorName'],
       title: json['title'],
       price: json['price'],
       save: json['save'],
@@ -53,6 +58,7 @@ class MyCartModel extends Equatable {
       'productId': productId,
       'image': image,
       'color': color,
+      'colorName': colorName,
       'title': title,
       'price': price,
       'save': save,

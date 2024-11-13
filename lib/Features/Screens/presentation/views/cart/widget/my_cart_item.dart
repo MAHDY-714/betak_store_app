@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:betak_store_app/Features/Screens/data/models/my_cart_data_model/my_cart_model.dart';
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/manager/my_cart_manager/my_cart_cubit.dart';
@@ -8,9 +6,11 @@ import 'package:betak_store_app/Features/Screens/presentation/views/cart/widget/
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/widget/item_in_my_cart_item/info_price_and_total_in_my_cart.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/widget/item_in_my_cart_item/text_in_my_cart_item.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/product_details/part2/color_product_item.dart';
+import 'package:betak_store_app/core/styles/app_color.dart';
 import 'package:betak_store_app/core/styles/decorations.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MyCartItemBuilder extends StatelessWidget {
@@ -18,48 +18,51 @@ class MyCartItemBuilder extends StatelessWidget {
     super.key,
     this.myCartModel,
     this.productModel,
+    required this.index,
+    this.myCartModelList,
   });
   final MyCartModel? myCartModel;
+  final List<MyCartModel>? myCartModelList;
   final ProductModel? productModel;
+  final int index;
   @override
   Widget build(BuildContext context) {
-    // var cubi = BlocProvider.of<MyCartCubit>(context);
-    double height =
-        kHeightCondtions(context, valueIsTrue: 140.0, valueIsFalse: 160.0);
+    var cubi = BlocProvider.of<MyCartCubit>(context);
+    double totalPrice = myCartModel!.price! * myCartModel!.quantity;
+    double height = kHeightCondtions(context,
+        valueIsTrue: myCartModel!.colorName!.isNotEmpty ? 155.0 : 140.0,
+        valueIsFalse: myCartModel!.colorName!.isNotEmpty ? 175.0 : 160.0);
     double heightColorProductItem =
         kHeightCondtions(context, valueIsTrue: 25.0, valueIsFalse: 30.0);
 
     return Padding(
       padding: const EdgeInsetsDirectional.only(
-        top: 4.0,
-        bottom: 4.0,
-        start: 8.0,
-        end: 0.0,
-      ),
+          top: 4.0, bottom: 4.0, start: 8.0, end: 0.0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           CountOfUnitsAndRemoveItemWidget(
-            onTapAdd: () => log('add 1 unit'),
-            onTapMinus: () => log('remove 1 unit'),
-            onTapRemoveItem: () => log('remove The Item'),
+            onTapAdd: () {
+              cubi.counterPlusQuantity(myCartModelList!, index);
+            },
+            onTapMinus: () {
+              cubi.counterMinusQuantity(myCartModelList!, index);
+            },
+            onTapRemoveItem: () => cubi.removeProductsInMyCart(
+                myCartModel: myCartModel!, index: index),
             quantity: myCartModel!.quantity,
             height: height,
+            index: index,
           ),
           const SizedBox(width: 8.0),
           Expanded(
             child: Container(
               height: height,
-              // width: kWidth(context) * .85,
-
               decoration: Decorations.myCartItemBoxDecoration,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ImageInMyCartItem(
-                    height: height,
-                    image: myCartModel!.image!,
-                  ),
+                  ImageInMyCartItem(height: height, image: myCartModel!.image!),
                   const SizedBox(width: 6.0),
                   Padding(
                     padding: const EdgeInsetsDirectional.symmetric(
@@ -68,27 +71,27 @@ class MyCartItemBuilder extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        TextInMyCartItem(
-                          title: myCartModel!.title.toString(),
-                        ),
+                        TextInMyCartItem(title: myCartModel!.title.toString()),
                         const Spacer(),
                         ColorProductItem(
-                          productModel: productModel,
-                          height: heightColorProductItem,
-                          width: heightColorProductItem,
-                          colorForItemInCart: true,
-                          colorFoItemInCartSelected: myCartModel!.color!,
-                        ),
+                            productModel: productModel,
+                            height: heightColorProductItem,
+                            width: heightColorProductItem,
+                            colorForItemInCart: true,
+                            colorFoItemInCartSelected: myCartModel!.color!),
+                        if (myCartModel!.colorName!.isNotEmpty)
+                          const SizedBox(height: 4.0),
+                        if (myCartModel!.colorName!.isNotEmpty)
+                          TextInMyCartItem(
+                              title: myCartModel!.colorName.toString(),
+                              color: AppColor.itemUnSelectedInHomeBottomNavBar,
+                              fontTrue: 10,
+                              fontFalse: 12),
                         const Spacer(),
                         InfoPriceAndTotalInMyCart(
-                          title: 'Price: ',
-                          price: myCartModel!.price ?? 0.0,
-                        ),
+                            title: 'Price: ', price: myCartModel!.price ?? 0.0),
                         InfoPriceAndTotalInMyCart(
-                          title: 'Total: ',
-                          price: myCartModel!.price! * 5,
-                          style: false,
-                        ),
+                            title: 'Total: ', price: totalPrice, style: false),
                       ],
                     ),
                   ),

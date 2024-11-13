@@ -31,8 +31,7 @@ class InfoProduct extends StatelessWidget {
           children: [
             Text(
               productModel!.title.toString(),
-              maxLines:
-                  kHeight(context) >= 770 && kHeight(context) <= 810 ? 2 : 2,
+              maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: TextStyles.nameProductStyleInInLayer2.copyWith(
                   fontSize: kHeightCondtions(context,
@@ -92,33 +91,42 @@ class InfoProduct extends StatelessWidget {
                   ),
                 ],
               ),
-            Row(
-              children: [
-                Text(
-                  '${productModel!.price!.round()}\$',
-                  // '99999',
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyles.priceStyleInInLayer2.copyWith(
-                    fontSize: kHeight(context) >= 770 && kHeight(context) <= 810
-                        ? 12
-                        : 16,
-                  ),
-                ),
-                if (productModel!.priceWas != null) const SizedBox(width: 4),
-                if (productModel!.priceWas != null)
+            if (productModel?.price != null)
+              Row(
+                children: [
                   Text(
-                    '${productModel!.priceWas!.round()}\$',
+                    '${productModel!.price!.round()}\$',
                     // '99999',
-                    style: TextStyles.priceTextStyle9.copyWith(
-                        color: AppColor.errorBorderAndRemoveAndIcons,
-                        fontSize:
-                            kHeight(context) >= 770 && kHeight(context) <= 810
-                                ? 6
-                                : 9),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyles.priceStyleInInLayer2.copyWith(
+                      fontSize:
+                          kHeight(context) >= 770 && kHeight(context) <= 810
+                              ? 12
+                              : 16,
+                    ),
                   ),
-              ],
-            ),
+                  if (productModel?.priceWas != null) const SizedBox(width: 4),
+                  if (productModel?.priceWas != null)
+                    Text(
+                      '${productModel!.priceWas!.round()}\$',
+                      // '99999',
+                      style: TextStyles.priceTextStyle9.copyWith(
+                          color: AppColor.errorBorderAndRemoveAndIcons,
+                          fontSize:
+                              kHeight(context) >= 770 && kHeight(context) <= 810
+                                  ? 6
+                                  : 9),
+                    ),
+                ],
+              )
+            else
+              Text(
+                'out of stock!',
+                style: TextStyles.textStyle16Error.copyWith(
+                    fontSize: kHeightCondtions(context,
+                        valueIsTrue: 13.0, valueIsFalse: 16.0)),
+              ),
             const SizedBox(height: 4),
           ],
         ),
