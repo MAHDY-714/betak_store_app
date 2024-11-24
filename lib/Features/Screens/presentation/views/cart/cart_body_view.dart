@@ -1,5 +1,7 @@
 import 'dart:developer';
 
+import 'package:betak_store_app/Features/Screens/presentation/manager/my_cart_manager/my_cart_cubit.dart';
+import 'package:betak_store_app/Features/Screens/presentation/manager/nav_bar_manager/nav_bar_cubit/nav_bar_cubit.dart';
 import 'package:betak_store_app/core/utils/cache_helper.dart';
 import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:betak_store_app/core/widget/circle_loading_indicator.dart';
@@ -9,6 +11,7 @@ import 'package:conditional_builder_null_safety/conditional_builder_null_safety.
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/styles/app_color.dart';
@@ -22,7 +25,8 @@ class CartBodyView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String uId = CacheHelper.getData(key: 'uId');
-
+    var cubiNavBar = BlocProvider.of<NavBarCubit>(context).currentScreen;
+    var cubi = BlocProvider.of<MyCartCubit>(context);
     CollectionReference myCartRef = FirebaseFirestore.instance
         .collection('customers')
         .doc(uId)
@@ -31,33 +35,41 @@ class CartBodyView extends StatelessWidget {
     return StreamBuilder<QuerySnapshot>(
       stream: myCartRef.snapshots(),
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-        List<MyCartModel> myCartModelList = [];
+        cubi.myCartModelList.clear();
         if (snapshot.hasData) {
           for (int index = 0; index < snapshot.data!.docs.length; index++) {
-            myCartModelList
+            cubi.myCartModelList
                 .add(MyCartModel.formJson(snapshot.data!.docs[index]));
           }
-          log(myCartModelList.toString());
+          log(cubi.myCartModelList.toString());
           return Container(
             height: kHeight(context),
             width: kWidth(context),
             color: AppColor.backgroundLayer2,
-            padding: const EdgeInsets.symmetric(vertical: 8.0),
             child: CustomScrollView(
               // physics: const NeverScrollableScrollPhysics(),
               slivers: [
                 SliverFillRemaining(
+                  fillOverscroll: true,
                   child: ConditionalBuilder(
-                    condition: myCartModelList.isNotEmpty,
+                    condition: cubi.myCartModelList.isNotEmpty,
                     builder: (context) => Column(
                       children: [
+                        const SizedBox(height: 8.0),
                         MyCartListView(
-                          myCartModelList: myCartModelList,
+                          myCartModelList: cubi.myCartModelList,
                         ),
-                        const SizedBox(height: 8),
-                        PaymentButton(
-                          nameButton: 'Payment',
-                          onTapPayment: () {},
+                        Padding(
+                          padding: EdgeInsetsDirectional.only(
+                            start: cubiNavBar == 1 ? 8.0 : 0,
+                            end: cubiNavBar == 1 ? 8.0 : 0,
+                            top: cubiNavBar == 1 ? 8.0 : 8,
+                            bottom: cubiNavBar == 1 ? 64.0 : 0,
+                          ),
+                          child: PaymentButton(
+                            nameButton: 'Payment',
+                            onTapPayment: () {},
+                          ),
                         ),
                       ],
                     ),

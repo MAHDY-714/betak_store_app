@@ -81,7 +81,8 @@ flutter:
     - assets/images/
     - assets/images/images_splash_view/
     - assets/images/home_images_background/
-    - assets/images/navBarIcons/
+    - assets/images/nav_bar_icons/
+    - assets/images/my_cart_icons/
     - assets/images/rating/
     - assets/images/main_categories/
     - assets/images/in_main_categories/furniture_Category/

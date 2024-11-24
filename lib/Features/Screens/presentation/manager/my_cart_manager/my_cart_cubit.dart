@@ -1,8 +1,9 @@
-import 'dart:developer';
+// ignore_for_file: avoid_print
 
 import 'package:betak_store_app/Features/Screens/data/models/my_cart_data_model/my_cart_model.dart';
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/core/utils/cache_helper.dart';
+import 'package:betak_store_app/core/utils/images.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,56 +14,15 @@ class MyCartCubit extends Cubit<MyCartState> {
   MyCartCubit() : super(MyCartInitial());
   List<MyCartModel> myCartModelList = [];
   MyCartModel? myCartModel;
+  String iconPath = AssetsImages.myCartIconAdd;
+  List<String> iconsPaths = [];
+  List<String> iconsPathsId = [];
+  List<bool> isAllItems = [];
+  int indexIcon = 0;
   // int unit = 1;
   List<int> units = [];
   CollectionReference collectionRef =
       FirebaseFirestore.instance.collection('customers');
-  Future<void> addProductsInMyCart({
-    required MyCartModel myCartModel,
-  }) async {
-    if (myCartModel.price == null) {
-      log('out of stock');
-    } else {
-      String uId = CacheHelper.getData(key: 'uId');
-      log('the uId from add product In My Cart:- $uId');
-      log('the productResults.productId from add product In My Cart:- {${myCartModel.productId}}');
-      try {
-        log(myCartModel.toString());
-        await collectionRef
-            .doc(uId)
-            .collection('my_cart_products')
-            .doc(myCartModel.productId)
-            .set(myCartModel.toJson());
-        log('this add is success');
-        emit(AddItemInMyCartSuccessState());
-      } catch (e) {
-        log(e.toString());
-        emit(AddItemInMyCartFailureState(errorMessage: e.toString()));
-      }
-    }
-  }
-
-  Future<void> removeProductsInMyCart({
-    required MyCartModel myCartModel,
-    required int index,
-  }) async {
-    String uId = CacheHelper.getData(key: 'uId');
-    log('the uId from add product In My Cart:- $uId');
-    log('the productResults.productId from add product In My Cart:- {${myCartModel.productId}}');
-    try {
-      log(myCartModel.toString());
-      await collectionRef
-          .doc(uId)
-          .collection('my_cart_products')
-          .doc(myCartModel.productId)
-          .delete();
-      log('this remove is success');
-      emit(RemoveItemInMyCartSuccessState());
-    } catch (e) {
-      log(e.toString());
-      emit(RemoveItemInMyCartFailureState(errorMessage: e.toString()));
-    }
-  }
 
   MyCartModel myCartModelData({
     required ProductModel? productModel,
@@ -86,21 +46,94 @@ class MyCartCubit extends Cubit<MyCartState> {
       original: productModel.priceWas != null ? productModel.priceWas! : 0.0,
       modelNumber: productModel.modelNumber,
       brand: productModel.brand ?? 'Unknown Brand',
+      // isRemove: isRemove,
     );
   }
 
-  int unit = 1;
+  Future<void> addProductsInMyCart({
+    required MyCartModel myCartModel,
+  }) async {
+    String uId = CacheHelper.getData(key: 'uId');
+    if (myCartModel.price == null) {
+      print('out of stock');
+    } else {
+      print('the uId from add product In My Cart:- $uId');
+      print(
+          'the productResults.productId from add product In My Cart:- {${myCartModel.productId}}');
+      try {
+        await collectionRef
+            .doc(uId)
+            .collection('my_cart_products')
+            .doc(myCartModel.productId)
+            .set(myCartModel.toJson())
+            .then((value) {
+          print('this add is success');
+          emit(AddItemInMyCartSuccessState());
+        });
+      } catch (e) {
+        print(e.toString());
+        emit(AddItemInMyCartFailureState(errorMessage: e.toString()));
+      }
+    }
+  }
+
+  Future<void> removeProductsInMyCart({
+    required MyCartModel myCartModel,
+  }) async {
+    String uId = CacheHelper.getData(key: 'uId');
+    print('the uId from add product In My Cart:- $uId');
+    print(
+        'the productResults.productId from add product In My Cart:- {${myCartModel.productId}}');
+    try {
+      await collectionRef
+          .doc(uId)
+          .collection('my_cart_products')
+          .doc(myCartModel.productId)
+          .delete()
+          .then((value) {
+        iconsPaths.removeWhere((element) => element == myCartModel.productId);
+        // iconsPaths.add(value.);
+        print('this remove is success');
+        emit(RemoveItemInMyCartSuccessState());
+      });
+    } catch (e) {
+      print(e.toString());
+      emit(RemoveItemInMyCartFailureState(errorMessage: e.toString()));
+    }
+  }
+
+  Future<void> addOrRemoveProductsInMyCart({
+    required MyCartModel? myCartModel,
+    required ProductModel productModel,
+    int colorIndex = 0,
+  }) async {
+    String uId = CacheHelper.getData(key: 'uId');
+    final querySnapshot =
+        await collectionRef.doc(uId).collection('my_cart_products').get();
+
+    bool isAdd = querySnapshot.docs.any((element) {
+      return element.id == productModel.productId;
+    });
+    if (isAdd == false) {
+      addProductsInMyCart(myCartModel: myCartModel!);
+    } else if (isAdd == true) {
+      removeProductsInMyCart(myCartModel: myCartModel!);
+      iconsPaths.remove(productModel.productId);
+    } else {
+      addProductsInMyCart(myCartModel: myCartModel!);
+    }
+  }
+
   counterPlusQuantity(
     List<MyCartModel> models,
     index,
   ) {
     String uId = CacheHelper.getData(key: 'uId');
     try {
-      // units[index] = unit < 1 ? unit = 1 : unit += 1;
       models[index].quantity = models[index].quantity < 1
           ? models[index].quantity = 1
           : models[index].quantity += 1;
-      log('counter plus model.quantity = ${models[index].quantity}');
+      print('counter plus model.quantity = ${models[index].quantity}');
       collectionRef
           .doc(uId)
           .collection('my_cart_products')
@@ -110,7 +143,7 @@ class MyCartCubit extends Cubit<MyCartState> {
       });
       emit(CounterPlusInMyCartSuccessState());
     } catch (e) {
-      log(e.toString());
+      print(e.toString());
     }
   }
 
@@ -119,7 +152,7 @@ class MyCartCubit extends Cubit<MyCartState> {
     models[index].quantity = models[index].quantity <= 1
         ? models[index].quantity = 1
         : models[index].quantity -= 1;
-    log('counter minus model.quantity = ${models[index].quantity}');
+    print('counter minus model.quantity = ${models[index].quantity}');
     collectionRef
         .doc(uId)
         .collection('my_cart_products')

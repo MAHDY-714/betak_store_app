@@ -27,16 +27,14 @@ class ProductDetailsBodyView extends StatelessWidget {
   Widget build(BuildContext context) {
     var cubi = BlocProvider.of<ProductDetailsCubit>(context);
     var cubiMyCart = BlocProvider.of<MyCartCubit>(context);
-    MyCartModel? myCartModel;
+    // MyCartModel? myCartModel;
     return BlocBuilder<ProductDetailsCubit, ProductDetailsState>(
       builder: (BuildContext context, ProductDetailsState state) {
-        if (cubi.productResults != null) {
-          myCartModel = cubiMyCart.myCartModelData(
-            // productResults: cubi.productResults!,
-            productModel: productModel,
-            colorIndex: cubi.colorIndex,
-          );
-        }
+        MyCartModel? myCartModel = cubiMyCart.myCartModelData(
+          productModel: productModel,
+          colorIndex: cubi.colorIndex,
+        );
+
         return Column(
           children: [
             ConditionalBuilder(
@@ -96,20 +94,16 @@ class ProductDetailsBodyView extends StatelessWidget {
               child: PaymentRow(
                 onTapPayment: () {
                   if (cubi.productResults != null) {
-                    // BlocProvider.of<MyCartCubit>(context).getProductsInMyCart();
                     GoRouter.of(context).push(
                       AppRouter.kCartBodyView,
-                      extra: myCartModel!,
+                      extra: myCartModel,
                     );
                   }
                 },
-                onTapMyCart: () {
-                  if (cubi.productResults != null) {
-                    BlocProvider.of<MyCartCubit>(context).addProductsInMyCart(
-                      myCartModel: myCartModel!,
-                    );
-                  }
-                },
+                onTapMyCart: () {},
+                iconPath: BlocProvider.of<MyCartCubit>(context).iconPath,
+                productModel: productModel,
+                colorIndex: cubi.colorIndex,
               ),
             ),
           ],

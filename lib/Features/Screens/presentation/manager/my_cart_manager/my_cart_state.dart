@@ -19,10 +19,7 @@ final class AddItemInMyCartFailureState extends MyCartState {
   const AddItemInMyCartFailureState({required this.errorMessage});
 }
 
-final class RemoveItemInMyCartSuccessState extends MyCartState {
-  // final List<MyCartModel>? myCartModelList;
-  // const AddItemInMyCartSuccess({this.myCartModelList});
-}
+final class RemoveItemInMyCartSuccessState extends MyCartState {}
 
 final class RemoveItemInMyCartFailureState extends MyCartState {
   final String errorMessage;
@@ -43,11 +40,9 @@ final class MyCartFailure extends MyCartState {
 }
 
 final class CounterPlusInMyCartSuccessState extends MyCartState {
-  // final List<MyCartModel>? myCartModelList;
-  // const AddItemInMyCartSuccess({this.myCartModelList});
+  
 }
 
 final class CounterMinusInMyCartSuccessState extends MyCartState {
-  // final List<MyCartModel>? myCartModelList;
-  // const AddItemInMyCartSuccess({this.myCartModelList});
+  
 }

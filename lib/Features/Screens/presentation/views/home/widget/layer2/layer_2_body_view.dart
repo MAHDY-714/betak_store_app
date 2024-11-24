@@ -12,7 +12,10 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Layer2BodyView extends StatelessWidget {
-  const Layer2BodyView({super.key});
+  const Layer2BodyView({
+    super.key,
+  });
+
   @override
   Widget build(BuildContext context) {
     var cub = BlocProvider.of<HomeCubit>(context);

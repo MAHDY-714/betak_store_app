@@ -24,7 +24,7 @@ class ProductsInCategoriesGridView extends StatelessWidget {
       itemBuilder: (context, index) {
         return ProductItemBuilder(
           index: index,
-          onTapLove: () {},
+          onTapAddToMyCart: () {},
           onTapGoProductAllInfo: () async {
             GoRouter.of(context).push(
               AppRouter.kProductDetailsView,
@@ -33,7 +33,8 @@ class ProductsInCategoriesGridView extends StatelessWidget {
           },
           imageProduct:
               productModelFormCategories[index].thumbnails![0].last.toString(),
-          productModel: productModelFormCategories[index],
+          productModel: productModelFormCategories,
+          // myCartProductIdList: [],
         );
       },
       itemCount: productModelFormCategories.length,

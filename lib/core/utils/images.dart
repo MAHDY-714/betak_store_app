@@ -6,7 +6,8 @@ abstract class AssetsImages {
   static const basicPathImages = 'assets/images';
   static const imagesSplashViewPath = '$basicPathImages/images_splash_view';
   static const homeImagesLayer1Path = '$basicPathImages/home_images_background';
-  static const navbarPath = '$basicPathImages/navBarIcons';
+  static const navBarPath = '$basicPathImages/nav_bar_icons';
+  static const myCartPath = '$basicPathImages/my_cart_icons';
   static const profilePath = '$basicPathImages/profile_images';
   static const mainCategoriesPath = '$basicPathImages/main_categories';
   static const inMainCategoriesPath = '$basicPathImages/in_main_categories';
@@ -43,17 +44,20 @@ abstract class AssetsImages {
 
   ///nav bar icons
 
-  static const homeIcon = "$navbarPath/homeIcon.png";
-  static const productsIcon = "$navbarPath/productsIcon.png";
-  static const searchIcon = "$navbarPath/searchIcon.png";
-  static const myCartIcon = "$navbarPath/myCartIcon.png";
-  static const myCartIcon1 = "$navbarPath/myCartIcon1.png";
-  static const categoriesIcon = "$navbarPath/categoriesIcon.png";
-  static const categoriesIcon2 = "$navbarPath/categoriesIcon2.png";
-  static const profileIcon = "$navbarPath/profile.png";
-  static const settingsIcon = "$navbarPath/settingsIcon.png";
-  static const settingsIcon1 = "$navbarPath/settingsIcon1.png";
-  static const settingsIcon2 = "$navbarPath/settingsIcon2.png";
+  static const homeIcon = "$navBarPath/homeIcon.png";
+  static const productsIcon = "$navBarPath/productsIcon.png";
+  static const searchIcon = "$navBarPath/searchIcon.png";
+  static const myCartIcon = "$navBarPath/myCartIcon.png";
+  static const categoriesIcon = "$navBarPath/categoriesIcon.png";
+  static const categoriesIcon2 = "$navBarPath/categoriesIcon2.png";
+  static const profileIcon = "$navBarPath/profile.png";
+  static const settingsIcon = "$navBarPath/settingsIcon.png";
+  static const settingsIcon1 = "$navBarPath/settingsIcon1.png";
+  static const settingsIcon2 = "$navBarPath/settingsIcon2.png";
+
+  //*my cart icons
+  static const myCartIconAdd = "$myCartPath/myCartIconAdd.png";
+  static const myCartIconCheckIn = "$myCartPath/myCartIconCheckIn.png";
 
   ///profile Images
   static const avatarMan = '$profilePath/avatarMan.jpg';

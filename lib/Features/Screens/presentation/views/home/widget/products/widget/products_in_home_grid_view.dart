@@ -8,10 +8,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class ProductsInHomeGridView extends StatelessWidget {
-  const ProductsInHomeGridView({super.key});
+  const ProductsInHomeGridView({super.key,});
   @override
   Widget build(BuildContext context) {
-    var cub = BlocProvider.of<HomeCubit>(context);
+    var cubi = BlocProvider.of<HomeCubit>(context);
     double height =
         kHeightCondtions(context, valueIsTrue: .905, valueIsFalse: .835);
     double width = kWidthCondtions(context, valueIsTrue: .5, valueIsFalse: 0.5);
@@ -30,21 +30,21 @@ class ProductsInHomeGridView extends StatelessWidget {
             itemBuilder: (context, index) {
               return ProductItemBuilder(
                 index: index,
-                onTapLove: () {
-                  cub.getProducts(qValue: 'sofa', sortValue: 'best_match');
+                onTapAddToMyCart: () {
+                  cubi.getProducts(qValue: 'sofa', sortValue: 'best_match');
                 },
                 onTapGoProductAllInfo: () async {
                   GoRouter.of(context).push(
                     AppRouter.kProductDetailsView,
-                    extra: cub.productModel[index],
+                    extra: cubi.productModel[index],
                   );
                 },
                 imageProduct:
-                    cub.productModel[index].thumbnails![0].last.toString(),
-                productModel: cub.productModel[index],
+                    cubi.productModel[index].thumbnails![0].last.toString(),
+                productModel: cubi.productModel,
               );
             },
-            itemCount: cub.productModel.length,
+            itemCount: cubi.productModel.length,
             physics: const BouncingScrollPhysics(),
             scrollDirection: Axis.vertical,
             shrinkWrap: true,

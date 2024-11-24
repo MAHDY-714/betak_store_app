@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/items_in_product_Item/add_to_my_cart_product_button.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/items_in_product_Item/add_to_my_wish_list_product_button.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/items_in_product_Item/go_to_product_all_info_button.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/items_in_product_Item/image_in_product.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/home/widget/products/widget/items_in_product_Item/info_product.dart';
@@ -14,7 +15,7 @@ class ProductItemBuilder extends StatelessWidget {
   const ProductItemBuilder({
     super.key,
     this.index = 0,
-    required this.onTapLove,
+    required this.onTapAddToMyCart,
     required this.onTapGoProductAllInfo,
     this.isDiscount = false,
     required this.imageProduct,
@@ -22,10 +23,10 @@ class ProductItemBuilder extends StatelessWidget {
   });
   final int index;
   final String imageProduct;
-  final void Function()? onTapLove;
+  final void Function()? onTapAddToMyCart;
   final void Function()? onTapGoProductAllInfo;
   final bool isDiscount;
-  final ProductModel? productModel;
+  final List<ProductModel>? productModel;
 
   @override
   Widget build(BuildContext context) {
@@ -57,36 +58,64 @@ class ProductItemBuilder extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            if (productModel?.percentageOff != null)
-                              PercentageWidget(
-                                textValue: productModel!.percentageOff!.round(),
-                                // textValue: 100,
-                                textDiscount:
-                                    '${productModel?.percentageOff!.round()}',
-                                isDiscount: productModel?.percentageOff != null
-                                    ? true
-                                    : false,
+                        child: SizedBox(
+                          height: kHeightCondtions(context,
+                              valueIsTrue: 145.0, valueIsFalse: 184.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  if (productModel?[index].percentageOff !=
+                                      null)
+                                    PercentageWidget(
+                                      textValue: productModel![index]
+                                          .percentageOff!
+                                          .round(),
+                                      // textValue: 100,
+                                      textDiscount:
+                                          '${productModel![index].percentageOff!.round()}',
+                                      isDiscount:
+                                          productModel?[index].percentageOff !=
+                                                  null
+                                              ? true
+                                              : false,
+                                    ),
+                                ],
                               ),
-                            if (productModel?.percentageOff == null)
-                              const SizedBox(
-                                height: 60,
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Align(
+                                    child: AddToMyWishListProductButton(
+                                      onTap: () {
+                                        log('${kHeight(context).round()}');
+                                        log('${kWidth(context).round()}');
+                                      },
+                                    ),
+                                  ),
+                                  Align(
+                                    child: AddToMyCartProductButton(
+                                      productModel: productModel![index],
+                                      onTap: () {
+                                        log('${kHeight(context).round()}');
+                                        log('${kWidth(context).round()}');
+                                      },
+                                    ),
+                                  ),
+                                ],
                               ),
-                            AddToMyCartProductButton(
-                              onTap: () {
-                                log('${kHeight(context).round()}');
-                                log('${kWidth(context).round()}');
-                              },
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ],
                   ),
                   InfoProduct(
-                    productModel: productModel!,
+                    productModel: productModel![index],
                   ),
                 ],
               ),
@@ -95,7 +124,7 @@ class ProductItemBuilder extends StatelessWidget {
           GoToProductAllInfoButton(
             index: index,
             onTap: onTapGoProductAllInfo,
-            productModel: productModel!,
+            productModel: productModel![index],
           ),
         ],
       ),

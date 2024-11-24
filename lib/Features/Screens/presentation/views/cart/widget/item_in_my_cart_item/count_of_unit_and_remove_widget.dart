@@ -6,8 +6,8 @@ import 'package:betak_store_app/core/utils/constanse.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class CountOfUnitsAndRemoveItemWidget extends StatelessWidget {
-  const CountOfUnitsAndRemoveItemWidget({
+class CountOfUnitsAndRemoveWidget extends StatelessWidget {
+  const CountOfUnitsAndRemoveWidget({
     super.key,
     this.onTapAdd,
     this.onTapMinus,
@@ -34,16 +34,18 @@ class CountOfUnitsAndRemoveItemWidget extends StatelessWidget {
       decoration: Decorations.countOfUnitsAndRemoveItemBoxDecoration,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        // mainAxisAlignment: MainAxisAlignment.end,
         mainAxisSize: MainAxisSize.min,
         children: [
-          InkWell(
-            onTap: onTapRemoveItem,
-            child: Icon(
-              FontAwesomeIcons.trash,
-              color: AppColor.focusederrorBorderAndRemove,
-              size: kWidthCondtions(context,
-                  valueIsTrue: 17.0, valueIsFalse: 20.0),
+          SizedBox(
+            width: kWidth(context) * .12,
+            child: InkWell(
+              onTap: onTapRemoveItem,
+              child: Icon(
+                FontAwesomeIcons.trash,
+                color: AppColor.focusederrorBorderAndRemove,
+                size: kWidthCondtions(context,
+                    valueIsTrue: 17.0, valueIsFalse: 20.0),
+              ),
             ),
           ),
           const SizedBox(height: 12.0),

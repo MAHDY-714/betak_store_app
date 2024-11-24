@@ -1,7 +1,7 @@
 import 'package:betak_store_app/Features/Screens/data/models/my_cart_data_model/my_cart_model.dart';
 import 'package:betak_store_app/Features/Screens/data/models/product_model/product_model.dart';
 import 'package:betak_store_app/Features/Screens/presentation/manager/my_cart_manager/my_cart_cubit.dart';
-import 'package:betak_store_app/Features/Screens/presentation/views/cart/widget/item_in_my_cart_item/count_of_unit_widget.dart';
+import 'package:betak_store_app/Features/Screens/presentation/views/cart/widget/item_in_my_cart_item/count_of_unit_and_remove_widget.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/widget/item_in_my_cart_item/image_in_my_cart_item.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/widget/item_in_my_cart_item/info_price_and_total_in_my_cart.dart';
 import 'package:betak_store_app/Features/Screens/presentation/views/cart/widget/item_in_my_cart_item/text_in_my_cart_item.dart';
@@ -41,21 +41,25 @@ class MyCartItemBuilder extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          CountOfUnitsAndRemoveItemWidget(
-            onTapAdd: () {
-              cubi.counterPlusQuantity(myCartModelList!, index);
-            },
-            onTapMinus: () {
-              cubi.counterMinusQuantity(myCartModelList!, index);
-            },
-            onTapRemoveItem: () => cubi.removeProductsInMyCart(
-                myCartModel: myCartModel!, index: index),
-            quantity: myCartModel!.quantity,
-            height: height,
-            index: index,
+          Expanded(
+            flex: 1,
+            child: CountOfUnitsAndRemoveWidget(
+              onTapAdd: () {
+                cubi.counterPlusQuantity(myCartModelList!, index);
+              },
+              onTapMinus: () {
+                cubi.counterMinusQuantity(myCartModelList!, index);
+              },
+              onTapRemoveItem: () =>
+                  cubi.removeProductsInMyCart(myCartModel: myCartModel!),
+              quantity: myCartModel!.quantity,
+              height: height,
+              index: index,
+            ),
           ),
           const SizedBox(width: 8.0),
           Expanded(
+            flex: 6,
             child: Container(
               height: height,
               decoration: Decorations.myCartItemBoxDecoration,

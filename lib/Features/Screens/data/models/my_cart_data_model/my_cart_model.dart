@@ -15,6 +15,7 @@ class MyCartModel extends Equatable {
   final String? modelNumber;
   final String? brand;
   late int quantity;
+
   MyCartModel({
     required this.productId,
     required this.image,
@@ -75,6 +76,7 @@ class MyCartModel extends Equatable {
         productId,
         image,
         color,
+        colorName,
         title,
         price,
         save,
@@ -82,6 +84,6 @@ class MyCartModel extends Equatable {
         original,
         modelNumber,
         brand,
-        quantity
+        quantity,
       ];
 }
